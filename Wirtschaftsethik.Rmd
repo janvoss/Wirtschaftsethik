@@ -1,7 +1,7 @@
 ---
 title: "Wirtschaftsethik"
 author: "Prof. Dr. Jan S. Voßwinkel"
-date: "WiSe 2022/23"
+date: "WiSe 2023/24"
 
 output:
   #  bookdown::epub_book:
@@ -14,7 +14,6 @@ output:
 link-citations: yes
 
 bibliography: ./Wirtschaftsethik/Wirtschaftsethik.bib
-
 ---
 
 ---
@@ -22,62 +21,59 @@ nocite: '@*'
 csl: technische-universitat-dresden-betriebswirtschaftslehre-rechnungswesen-controlling.csl
 ---
 
-[gesamte Literturdatei ins LVZ]::
-       
 ```{r include=F}
 knitr::opts_chunk$set(dev = 'svg') # set output device to svg
 ```
-# {-}
 
+#  {.unnumbered}
 
 ```{r qr,  echo=FALSE, warning=FALSE}
 library(qrcode)
 
-qr <- qr_code('https://neo.hfwu.de/dispatch.php/course/files/index/18198274ea2d52cb8049579cbca50859?cid=9bfd8406f98f1eb459a8e3a488822b6e')
+qr <- qr_code('https://janvoss.github.io/Wirtschaftsethik')
 #plot(qr)
 
 generate_svg(qr, filename = "qr.svg")
 
 ```
 
-
- ${}$             |  Unterlagen: [Downloadbereich in neo](https://neo.hfwu.de/dispatch.php/course/files/index/18198274ea2d52cb8049579cbca50859?cid=9bfd8406f98f1eb459a8e3a488822b6e)
+ ${}$             |  Unterlagen: [https://janvoss.github.io/Wirtschaftsethik](https://janvoss.github.io/Wirtschaftsethik)
 :-------------------------:|:-------------------------:
-![logo](logo.png)  |  ![Downloadbereich in neo](qr.svg){width=50% }
+![logo](logo.png)  |  ![](qr.svg){width=60% }
 
+# Organisatorisches {.unnumbered}
 
-# Organisatorisches {-}
+-   Prüfungsleistung: Mündliche Prüfung am Ende des Semesters
 
-- Prüfungsleistung: Mündliche Prüfung am Ende des Semesters
-
-- Verzahnung mit den anderen Vorlesungen im Modul
+-   Verzahnung mit den anderen Vorlesungen im Modul
 
 # Einleitung
 
 ## Fragestellungen
 
-- Welches Ausmaß und unter welchen Umständen ist Ungleichheit Gerecht?
+-   Welches Ausmaß und unter welchen Umständen ist Ungleichheit Gerecht?
 
-- Wie kann die Belastung durch Veränderung gerecht verteilt werden (betriebswirtschaftlich und gesamtgesellschaftliches)
+-   Wie kann die Belastung durch Veränderung gerecht verteilt werden (betriebswirtschaftlich und gesamtgesellschaftliches)
 
-- Sind wir zu mehr als zur Einhaltung von Gesetzen und Verträgen verpflichtet?
- 
+-   Sind wir zu mehr als zur Einhaltung von Gesetzen und Verträgen verpflichtet?
+
 ## Der Blick in die Welt
 
 Daten von [Our World in Data](https://ourworldindata.org/) zu (realem) BIP pro Kopf, Lebenserwartung, Gini-Index, Bevölkerungsgröße
 
+
 ```{r echo=F, warning=F, message=F, cache=F}
 
 library(tidyverse)
-library(owidR)
+# library(owidR)
 library(RColorBrewer)
 
-# Daten herunterladen
+# Daten von OWID laden
 
-gdppc <- owid("gdp-per-capita-worldbank")
-lifeex <- owid("life-expectancy")
-gini <- owid("economic-inequality-gini-index")
-pop <- owid("Population")
+gdppc <- read.csv("gdp-per-capita-worldbank.csv")
+lifeex <- read.csv("life-expectancy.csv")
+gini <- read.csv("economic-inequality-gini-index.csv")
+pop <- read.csv("population-long-run-with-projections.csv")
 
 # Daten zusammenfügen
 
@@ -87,42 +83,44 @@ df <- gdppc %>%
   left_join(pop) %>%
 
    #Dummy for EU Member States
-  mutate(dummy_EU = as.numeric(entity %in% c("Austria", "Belgium", "Denmark",
+  mutate(dummy_EU = as.numeric(Entity %in% c("Austria", "Belgium", "Denmark",
                                              "Finland", "France", "Germany", 
                                              "Greece", "Ireland", "Italy",
                                              "Luxembourg", "Netherlands", "Portugal",
                                              "Spain", "Sweden", "United Kingdom"))) %>%
   #Dummy for USA
-  mutate(dummy_USA = as.numeric(entity %in% c("United States")))
+  mutate(dummy_USA = as.numeric(Entity %in% c("United States")))
 
 ## Lücken füllen
 
-df %<>%  group_by(entity) %>% 
-  fill(`Gini coefficient`, .direction = "downup") %>% 
+df %<>%  group_by(Entity) %>% 
+  fill(Gini.coefficient, .direction = "downup") %>% 
    ungroup()
 
 # Daten ansehen
 
-library(psych)
+#library(psych)
 #  headTail(df, top = 2, bottom = 2, ellipsis = T)
 
-library(knitr)
-kable(headTail(df, top = 2, bottom = 2, ellipsis = T), digits=2)
+#library(knitr)
+#kable(headTail(df, top = 2, bottom = 2, ellipsis = T), digits=2)
 ```
 
 
 ### BIP pro Kopf vs. Lebenserwartung
-  
+
 ```{r echo=F, warning=F, message=F, cache=F}
 
+options(scipen = 999)
+
 p <- df %>% 
-  filter(year == 2019)%>%
+  filter(Year == 2019)%>%
   #Gruppen herauswerfen
-  filter(is.na(code)==F,
-         entity !="World")%>%
-  ggplot(aes(x= `GDP per capita`,
-             y=  `Life expectancy`,
-             group=entity)
+  filter(is.na(Code)==F,
+         Entity !="World")%>%
+  ggplot(aes(x= GDP.per.capita..PPP..constant.2017.international...,
+             y=  Life.expectancy.at.birth..historical.,
+             group=Entity)
   )+
   # scale_x_log10()+
   scale_x_continuous(labels= function(x) format(x,scientific = F) , 
@@ -132,17 +130,17 @@ p <- df %>%
                   #   trans="log10"
   )+
   scale_color_distiller(palette='Spectral')+
-  geom_point(aes(color=`Gini coefficient`, size=Population #, frame=year
+  geom_point(aes(color=Gini.coefficient, size=Population..historical.estimates. #, frame=year
                  )
     )+
-  geom_smooth(aes(group=NULL), weight='Population')+
+  geom_smooth(aes(group=NULL, weight=Population..historical.estimates.))+
 #  coord_cartesian(xlim = c(100, 150000))+
   # shadow_wake(.5)+
   labs(title="BIP pro Kopf vs. Lebenserwartung",
        #subtitle= expression('2020=100'),
        x="BIP pro Kopf",
        y='Lebenserwartung',
-       caption = paste('Illustration: The Author; Data: Our World in Data, Data retrieval:', Sys.Date(), sep = " ")
+       caption = paste('Abbildung: Jan S. Voßwinkel; Daten: Our World in Data, Datenabruf:', Sys.Date(), sep = " ")
   )
 
 # p
@@ -178,60 +176,35 @@ p1
 ```
 
 
-### BIP pro Kopf 1990 vs. 2019
+### BIP pro Kopf im Zeitverlauf
 
-```{r echo=F, message=F, warning=F, cache=F}
+```{r echo=F, warning=F, message=F, cache=F}
 
-#GDPPC einst und jetzt
+library(quantreg)
 
-
-# neue Tabelle
-
-df1 <- df %>% 
-  filter(year==1990) %>% 
-  select(entity, code, `GDP per capita`) %>% 
-  rename(GDPPC1990 = `GDP per capita`)
-
-df2 <- df %>% 
-  filter(year==2019) %>% 
-  select(entity, code, `GDP per capita`, Population, `Gini coefficient`) %>% 
-  rename(GDPPC2019 = `GDP per capita`)
-
-df3 <- df1 %>% 
-  left_join(df2)
-
-p <- df3 %>% 
-   filter(is.na(code)==F,
-         entity !="World")%>%
-  ggplot(aes(x=GDPPC1990,
-             y=GDPPC2019,
-             group=entity))+
-  scale_x_continuous(labels= function(x) format(x,scientific = F) , 
-                     trans = "log10"
-  )+
-  scale_y_continuous(labels= function(x) format(x,scientific = F) ,
-                        trans="log10"
-  )+
+p <- df %>% 
+  #Gruppen herauswerfen
+  filter(is.na(Code)==F,
+         Entity !="World")%>%
+  ggplot(aes(Year, GDP.per.capita..PPP..constant.2017.international..., label=Entity))+
+  geom_point(aes(color = Gini.coefficient),alpha=.7)+
   scale_color_distiller(palette='Spectral')+
-  geom_point(
-    aes(color=`Gini coefficient`, 
-      size=Population #, frame=year
-      )
+  geom_quantile(size=1)+
+  scale_y_continuous(labels= function(x) format(x,scientific = F) , 
+                         trans = "log10"
   )+
-  geom_smooth(aes(group=NULL), weight='Population')+
-  geom_abline(slope = 1,
-              intercept = 0,
-              color="red")+
-  labs(title="BIP pro Kopf 1990 vs. 2019",
-       #subtitle= expression('2020=100'),
-       x="BIP pro Kopf 1990",
-       y='BIP pro Kopf 2019',
+  labs(title="BIP pro Kopf im Zeitverlauf",
+       subtitle= "Kaufkraft- und inflationsbereinigt",
+       x="Jahr",
+       y='BIP pro Kopf',
        caption = paste('Abbildung: Jan S. Voßwinkel; Daten: Our World in Data, Datenabruf:', Sys.Date(), sep = " ")
   )
+  
 
 # p
+  
 
-p1 <- ggplotly(p)%>%
+p1 <- ggplotly(p) %>%
   layout(margin = list(l = 50, r = 50, b = 100, t = 50),
          annotations = list(x = 1, y = -0.3, text =  paste('Abbildung: Jan S. Voßwinkel; Daten: Our World in Data, Datenabruf:', Sys.Date(), sep = " "),
                             xref='paper', yref='paper', showarrow = F, 
@@ -239,8 +212,8 @@ p1 <- ggplotly(p)%>%
                             font = list(size = 11)))
 
 p1
-``` 
 
+```
 
 ### Gini-Index 1990 vs. Gini-Index 2019
 
@@ -248,40 +221,41 @@ p1
 
 #Gini einst und jetzt
 
-
-# neue Tabelle
-
 df1 <- df %>% 
-  filter(year==1990) %>% 
-  select(entity, code, `Gini coefficient`) %>% 
-  rename(Gini1990 = `Gini coefficient`)
+  filter(Year==1990) %>% 
+  select(Entity, Code, Gini.coefficient) %>% 
+  rename(Gini1990 = Gini.coefficient)
 
 df2 <- df %>% 
-  filter(year==2019) %>% 
-  select(entity, code, `Gini coefficient`, Population, `GDP per capita`) %>% 
-  rename(Gini2019 = `Gini coefficient`)
+  filter(Year==2019) %>% 
+  select(Entity, Code, Gini.coefficient , GDP.per.capita..PPP..constant.2017.international..., Population..historical.estimates.) %>% 
+  rename(Gini2019 = Gini.coefficient)
 
 df3 <- df1 %>% 
   left_join(df2)
 
+options(scipen = 999)
+
 p <- df3 %>% 
-  filter(is.na(code)==F,
-         entity !="World")%>%
+  filter(is.na(Code)==F,
+         Entity !="World")%>%
   ggplot(aes(x=Gini1990,
              y=Gini2019,
-             group=entity))+
+             group=Entity, 
+            weight = Population..historical.estimates.
+             ))+
   scale_x_continuous(labels= function(x) format(x,scientific = F) #, 
-                    # trans = "log10"
+                     # trans = "log10"
   )+
   scale_y_continuous(labels= function(x) format(x,scientific = F) #,
-                    # trans="log10"
+                     # trans="log10"
   )+
   scale_color_distiller(palette='Spectral')+
   geom_point(
-    aes(color=`GDP per capita`, size=Population #, frame=year
-        )
+    aes(color= GDP.per.capita..PPP..constant.2017.international..., size=Population..historical.estimates.)
   )+
-  geom_smooth(aes(group=NULL), weight='Population')+
+  geom_smooth(aes(group=NULL #, weight=Population
+                  ))+
   geom_abline(slope = 1,
               intercept = 0,
               color="red")+
@@ -292,7 +266,7 @@ p <- df3 %>%
        caption = paste('Abbildung: Jan S. Voßwinkel; Daten: Our World in Data, Datenabruf:', Sys.Date(), sep = " ")
   )
 
-# p
+ # p
 
 p1 <- ggplotly(p)%>%
   layout(margin = list(l = 50, r = 50, b = 100, t = 50),
@@ -302,72 +276,9 @@ p1 <- ggplotly(p)%>%
                             font = list(size = 11)))
 
 p1
+
 ```
 
-
-### Lebenserwartung 1990 vs. Lebenserwartung 2019
-
-```{r echo=F, message=F, warning=F, cache=F}
-
-#Gini einst und jetzt
-
-
-# neue Tabelle
-
-df1 <- df %>% 
-  filter(year==1990) %>% 
-  select(entity, code, `Life expectancy`) %>% 
-  rename(Lebenserwartung1990 = `Life expectancy`)
-
-df2 <- df %>% 
-  filter(year==2019) %>% 
-  select(entity, code,`Life expectancy`, `Gini coefficient`, Population, `GDP per capita`) %>% 
-  rename(Lebenserwartung2019 = `Life expectancy`)
-
-df3 <- df1 %>% 
-  left_join(df2)
-
-p <- df3 %>% 
-  filter(is.na(code)==F,
-         entity !="World")%>%
-  ggplot(aes(x=Lebenserwartung1990,
-             y=Lebenserwartung2019,
-             group=entity))+
-  scale_x_continuous(labels= function(x) format(x,scientific = F) #, 
-                    # trans = "log10"
-  )+
-  scale_y_continuous(labels= function(x) format(x,scientific = F) #,
-                    # trans="log10"
-  )+
-  scale_color_distiller(palette='Spectral')+
-  geom_point(
-    aes(color=`Gini coefficient`, size=Population #, frame=year
-        )
-  )+
-  geom_smooth(aes(group=NULL), weight='Population')+
-  geom_abline(slope = 1,
-              intercept = 0,
-              color="red")+
-  labs(title="Lebenserwartung 1990 vs. 2019",
-       #subtitle= expression('2020=100'),
-       x="Lebenserwartung 1990",
-       y='Lebenserwartung 2019 ',
-       caption = paste('Abbildung: Jan S. Voßwinkel; Daten: Our World in Data, Datenabruf:', Sys.Date(), sep = " ")
-  )
-
- p
-
-p1 <- ggplotly(p)%>%
-  layout(margin = list(l = 50, r = 50, b = 100, t = 50),
-         annotations = list(x = 1, y = -0.3, text =  paste('Abbildung: Jan S. Voßwinkel; Daten: Our World in Data, Datenabruf:', Sys.Date(), sep = " "),
-                            xref='paper', yref='paper', showarrow = F, 
-                            xanchor='right', yanchor='auto', xshift=0, yshift=0,
-                            font = list(size = 11)))
-
-p1
-```
-
-[W-E-Buch, LB, Verantwortung]::
 
 # Begriffliche Grundlagen
 
@@ -377,40 +288,642 @@ p1
 
 ## *Wirtschafts*ethik
 
-Abgrenzung über  
+Abgrenzung über
 
-- den Gegenstand: Analyse ethische Fragen im Zusammehang mit wirtschaftlichem Handeln
+-   den Gegenstand: Analyse ethische Fragen im Zusammehang mit wirtschaftlichem Handeln
 
-- die Methode: Analyse ethischer Fragen unter Rückgriff auf wirtschaftswissenschaftliche Grundmodelle und Methoden
+-   die Methode: Analyse ethischer Fragen unter Rückgriff auf wirtschaftswissenschaftliche Grundmodelle und Methoden
 
-##  Ethik und Verantwortung
+## Ethik und Verantwortung
 
-![Abbildung Jan S. Voßwinkel](./Tikz/Verantwortung.svg)
+### Verhaltensregeln und Regelüberwachung
+
+-   Die Übernahme bzw. Zuweisung von Verantwortung setzt voraus
+
+    -   ein verantwortungsfähiges handelndes **Subjekt**
+
+    -   eine (bestenfalls geteilte) **normative Überzeugung**
+
+    -   eine **Entität, vor** bzw. gegenüber **der man die Verantwortung trägt.**
+
+$\rightarrow$ Was ist bezüglich der Entität, vor bzw. gegenüber der man Verantwortung trägt, vorstellbar?
+
+Systematisierung von Verhaltensregeln anhand der Form der Regelüberwachung in sehr enger Anlehnung an Voigt (2009)
+
+```{r Regeln, echo=F, message=F, warning=F, cache=F}
+
+library(tidyverse)
+
+df <- data.frame(Regel=c("Konvention", "Ethische Regel", "Sitte", "Formelle private Regel", "Regel positiven Rechts"),
+                 "Überwachung" = c("Selbstüberwachung", "imperative Selbstbindung","informelle Überwachung durch andere Akteure", "organisierte private Überwachung", "organisierte staatliche Überwachung"),
+                 'Institutionenkategorie'= c("intern vom Typ 1", "intern vom Typ 2",
+                                             "intern vom Typ 3", "intern vom Typ 4",
+                                             "extern"),
+                 'Beispiel'=c("Regeln der Sprache", "Kategorischer Imperativ, privater Trainingsplan", "gesellschaftliche Umgangsformen", "Regeln des Sports", "Privat- und Strafrecht, öffentliches Recht"))
+
+
+library(knitr)
+# library(kableExtra)
+kable(df) #%>% 
+  #kable_styling(#bootstrap_options = c("responsive")
+   # )
+
+```
+
+### Verantwortungsbegriff
+
+Elemente und Beziehungen des Verantwortungsbegriffs nach @lohStrukturenUndRelata2017 ![Abbildung: Jan S. Voßwinkel](./Tikz/Verantwortung2.svg)
+
+**Subjekt**
+
+-   Individuum
+
+-   Kollektiv/Organisation
+
+    -   nach außen gleichgerichtetes Handeln\
+    -   Individualisierung der Verantwortung im Innenverhältnis
+
+-   System
+
+    -   Kein gleichgerichtetes Handeln nach Außen
+    -   (Ausmaß der) Handlungsfolgen beruhen nicht allein auf individuellem Handeln $\rightarrow$ Wer ist das Subjekt?
+
+**Handlungsfolgen**
+
+-   Beabsichtigt
+
+-   Vorhergesehen
+
+-   Unvorhergesehen
+
+    -   Risiko vs. Unsicherheit
+    -   Wissensbeschaffung zumutbar?
+
+### Funktionen der Verantwortung
+
+-   Anreize für Rationalität
+
+-   Verantwortung bewährt sich in einem Umfeld ohne etablierte Verfahrensregeln, in dem pragmatisches Handeln in komlexen Situationen erforderlich ist [@heidbrinkDefinitionenUndVoraussetzungen2017]
+
+### Grenzen der Verantwortung: Systemverantwortung
+
+```{tikz,  fig.ext = 'png', cache=F, echo=F,  out.width="50%"}
+
+\usetikzlibrary{calc}
+\usetikzlibrary{matrix}
+\usetikzlibrary{positioning}
+
+\begin{tikzpicture}
+
+\sffamily % Keine Serifen
+
+\renewcommand{\familydefault}{\sfdefault} 
+
+\matrix[matrix of math nodes,every odd row/.style={align=right},every even row/.style={align=left},every node/.style={text width=1.5cm},row sep=0.35cm,column sep=0.2cm] (m) {
+ 5&3\\ 
+ 5&3\\
+ 1&2\\
+1&2\\
+};
+\draw (m.north east) rectangle (m.south west);
+\draw (m.north) -- (m.south);
+\draw (m.east) -- (m.west);
+
+\coordinate (a) at ($(m.north west)!0.25!(m.north east)$);
+\coordinate (b) at ($(m.north west)!0.75!(m.north east)$);
+\node[above=5pt of a,anchor=base] {links};
+\node[above=5pt of b,anchor=base] {rechts};
+
+\coordinate (c) at ($(m.north west)!0.25!(m.south west)$);
+\coordinate (d) at ($(m.north west)!0.75!(m.south west)$);
+%\node[left=0pt of c, red]{c};
+\node[left=12pt of c,text width=1.5cm,rotate=90,align=center,anchor=center]  {oben};
+\node[left=12pt of d,text width=1.5cm,rotate=90,align=center,anchor=center]  {unten};
+
+
+\node[above=18pt of m.north] (Spaltenspieler) {Annalena};
+\node[left=30pt of m.west,rotate=90,align=center,anchor=center] {Christian};
+
+
+%\draw [-latex, blue, very thick]
+%    (m-1-2.center) edge (m-1-1)
+  %  ($(m-2-1.south)+(-0.55,0)$) edge ($(m-4-1.north)+(-0.55,0)$)
+   % (m-3-1.east) edge (m-3-2.center)
+    %($(m-4-2.north)+(-0.55,0)$) to ($(m-2-2.south)+(-0.55,0)$)
+;
+
+\node[above=5pt of Spaltenspieler]  {Effizientes Gleichgewicht};
+
+\end{tikzpicture}
+
+```
+
+```{tikz,  fig.ext = 'png', cache=F, echo=F, ,  out.width="50%"}
+
+\usetikzlibrary{calc}
+\usetikzlibrary{matrix}
+\usetikzlibrary{positioning}
+
+\begin{tikzpicture}
+
+\sffamily % Keine Serifen
+
+\renewcommand{\familydefault}{\sfdefault} 
+
+\matrix[matrix of math nodes,every odd row/.style={align=right},every even row/.style={align=left},every node/.style={text width=1.5cm},row sep=0.35cm,column sep=0.2cm] (m) {
+ 5&3\\ 
+ 5&3\\
+ 1&5\\
+1&5\\
+};
+\draw (m.north east) rectangle (m.south west);
+\draw (m.north) -- (m.south);
+\draw (m.east) -- (m.west);
+
+\coordinate (a) at ($(m.north west)!0.25!(m.north east)$);
+\coordinate (b) at ($(m.north west)!0.75!(m.north east)$);
+\node[above=5pt of a,anchor=base] {links};
+\node[above=5pt of b,anchor=base] {rechts};
+
+\coordinate (c) at ($(m.north west)!0.25!(m.south west)$);
+\coordinate (d) at ($(m.north west)!0.75!(m.south west)$);
+%\node[left=0pt of c, red]{c};
+\node[left=12pt of c,text width=1.5cm,rotate=90,align=center,anchor=center]  {oben};
+\node[left=12pt of d,text width=1.5cm,rotate=90,align=center,anchor=center]  {unten};
+
+
+\node[above=18pt of m.north] (Spaltenspieler) {Annalena};
+\node[left=30pt of m.west,rotate=90,align=center,anchor=center] {Christian};
+
+
+%\draw [-latex, blue, very thick]
+%    (m-1-2.center) edge (m-1-1)
+  %  ($(m-2-1.south)+(-0.55,0)$) edge ($(m-4-1.north)+(-0.55,0)$)
+   % (m-3-1.east) edge (m-3-2.center)
+    %($(m-4-2.north)+(-0.55,0)$) to ($(m-2-2.south)+(-0.55,0)$)
+;
+
+\node[above=5pt of Spaltenspieler]  {Zwei Gleichgewichte};
+
+\end{tikzpicture}
+
+```
+
+```{tikz,  fig.ext = 'png', cache=F, echo=F, ,  out.width="50%"}
+
+\usetikzlibrary{calc}
+\usetikzlibrary{matrix}
+\usetikzlibrary{positioning}
+
+\begin{tikzpicture}
+
+\sffamily % Keine Serifen
+
+\renewcommand{\familydefault}{\sfdefault} 
+
+\matrix[matrix of math nodes,every odd row/.style={align=right},every even row/.style={align=left},every node/.style={text width=1.5cm},row sep=0.35cm,column sep=0.2cm] (m) {
+5&10\\ 
+ 5&1\\
+ 1&3\\
+10&3\\
+};
+\draw (m.north east) rectangle (m.south west);
+\draw (m.north) -- (m.south);
+\draw (m.east) -- (m.west);
+
+\coordinate (a) at ($(m.north west)!0.25!(m.north east)$);
+\coordinate (b) at ($(m.north west)!0.75!(m.north east)$);
+\node[above=5pt of a,anchor=base] {links};
+\node[above=5pt of b,anchor=base] {rechts};
+
+\coordinate (c) at ($(m.north west)!0.25!(m.south west)$);
+\coordinate (d) at ($(m.north west)!0.75!(m.south west)$);
+%\node[left=0pt of c, red]{c};
+\node[left=12pt of c,text width=1.5cm,rotate=90,align=center,anchor=center]  {oben};
+\node[left=12pt of d,text width=1.5cm,rotate=90,align=center,anchor=center]  {unten};
+
+
+\node[above=18pt of m.north] (Spaltenspieler) {Annalena};
+\node[left=30pt of m.west,rotate=90,align=center,anchor=center] {Christian};
+
+
+%\draw [-latex, blue, very thick]
+%    (m-1-2.center) edge (m-1-1)
+  %  ($(m-2-1.south)+(-0.55,0)$) edge ($(m-4-1.north)+(-0.55,0)$)
+   % (m-3-1.east) edge (m-3-2.center)
+    %($(m-4-2.north)+(-0.55,0)$) to ($(m-2-2.south)+(-0.55,0)$)
+;
+
+\node[above=5pt of Spaltenspieler]  {Ineffizientes Gleichgewicht};
+
+\end{tikzpicture}
+
+```
 
 # Ethische Grundpositionen
 
+## Tugendethik
+
+-   Suche nach Charaktereigenschaften, die menschliche Triebe (in gewünschter Weise) steuern
+
+-   Ziel: Persönliche Vervollkommnung
+
+## Pflichtenethik
+
+-   Willensfreiheit verlangt die Überwindung menschlicher Neigungen.
+
+-   Wer aus einer Pflicht heraus handelt, d.h., wer die Einsicht in das moralisch Gebotene über seine menschlichen Neigungen stellt, handelt moralisch.
+
+## Utilitarismus/teleologische Ethik
+
+-   Teleologische Ethik: Die Folgen des Handelns sind entscheidend für die Beurteilung von Handlungen
+
+-   Spezialfall Utilitarismus: Die Summe der Nutzen in der Gesellschaft ist zu erhöhen (Problem: Konsequenzen für den/die Einzelne:n)
+
+-   Probleme
+
+    -   „Paradox der Quantität" (Durchschnittsnutzen kann sinken, Gesamtnutzen aber steigen)
+
+    -   „Paradox der Aggregtion" (Notwendige Ergänzung: Grundlegende Interessen jedes Einzelnen)
+
+    -   Berücksichtigung des *tatsächlichen* Nutzens oder des NUtzens einer *hypothetischen gut informierten* Person?
+
+## Vertragstheorien
+
+-   Freie und gleiche/gleichberechtigte Individuen einigen sich auf Rechte und Pflichten
+
+-   Moral entsteht durch Übereinkunft
+
+-   Anwendungsfall: Einstimmige Einigung hinter dem Schleier des Nichtwissens
+
+## Diskursethik
+
+-   Ausgangspunkt: Es gibt keine objektiv begründbaren universellen Wertevorstellungen
+
+-   Gesucht: Ein Konsens über Wertungen
+
+-   Der Konsens kann nur aus einem Diskurs mit den folgenden Eigenschaften hervorgehen [@holzmannWirtschaftsethik2019]:
+
+    -   Beteiligung aller
+    -   Chancengleichheit
+    -   Zwanglosigkeit
+    -   Handlungsentlastung (kein Zeit- und Handlungsdruck)
+    -   Unbeschränkte Information
+    -   Universalisierbarkeit
+    -   Mündigkeit
+    -   Rationale Motivation
+
 # Ethik und Erkenntnistheorie
 
-# Wirtschaftsethische Ansätze
+Ab jetzt: teleologische Ethik
 
-# Anwendungen 
+-   Berücksichtigen der Folgen verlangt positives Wissen über Ursache-Wirkungsbeziehungen
 
-## Markt und Moral
+-   Positves Wissen ist ihärent unsicher
 
-## Ethik als Ordnungspolitik
+-   „Ethischer Irrtum" daher möglich\
+    $\rightarrow$ Pflicht, möglichst gutes positives Wissen zu erlangen.
 
-## Ethische Fragen des gesellschaftlichen Wandels
+-   Stochastische Prozesse: Einkalkulieren unerwarteter Folgen.
 
-## Ethische Fragen der unternehmerischen Veränderung
+-   Nicht *tatsächliche* Folgen sind für die Beurteilung einer Handlung entscheidend sondern *erwartete* Folgen
 
-# Literatur {-}
+-   Offene Frage: Wo liegen die Grenzen der Verantwortung für sehr unwahrscheinliche Ereignisse
 
-<div style="text-indent: -40px; padding-left: 40px;">
+-   Deontologisches Element in der teleologischen Ethik: Beachtung von SOrgfalts*pflichten*, um auch nicht gewünschte nicht-deterministische Ereignisse unwahrscheinlicher zu machen
 
-<div id="refs"></div>
+# Grundlegende Perspektiven der Gerechtigkeit
 
-</div>
+Vgl. @duclosHorizontalVerticalEquity2018
 
-[Hier LVZ ausgeben]::
+## Vertikale Gerechtigkeit
 
-[https://dailydevsblog.com/troubleshoot/resolved-how-to-generate-a-hanging-citation-for-an-html-document-in-rmarkdown-151396/]::
+-   Staatliche Belastungen und Begünstigungen sollen so ausgerichtet sein, dass das Ausmaß der Ungleichheit verringert wird.
+
+-   (Diskussion: Begründung?)
+
+## Horizontale Gerechtigkeit
+
+-   Individuen in ethisch relevanter gleicher Position sollen sich auch nach staatlicher Behandlung in ethisch vergleichbarer Position befinden\
+    $\rightarrow$ Schutz vor willkürlicher Diskriminierung
+
+-   Begrenzung für Maßnahmen der vertikalen Gerechtigkeit: Durch staatliche Maßnahmen (zur Herstellung vertikaler Gerechtigket) soll es nicht zu einer Rangfolgenumkehr der Nutzenpositionen kommen, es sei denn, die ursprüngliche Rangfolge war ungerecht.
+
+## Dimensionen der Gerechtigkeit
+
+Sechs Dimensionen der Gerechtigkeit [@ensteGerechtigkeitImInternationalen2014]:
+
+1.  **Bedarfsgerechtigkeit**
+
+2.  **Leistungsgerechtigkeit**
+
+3.  **Chancengerechtigkeit**
+
+4.  **Einkommensgerechtigkeit**
+
+5.  **Regelgerechtigkeit**
+
+6.  **Generationengerechtigkeit**
+
+$\rightarrow$ konfligierende Beziehungen?
+
+$\rightarrow$ Folgen für die Wirtschaftspolitik?
+
+## Die Relevanz von statlicher Umverteilung
+
+```{r echo=F, warning=F, message=F}
+library(tidyverse)
+library(eurostat)
+
+# Daten herunterladen
+
+df <- get_eurostat("ilc_di12",
+                   time_format = "num",
+                       select_time="Y",
+                       cache = T
+                 ) %>% 
+  rename(gini_nach_transfers=values) %>% 
+  select(!indic_il)
+
+df1 <- get_eurostat("ilc_di12b",
+                   time_format = "num",
+                   select_time="Y",
+                   cache = T
+) %>% 
+  rename(gini_vor_transfers=values) %>% 
+  select(!indic_il)
+
+
+df <- df %>%  left_join(df1)
+
+## Plot
+
+library(ggrepel)
+p <- df %>%  
+  filter(time==2021,
+         geo!="EU27_2020",
+         geo !="EA19") %>% 
+  ggplot(aes(x=gini_vor_transfers, y=gini_nach_transfers, label=geo))+ 
+  geom_point()+
+  geom_smooth()+
+  geom_abline()+
+  geom_text_repel()+
+  labs(title="Wirkung staatlicher Umverteilung auf den Gini-Koeffizienten",
+       caption="Daten: Eurostat Tabellen ilc_di12 und ilc_di12b",
+       x="Gini-Koeffizient vor Steuern Transfers und Renten",
+       y="Gini-Koeffizient nach Transfers und Renten")
+
+p
+
+# Relative Senkung der Ungleichheit durch staatl. Maßnahmen:
+# (g_nach - g_nach)/g_vor
+
+#df %>% mutate(reduktion= gini)
+
+#p
+```
+
+# Anwendung: Globale Unterschiede
+
+Lesen wir etwas: <https://ourworldindata.org/global-economic-inequality>
+
+```{r qr_inequality,  echo=FALSE, warning=FALSE}
+library(qrcode)
+
+qr_inequality <- qr_code('https://ourworldindata.org/global-economic-inequality')
+#plot(qr)
+
+generate_svg(qr_inequality, filename = "qr_inequality.svg")
+
+```
+
+![](qr_inequality.svg)
+
+## Kernpunkte
+
+-   Globale Chancengleichheit manifestiert sich u.a. in Größen wie Lebenserwartung, Kindersterblichkeit, Schulbesuche, usw.
+
+-   Lebensperspektive Ergebnis äußerer Faktoren (Ort u Zeit); gegenwärtiger Zustand abhöngig von der Entwicklungsgeschichte der Länder
+
+-   Lebenschancen zufällig -\> ungerecht
+
+-   Ethische Aufforderung: An der Ungleichheit etwas zu ändern
+
+-   Chancengleichheit von morgen hängt an Ergebnisgleichheit von heute.
+
+## Offene Punkte
+
+-   Eurozentrische Perspektive?
+
+## Offene Fragen
+
+```{r echo=F, message=F, warning=F, eval=F}
+
+library(tidyverse)
+library(owidR)
+
+df <- owid("gdp-per-capita-worldbank") %>% 
+  left_join(owid("Population"))
+
+# Gewicht mit Bevölkerung?
+
+# 
+
+#Top3
+
+top_3_1990 <- df %>% 
+  filter(year ==1990) %>% 
+  arrange(desc(`GDP per capita`)) %>% 
+  slice(1:3) %>% 
+  pull(entity)
+
+top_3_2020 <- df %>% 
+  filter(year ==2020) %>% 
+  arrange(desc(`GDP per capita`)) %>% 
+  slice(1:3) %>% 
+  pull(entity)
+
+
+#Lowest
+
+lowest_3_1990 <- df %>% 
+  filter(year ==1990) %>% 
+  arrange(`GDP per capita`) %>% 
+  slice(1:3) %>% 
+  pull(entity)
+
+lowest_3_2020 <- df %>% 
+  filter(year ==2020) %>% 
+  arrange(`GDP per capita`) %>% 
+  head(3) %>% #slice(1:3) scheint gelegentlich zu Problemen zu führen. Warum?
+  pull(entity)
+
+#Median3
+
+med_3_1990 <- df %>% 
+  filter(year==1990) %>% 
+  arrange(abs(`GDP per capita`-median(`GDP per capita`))) %>% 
+  slice(1:3) %>% 
+  pull(entity)
+
+med_3_2020 <- df %>% 
+  filter(year==2020) %>% 
+  arrange(abs(`GDP per capita`-median(`GDP per capita`))) %>% 
+  slice(1:3) %>% 
+  pull(entity)
+
+
+hilf <- c("Germany", "United States", "France", "China", "Turkey", "Poland",
+          top_3_1990, top_3_2020, lowest_3_1990, lowest_3_2020,
+          med_3_1990, med_3_2020)
+
+df <- df %>% 
+  group_by(entity, year) %>% 
+  mutate(Auswahl= ifelse( entity %in% hilf, entity, NA))
+
+library(ggrepel)
+
+set.seed(123)
+options(scipen=999)
+p <- df %>% 
+  filter(is.na(code)==F, #keine Regionen/Kontinente
+         entity !="World")%>%
+  filter(year %in% c(1990, 2020)) %>% 
+  ggplot(aes(x=year, y=`GDP per capita`, group=year,
+             text=entity, label= Auswahl, #weight= Population
+             ))+
+  geom_boxplot(outlier.alpha = 0  # Outlier unsichtbar
+               )+ 
+ # geom_jitter(width = 1.5, height=0, alpha=.4, color="purple")+
+  geom_point(color="purple", alpha=.4)+
+  geom_text_repel(box.padding = 0.7, max.overlaps = 50
+    )+
+#  stat_summary(fun=mean, geom="point", shape=5, size=4, color="red")+
+#  coord_flip()+
+ # scale_y_continuous(trans='log10')+
+scale_x_continuous(breaks=c(1990, 2020)
+  )
+
+
+p
+
+p + scale_y_continuous(trans='log10')+
+  labs(caption="logarithmischer Maßstab")
+
+
+
+
+p <- df %>% 
+  filter(is.na(code)==F, #keine Regionen/Kontinente
+         entity !="World")%>%
+  filter(year %in% c(1990, 2020)) %>% 
+  ggplot(aes(x=year, y=`GDP per capita`, group=year,
+             text=entity, label= Auswahl, weight= Population
+             ))+
+  geom_boxplot(outlier.alpha = 0  # Outlier unsichtbar
+               )+ 
+ # geom_jitter(width = 1.5, height=0, alpha=.4, color="purple")+
+  geom_point(color="purple", alpha=.4)+
+#  geom_text_repel(box.padding = 0.7, max.overlaps = 50
+ #   )+
+#  stat_summary(fun=mean, geom="point", shape=5, size=4, color="red")+
+#  coord_flip()+
+ # scale_y_continuous(trans='log10')+
+scale_x_continuous(breaks=c(1990, 2020)
+  )
+
+
+p
+
+p + scale_y_continuous(trans='log10')+
+  labs(caption="logarithmischer Maßstab")
+
+
+
+#library(plotly)
+
+#options(scipen=999)
+
+#ggplotly(p)
+
+# Gini der Welt
+# Gewichteter Gini der Welt
+
+# Anteil der obersten 10% am Gesamteinkommen
+# 
+
+library(plotly)
+
+options(scipen=999)
+
+#ggplotly(p)
+
+
+```
+
+```{r, echo=F, warning=F, message=F, cache=F, eval=F}
+
+library(PearsonDS)
+library(ineq)
+library(moments)
+
+
+df1 <- df %>% 
+  group_by(year) %>% 
+  filter(year %in% c(1990,2020)) %>% 
+  summarise(Spannweite=max(`GDP per capita`)-min(`GDP per capita`),
+            Standardabweichung = sd(`GDP per capita`),
+            Variationskoeffizient = sd(`GDP per capita`)/mean(`GDP per capita`),
+            Schiefe = skewness(`GDP per capita`),
+            Gini = ineq(`GDP per capita`, type= "Gini"))
+
+
+t <- kable(df1, digits=2)
+
+t
+```
+
+**Gibt es eine Verantwortung gegenüber den ärmeren Staaten?**
+
+-   humanitäres Argument
+
+-   Verschuldung (vielfach problematisch in der Zuodnung; Nicht-Identitätsproblem)
+
+-   Heutiges Profitieren von (vergangenem) Verschulden?/ Komplizenschaft
+
+-   Individuelle vs. kollektive Verantwortung (Systemverantwortung)
+
+# Übungsfragen {.unnumbered}
+
+1.  Grenzen Sie Ethik und Moral voneinander ab.
+
+2.  Grenzen Sie Wirtschaftsethik vom Begriff der Ethik ab. Diskutieren Sie dabei unterschiedliche Abgrenzungsmöglichkeiten
+
+3.  Wie hängt (tendenziell) die Lebenserwartung mit dem BIP pro Kopf zusammen?
+
+4.  Wie hat sich (tendenziell) die Einkommensungleichheit innerhalb der Länder weltweit in den letzten zwanzig Jahren entwickelt?
+
+5.  Systematisieren Sie den Verantwortungsbegriff. Gehen Sie dabei insbesondere auf die folgenden Begriffe ein: Verantwortungssubjekt, -adressat und -instanz.
+
+6.  Systematisieren Sie in diesem Zusammenhang die Handlungsfolgen nach den Merkmalen beabsichtigt, vorhergesehen und unvorhergesehen. Unter welchen Umständen sollte ein Handlungssubjekt Ihre Auffassung nach auch für unvorhergesehene Handlungsfolgen verantwortlich gemacht werden können?
+
+7.  Erläutern Sie anhand eines spieltheoretischen Beispiels den Begriff der Systemverantwortung. Wer ist in diesem Zusammenhang das Verantwortungssubjekt?
+
+8.  Erläutern Sie die Begriffe Tugendethik, Pflichtenethik und Utilitarismus/teleologische Ethik.
+
+9.  Grenzen Sie Vertragstheorien von der Diskursethik ab. Welche Eigenschaften muss nach Auffassung der Diskursethik ein Diskurs erfüllen, damit sei Ergebnis ethische Relevanz aufweist?
+
+10. Inwiefern gibt es aus teleologischer Perspektive eine Pflicht positives Wissen zu erlangen?
+
+11. Was meinen horizontale und vertikale Gerechtigkeit?
+
+12. Welche Dimensionen der Gerechtigkeit sind nach @ensteGerechtigkeitImInternationalen2014 empirisch relevant?
+
+13. Gibt es Ihrer Auffassung nach eine Verantwortung für Bewohner:innen reicherer Staaten zur Unterstützung ärmerer Staaten?
+
+# Literatur {.unnumbered}
+
+::: {style="text-indent: -40px; padding-left: 40px;"}
+::: {#refs}
+:::
+:::
