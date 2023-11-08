@@ -51,7 +51,11 @@ generate_svg(qr, filename = "qr.svg")
 
 ## Fragestellungen
 
+<<<<<<< HEAD
 -   Welches Ausmaß und unter welchen Umständen ist Ungleichheit Gerecht?
+=======
+- Welches Ausmaß und unter welchen Umständen ist Ungleichheit gerecht?
+>>>>>>> 8b931ecb045eb0c3bd8926eda91c1281531416fd
 
 -   Wie kann die Belastung durch Veränderung gerecht verteilt werden (betriebswirtschaftlich und gesamtgesellschaftliches)
 
@@ -520,6 +524,28 @@ Elemente und Beziehungen des Verantwortungsbegriffs nach @lohStrukturenUndRelata
 
 ```
 
+# Anwendung: Klimaschutzpolitik und Gerechtigkeit {-}
+
+Bitte lesen Sie folgenden Text: [Müller-Salo, Johannnes & Pritzl, Rupert: Gerechtigkeit und Effizienz in der Klimapolitik, in: Wirtschaftsdienst 101 (2021), S. 971-976.](https://www.wirtschaftsdienst.eu/inhalt/jahr/2021/heft/12/beitrag/gerechtigkeit-und-effizienz-in-der-klimapolitik.html)
+
+```{r,  echo=FALSE, warning=FALSE, out.width="30%"}
+library(qrcode)
+
+qr <- qr_code('https://www.wirtschaftsdienst.eu/inhalt/jahr/2021/heft/12/beitrag/gerechtigkeit-und-effizienz-in-der-klimapolitik.html')
+plot(qr)
+
+```
+
+Bitte beantworten Sie die folgenden Fragen:
+
+a) Wofür benötigen Sie noch weitere Erläuterungen?
+
+a) Welche Beziehung besteht nach diesem Text zwischen Effizienz und Gerechtigkeit?
+
+a) Auf welcher Ebene wird die Verantwortung für Klimaschutzpolitik angesiedelt (Individuum, Kollektiv oder System?)
+
+a) Was sind die Schlussfolgerungen für die deutsche Klimaschutzpolitik und wie bewerten Sie diese?
+
 # Ethische Grundpositionen
 
 ## Tugendethik
@@ -598,16 +624,27 @@ Vgl. @duclosHorizontalVerticalEquity2018
 
 ## Vertikale Gerechtigkeit
 
--   Staatliche Belastungen und Begünstigungen sollen so ausgerichtet sein, dass das Ausmaß der Ungleichheit verringert wird.
+- Ungleichheit soll in angemessener Weise berücksichtigt werden
+
+-   Mögliche Folge: Staatliche Belastungen und Begünstigungen sollen so ausgerichtet
+    sein, dass das Ausmaß der Ungleichheit verringert wird.
 
 -   (Diskussion: Begründung?)
 
 ## Horizontale Gerechtigkeit
 
--   Individuen in ethisch relevanter gleicher Position sollen sich auch nach staatlicher Behandlung in ethisch vergleichbarer Position befinden\
+
+- Gleiche Sachverhalte sollen gleich behandelt werden
+
+-   Individuen in ethisch relevanter gleicher Position sollen sich auch
+    nach staatlicher Behandlung in ethisch vergleichbarer Position
+    befinden\
     $\rightarrow$ Schutz vor willkürlicher Diskriminierung
 
--   Begrenzung für Maßnahmen der vertikalen Gerechtigkeit: Durch staatliche Maßnahmen (zur Herstellung vertikaler Gerechtigket) soll es nicht zu einer Rangfolgenumkehr der Nutzenpositionen kommen, es sei denn, die ursprüngliche Rangfolge war ungerecht.
+-   Begrenzung für Maßnahmen der vertikalen Gerechtigkeit: Durch
+    staatliche Maßnahmen (zur Herstellung vertikaler Gerechtigket) soll
+    es nicht zu einer Rangfolgenumkehr der Nutzenpositionen kommen, es
+    sei denn, die ursprüngliche Rangfolge war ungerecht.
 
 ## Dimensionen der Gerechtigkeit
 
