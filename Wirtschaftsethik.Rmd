@@ -685,9 +685,169 @@ $\rightarrow$ konfligierende Beziehungen?
 
 $\rightarrow$ Folgen für die Wirtschaftspolitik?
 
+## Unterschiedliche Positionen zur Gerechtigkeit in der Gesellschaft
+
+Die Darstellung folgt @conradWirtschaftsethik2016
+
+### Thomas Hobbes
+
+* **Naturzustand:** Anarchie ohne Eigentum und Gerechtigkeit
+* **Menschenbild:** Nutzenmaximierer und "Wolf"
+* **Gesellschaftsvertrag:** Einschränkung der natürlichen Freiheit
+* **Souverän:** Garant für Frieden und Recht
+* **Gerechtigkeit:** Ausdruck der Verträge und der Rechtsetzung des Souveräns
+
+
+### David Hume
+
+* **Gerechtigkeit als Werturteil:** Gerechtigkeit ist nicht logisch zu begründen, sondern ein Werturteil, das sich als Gewohnheit herausgebildet hat.
+* **Gerechtigkeit als Ordnungsprinzip:** Gerechtigkeit ist die Tugend, die die Ordnung im menschlichen Zusammenleben gewährleistet.
+* **Extremer Mangel führt zu Ungerechtigkeit:** Extremer Mangel führt zu einem Zusammenbruch der gesellschaftlichen Gerechtigkeit, da dann nur der überleben kann, der egoistisch handelt.
+* **Knappheit schließt Bedürfnisgerechtigkeit aus:** Ausgehend von einer Knappheit bei den Gütern des täglichen Bedarfs kann es keine Bedürfnisgerechtigkeit geben.
+* **Leistungsgerechtigkeit als zentrale Gerechtigkeit:** Leistungsgerechtigkeit ist die zentrale Gerechtigkeit, weil sie das Gesamtwohl der Gesellschaft am besten fördert.
+* **Abkehr vom Naturzustand:** Hume lehnt den von Hobbes beschriebenen ursprünglichen Naturzustand als falsch ab.
+* **Vorbedingungen für Staatenbildung:** Staaten können erst gebildet werden, wenn es bereits soziale Ordnungen gibt.
+
+### John Locke
+
+* **Naturrecht:** Von Gott gegebene Rechte auf Leben, Freiheit und Besitz
+* **Gesellschaftsvertrag:** Übertragung der Aufgabe der Durchsetzung des Naturrechts an den Staat
+* **Aufkündbarkeit des Gesellschaftsvertrags:** Wenn der Staat den Willen der Bürger nicht vertritt
+* **Gewaltenteilung:** Instrument zur Kontrolle der Staatsmacht
+* **Legislative:** Vom Volk gewählt und an eine Verfassung gebunden
+* **Regierung:** An die Gesetze gebunden
+
+
+### Jean-Jacques Rousseau
+
+* **Naturzustand:** Frieden, Selbstgenügsamkeit, Mitleid
+* **Eigentum:** Positiv, wenn durch Arbeit gewonnen, negativ, wenn Ungleichheit verstärkt
+* **Gesellschaftsvertrag:** Bürger übertragen ihre Rechte an den Staat
+* **Interessen der Gemeinschaft:** Überragen Einzelinteressen
+* **Gleichheitspostulat:** Soziale Umverteilung durch den Staat
+* **Reichtum:** Beschränkung des Eigentums und des Einflusses der Reichen
+
+### Immanuel Kant
+
+* **Gleichheit, Freiheit und Respekt vor den Rechten anderer:** Aus der Vernunft
+* **Persönlichkeit und Würde des Menschen:** Achtung
+* **Kategorischer Imperativ:** Grundsatz für das menschliche Zusammenleben
+* **Maximen:** Leitsätze der Menschen
+* **Kategorischer Imperativ:** Handlungsmaxime, die allgemeingültig ist
+* **Frage nach den Auswirkungen der Handlungen:** Ziel ist, Gutes zu tun oder niemandem Schaden zuzufügen
+
+
+### Soziologische Institutionentheorien (Durkheim, Weber)
+
+* **Freiheit des Menschen:** Bedarf sozialer Regeln zur Vermeidung von Schädigung Dritter
+* **Interessen:** Nicht ausreichend für stabile soziale Beziehungen
+* **Moral:** Erzeugt soziale Regeln
+* **Legitime Ordnungen:** Ermöglichen soziale Beziehungen
+* **Missbrauch der Macht:** Kann durch soziale Regeln verhindert werden
+
+
+### Karl Marx
+
+**Grundlage:** Klassenkampf zwischen Kapitalisten und Arbeitern
+
+**Ursache für Ungerechtigkeit:** Abhängigkeit der Arbeit vom Kapital
+
+**Ziel:** Kommunismus
+
+**Gerechtigkeitsprinzip:** "Jeder nach seinen Fähigkeiten, jedem nach seinen Bedürfnissen"
+
+
+### Friedrich August von Hayek
+
+* **Rechtliche und politische Gleichheit:** Ja
+* **Wirtschaftliche Gleichheit:** Nein
+* **Marktregeln:** Gegeben und unveränderbar
+* **Ergebnis des Marktes:** Gerecht, wenn die Spielregeln eingehalten werden
+* **Soziale Absicherung:** Ja, Existenzminimum
+* **Verteilungsgerechtigkeit:** Auskömmliches Leben, aber keine Gleichverteilung
+* **Marktkonforme Sozialpolitik:** Zufriedenheit und Sicherheit der Gesellschaft erhöhen, Produktivität der Wirtschaft steigern
+
+
+### John Rawls
+
+* **Aufgabe der gesellschaftlichen Ordnung:** Konflikte bewältigen und Interessen harmonisieren
+* **Bildung von gesellschaftlichen Institutionen:** Gemäß den gesellschaftlichen Vorstellungen von Gerechtigkeit
+* **Urzustand:** Gleichberechtigte Gesellschaftsmitglieder legen Grundordnung fest
+* **Ziel des Urzustands:** Kooperationsgewinne erzielen
+* **Hilfsmittel:** Schleier des Nichtwissens
+* **Grundsätze des Urzustands:**
+    * Gleichheit vor dem Gesetz
+    * Demokratische Freiheiten
+    * Rechtsstaatlichkeit
+    * Menschenrechte
+* **Zentral:** Chancengleichheit
+* **Differenzprinzip:** Ungleichheiten zulässig, wenn sie einen Vorteil für die am wenigsten Begünstigten bewirken
+* **Position:** Egalitärer Liberalismus
+* **Soziale Umverteilung:** Vor allem im Bildungsbereich
+* **Hohe Sparquote:** Gerechtigkeit zwischen den Generationen
+
+
+### David Gauthier
+
+* **Grundlage:** Nutzenmaximierende Rationalität
+* **Moral:** Gewählt, wenn sie dem Individuum Vorteile bringt
+* **Gefangenendilemma:** Kooperation bei mehreren Runden bringt Gewinne
+* **Voraussetzung:** Gegenseitiges Vertrauen
+* **Unvollkommene Marktbedingungen:** Fairer Ausgleich durch Verhandlungslösung
+* **Faire Verhandlungslösung:** Faire Ausgangsbedingungen, Vernunft, Maximalergebnis mit gleichen Minimalzugeständnissen (Minimax-Prinzip)
+* **Menschenbild:** Homo oeconomicus
+* **Begründungsansatz:** Moralökonomik
+
+
+### Thomas Scanlon
+
+* **Grundlage:** Vernunftsabwägung nach Kant
+* **Gerechtigkeitspostulate:** Müssen von anderen Personen als nicht abweisbar anerkannt werden
+* **Inhalt:** Verhalten nach den Folgen für Dritte bewerten
+* **Ergebnis:** Egalitarismus
+    * Chancengleichheit
+    * Begrenzung von Macht im Wirtschaftssystem
+    * Umverteilung
+* **Menschenbild:** Selbstgestaltung und Selbstverantwortung
+
+
+### Jürgen Habermas
+
+* **Rechtspositivismus, Naturrecht und Vernunft als Begründungen für gesellschaftliche Regelungen ablehnen**
+* **Recht und Moral als gesellschaftliche Vorstellungen gehören zusammen und unterliegen dem gesellschaftlichen Wandel**
+* **Legitimation des Rechts durch gesellschaftlichen Diskurs**
+    * Beteiligung aller Betroffenen
+    * Demokratie, Rechtsstaat und öffentliche freie Meinungsbildung als Grundlage
+
+
+
+### Axel Honneth
+
+* **Ausgangspunkt:** Hegels Theorie der Anerkennung
+* **Fokus:** Intersubjektive Beziehungen, soziale Interaktion und Anerkennung
+* **Gerechtigkeit:** Soziale Gleichberechtigung in Form von Anerkennung gleicher Rechte
+* **Verteilungsgerechtigkeit:** Verteilung von Gütern, Pflichten und Rechten
+* **Bedürfnisgerechtigkeit:** Aus Nächstenliebe abgeleitet
+* **Leistungsgerechtigkeit:** Aus fairer Arbeitsteilung hergeleitet
+
+
+### Amartya Sen
+
+* **Wohlstand:** Gestaltungsfreiheit, um das Leben nach den eigenen Bedürfnissen zu gestalten
+* **Gerechtigkeit:** Je mehr Selbstverwirklichungschancen, desto gerechter
+* **Selbstverwirklichungschancen:**
+    * Politische und wirtschaftliche Freiheiten
+    * Chancengleichheit
+    * Meinungs- und Pressefreiheit
+    * Soziale Sicherheit
+* **Globale Gerechtigkeit:**
+    * Utilitarismus und Kants Vernunftsethik
+    * Chancengleichheit nur durch Weltregierung möglich, was unrealistisch ist
+
+
 ## Die Relevanz von statlicher Umverteilung
 
-```{r echo=F, warning=F, message=F}
+```{r echo=F, warning=F, message=F, eval=F, include=F}
 library(tidyverse)
 library(eurostat)
 
