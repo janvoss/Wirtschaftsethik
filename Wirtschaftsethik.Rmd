@@ -899,12 +899,12 @@ p
 
 # Anwendung: Globale Unterschiede
 
-Lesen wir etwas: <https://ourworldindata.org/global-economic-inequality>
+Lesen wir etwas: <https://ourworldindata.org/global-economic-inequality-introduction>
 
 ```{r qr_inequality,  echo=FALSE, warning=FALSE}
 library(qrcode)
 
-qr_inequality <- qr_code('https://ourworldindata.org/global-economic-inequality')
+qr_inequality <- qr_code('https://ourworldindata.org/global-economic-inequality-introduction')
 #plot(qr)
 
 generate_svg(qr_inequality, filename = "qr_inequality.svg")
@@ -925,9 +925,14 @@ generate_svg(qr_inequality, filename = "qr_inequality.svg")
 
 -   Chancengleichheit von morgen hängt an Ergebnisgleichheit von heute.
 
+- Massives Wachstum erforderlich, um weltweite Ungleichheit zu verringern $\rightarrow$ Herausforderung für nachhaltige Entwicklung?
+
+
 ## Offene Punkte
 
 -   Eurozentrische Perspektive?
+
+- $\dots$ 
 
 ## Offene Fragen
 
@@ -1131,6 +1136,15 @@ plot(qr)
 - [Verein für Socialpolitik: Vereinigung der WirtschaftswissenschaftlerInnen im deutschsprachigen Raum](https://www.socialpolitik.de/de/history)
 
 - [Ethikkodex](https://www.socialpolitik.de/sites/default/files/2022-01/Ethikkodex_2021_12_08_DE_final_0.pdf)
+
+  ```{r,  echo=FALSE, warning=FALSE, out.width="30%"}
+library(qrcode)
+
+qr <- qr_code('https://www.socialpolitik.de/sites/default/files/2022-01/Ethikkodex_2021_12_08_DE_final_0.pdf')
+
+plot(qr)
+
+```
 
 
 # Übungsfragen {.unnumbered}
