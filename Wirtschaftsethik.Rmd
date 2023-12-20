@@ -1109,6 +1109,32 @@ t
 
 -   Individuelle vs. kollektive Verantwortung (Systemverantwortung)
 
+
+# Ethik in der Wirtschaftswissenschaft
+
+## Wissenschaftliche Politikberatung
+
+
+Wirtschaftsdienst Zeitgespräch: [Ethik und Institutionen in der wissenschaftlichen Politikberatung](https://www.wirtschaftsdienst.eu/inhalt/jahr/2022/heft/7/beitrag/ethik-und-institutionen-der-wissenschaftlichen-politikberatung.html)
+
+
+```{r,  echo=FALSE, warning=FALSE, out.width="30%"}
+library(qrcode)
+
+qr <- qr_code('https://www.wirtschaftsdienst.eu/inhalt/jahr/2022/heft/7/beitrag/ethik-und-institutionen-der-wissenschaftlichen-politikberatung.html')
+
+plot(qr)
+
+```
+
+
+## Ethikkodex des Vereins für Socialpolitik
+
+- [Verein für Socialpolitik: Vereinigung der WirtschaftswissenschaftlerInnen im deutschsprachigen Raum](https://www.socialpolitik.de/de/history)
+
+- [Ethikkodex](https://www.socialpolitik.de/sites/default/files/2022-01/Ethikkodex_2021_12_08_DE_final_0.pdf)
+
+
 # Übungsfragen {.unnumbered}
 
 1.  Grenzen Sie Ethik und Moral voneinander ab.
