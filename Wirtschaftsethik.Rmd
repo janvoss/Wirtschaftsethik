@@ -51,11 +51,9 @@ generate_svg(qr, filename = "qr.svg")
 
 ## Fragestellungen
 
-<<<<<<< HEAD
 -   Welches Ausmaß und unter welchen Umständen ist Ungleichheit Gerecht?
-=======
+
 - Welches Ausmaß und unter welchen Umständen ist Ungleichheit gerecht?
->>>>>>> 8b931ecb045eb0c3bd8926eda91c1281531416fd
 
 -   Wie kann die Belastung durch Veränderung gerecht verteilt werden (betriebswirtschaftlich und gesamtgesellschaftliches)
 
