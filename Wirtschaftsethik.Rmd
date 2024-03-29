@@ -1,7 +1,7 @@
 ---
 title: "Wirtschaftsethik"
 author: "Prof. Dr. Jan S. Voßwinkel"
-date: "WiSe 2023/24"
+date: "SoSe 2024"
 
 output:
   #  bookdown::epub_book:
