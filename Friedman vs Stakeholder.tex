@@ -1,0 +1,88 @@
+\documentclass[border=10pt]{standalone}
+\usepackage{smartdiagram} %für tikz
+\usepackage[ngerman]{babel} %Sprache deutsch (für Silbentrennung)
+\usepackage[utf8]{inputenc} %UTF-Code für Umlaute
+\usepackage[T1]{fontenc} %Trennung von Wörtern mit Umlauten
+\usepackage{lmodern} %Schriftart
+%\usepackage{libertine}
+\renewcommand*\familydefault{\sfdefault} %Serifenlose Schrift als Standard
+\usepackage{microtype}
+\usesmartdiagramlibrary{additions}
+\usetikzlibrary{fit}
+\usetikzlibrary{decorations.pathreplacing}
+
+\tikzstyle{container} = [draw, rectangle, semithick, inner sep=0.3cm
+]
+
+%Aufzählungsstriche
+\AtBeginDocument{
+	\def\labelitemi{\normalfont\bfseries{--}}
+}
+
+
+\begin{document}
+
+		\begin{tikzpicture}[
+		every node/.style = {shape=rectangle, % is not necessary, default node's shape is rectangle
+			rounded corners,
+		%	draw, semithick,
+			text width=5cm,
+			align=center,
+			node distance=0.1cm
+		}
+		]
+		
+%Überschriften
+	\node (Friedman)[text depth=.75ex  % Schrift immer auf der gleichen Höhe
+   		]{\textbf{Maximiere den Gewinn!}
+     };
+    
+    \node (Stakeholder)[text depth=.75ex, right =  of Friedman
+    ]{\textbf{Achte auf die Stakeholder!}
+    };
+
+
+
+%Spalten
+	\node[below= of Friedman, align=left](){
+	\begin{itemize}
+		\item Anreiz zu Innovationen $\rightarrow$ Bessere Produkte/Prozesse
+		\item Wachstum generiert Arbeitsplätze
+		\item Steueraufkommen
+		\item Man kann nur helfen, wenn es einem gut geht
+		\item Andere Unternehmen steigen in Markt ein: Wettbewerb erhöht!
+		\item Gewinne ermöglichen Rücklagen/ Soliditätx
+		
+	\end{itemize}
+	};
+
+\node[below= of Stakeholder, align=left](){
+	\begin{itemize}
+		\item Reselienz v. Lieferketten $\rightarrow$ langfristige Interessen!
+		\item Kundenzufriedenheit, langfristige Bindung
+		\item Image! (schon wieder: langfristige Interessen)
+		\item Arbeitnehmer Motivation, Fluktuation vermeiden, weniger Fehler
+		\item Anteilseigner: Zukunftsfähigkeit
+	\end{itemize}
+};
+
+
+		
+     
+%Horizontale Linie unter Überschriften	
+	\draw [
+	transform canvas={yshift=-0.1cm}
+	] (Friedman.south west) -- (Stakeholder.south east);
+	
+	
+
+	
+%Überschrift
+	\path [draw=none] (Friedman) -- (Stakeholder) node [midway] (Mittelpunkt) {};	
+	\node[above= 1cm of Mittelpunkt, text width=15cm] (Ueberschrift) {\huge Unternehmensziele};
+	
+	\node[below=of Ueberschrift] () {Wirtschaftsethik 27. Juni 2023};
+	
+	\end{tikzpicture}
+
+\end{document}

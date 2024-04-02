@@ -1,0 +1,28 @@
+---
+title: "Themenliste Essays zur Vorlesung Wirtschaftsethik"
+author: "Prof. Dr. Jan S. Voßwinkel"
+date: "WiSe 2022/23"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+# Rahmenbedingungen
+
+Die folgende Liste enhtält Themenkomplexe für mögliche Essays. Das tatschliche Thema/die Fragestellung wählen Sie bitte selbst. Gewünschter Umfang (bei üblicher Formatierung): 5-7 Seiten.
+
+Bitte tragen Sie sich in neo in die Essay-Liste ein (wird noch freigeschaltet). Mehrfachvergabe von Themenkomlexen und Themen/Fragestellungen ist möglich. Für Fragen stehe ich gerne zur Verfügung.
+
+Beginn: Ab sofort
+
+Abgabe: 10. Januar 2023
+
+# Themenkomplexe
+
+1. Ethische Imperative und nachhaltiger Konsum
+
+2. Gender Pay Gap -- Erklärungsansätze und ethische Beurteilung
+
+3. Ethische Dimensionen des Wirtschaftswachstums
+
+4. Wirtschaftsethische Fragen im Zusammenhang von Change-Prozessen in Unternehmen
