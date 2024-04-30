@@ -683,6 +683,24 @@ $\rightarrow$ konfligierende Beziehungen?
 
 $\rightarrow$ Folgen für die Wirtschaftspolitik?
 
+## Gerechtigkeit und Gleichheit
+
+Bitte lesen Sie den folgenden Text:
+
+[Peter Koller: Gerechtigkeit und Gleichheit](https://link.springer.com/chapter/10.1007/978-3-658-22107-2_20)
+
+```{r qr2,  echo=FALSE, warning=FALSE}
+library(qrcode)
+
+qr <- qr_code('https://link.springer.com/chapter/10.1007/978-3-658-22107-2_20')
+#plot(qr)
+
+generate_svg(qr, filename = "qr.svg")
+
+```
+
+![QR-Code](qr.svg){width=60% }
+
 ## Unterschiedliche Positionen zur Gerechtigkeit in der Gesellschaft
 
 Die Darstellung folgt @conradWirtschaftsethik2016
@@ -1137,7 +1155,7 @@ plot(qr)
 
 - [Ethikkodex](https://www.socialpolitik.de/sites/default/files/2022-01/Ethikkodex_2021_12_08_DE_final_0.pdf)
 
-  ```{r,  echo=FALSE, warning=FALSE, out.width="30%"}
+```{r,  echo=FALSE, warning=FALSE, out.width="30%"}
 library(qrcode)
 
 qr <- qr_code('https://www.socialpolitik.de/sites/default/files/2022-01/Ethikkodex_2021_12_08_DE_final_0.pdf')
