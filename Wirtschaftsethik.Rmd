@@ -524,6 +524,8 @@ Elemente und Beziehungen des Verantwortungsbegriffs nach @lohStrukturenUndRelata
 
 # Anwendung: Klimaschutzpolitik und Gerechtigkeit {-}
 
+## Effizienz und Gerechtigkeit in der Klimaschutzpolitik{-}
+
 Bitte lesen Sie folgenden Text: [Müller-Salo, Johannnes & Pritzl, Rupert: Gerechtigkeit und Effizienz in der Klimapolitik, in: Wirtschaftsdienst 101 (2021), S. 971-976.](https://www.wirtschaftsdienst.eu/inhalt/jahr/2021/heft/12/beitrag/gerechtigkeit-und-effizienz-in-der-klimapolitik.html)
 
 ```{r,  echo=FALSE, warning=FALSE, out.width="30%"}
@@ -546,6 +548,43 @@ a) Auf welcher Ebene wird die Verantwortung für Klimaschutzpolitik angesiedelt 
 
 a) Was sind die Schlussfolgerungen für die deutsche Klimaschutzpolitik und wie bewerten Sie diese?
 
+
+
+
+## Stellungnahme des Deutschen Ethikrats zur Klimagerechtigkeit {-}
+
+### Der Deutsche Ethikrat {-}
+
+[Zum Ethikrat](
+https://www.ethikrat.org/)
+
+### Die aktuelle Stellungnahme {-}
+
+[Stellungnahme des Ethikrats](
+https://www.ethikrat.org/fileadmin/Publikationen/Stellungnahmen/deutsch/klimagerechtigkeit.pdf)
+
+```{r,  echo=FALSE, warning=FALSE, out.width="30%"}
+library(qrcode)
+
+qr <- qr_code('https://www.ethikrat.org/fileadmin/Publikationen/Stellungnahmen/deutsch/klimagerechtigkeit.pdf')
+plot(qr)
+
+```
+
+1. Bitte lesen Sie zunächst insb. den Abschnitt 2.7 zu den Grundlagen der Klimaethik.
+
+  a) Welche Fragen haben Sie?
+  
+  a) Welche Kernaussagen entnehmen Sie der Darstellung?
+
+  
+2. Lesen Sie nun bitte insbesondere die Abschnitte 3.1 bis 3.3.
+
+  a) Welche Fragen haben Sie?
+  
+  a) Welche Kernaussagen entnehmen Sie der Darstellung?
+
+  
 
 # Ethische Grundpositionen
 
