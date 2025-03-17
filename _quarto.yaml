@@ -13,16 +13,16 @@ book:
 #  issued: "Sommersemester 2024"
   chapters:
     - index.qmd
-    - intro.qmd
-    - Begriff.qmd
-    - Grundmodelle.qmd
-    - Anwendungen.qmd
-    - Ausblick.qmd
+  #  - intro.qmd
+  #  - Begriff.qmd
+  #  - Grundmodelle.qmd
+  #  - Anwendungen.qmd
+  #  - Ausblick.qmd
    # - summary.qmd
-    - literatur.qmd
-    - Uebungsfragen.qmd
+  #  - literatur.qmd
+  #  - Uebungsfragen.qmd
 
-bibliography: Wirtschaftswachstum.bib
+bibliography: Wirtschaftsethik.bib
 #csl: dresden.csl #Ohne funktioniert es gut, mit nicht. 
 # Aber warum? Und was ist mit Herausgeberwerken (Hrsg vs. Ed?)
 
