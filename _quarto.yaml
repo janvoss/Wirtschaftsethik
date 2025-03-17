@@ -13,14 +13,13 @@ book:
 #  issued: "Sommersemester 2024"
   chapters:
     - index.qmd
-  #  - intro.qmd
-  #  - Begriff.qmd
-  #  - Grundmodelle.qmd
-  #  - Anwendungen.qmd
-  #  - Ausblick.qmd
-   # - summary.qmd
-  #  - literatur.qmd
-  #  - Uebungsfragen.qmd
+    - intro.qmd
+    - Begriff.qmd
+    - Grundmodelle.qmd
+    - Anwendungen.qmd
+    - Ausblick.qmd
+    - literatur.qmd
+    - Uebungsfragen.qmd
 
 bibliography: Wirtschaftsethik.bib
 #csl: dresden.csl #Ohne funktioniert es gut, mit nicht. 
