@@ -16,8 +16,12 @@ generate_svg(qr, filename = "qr.svg")
 
 - Unterlagen: <https://janvoss.github.io/Wirtschaftsethik/>
 
-- Modul: ###209-021 Wachstum und Transformation [Modulhandbuch](https://www.hfwu.de/fileadmin/user_upload/FAVM/ZuB/Module/Modulhandbuch_spob_zub_2022_WiSe_Stand_2022_WiSe.pdf) 
+- Modul: 209-034 Governance und Transformation [Modulhandbuch](https://www.hfwu.de/fileadmin/user_upload/FAVM/ZuB/Module/Modulhandbuch_spob_zub_2022_WiSe_Stand_2022_WiSe.pdf) 
 
-- Weitere Veranstaltung im ModuL: Strukturpolitik
+- Weitere Veranstaltung im ModuL:
 
-- Prüfungsleistung: K60, diese VL davon 50%
+  - Wirtschaftlicher Wandel und Global Governance
+  
+  - Change Management
+
+- Prüfungsleistung: M15, diese VL  2 Min (16,7% der Notengewichtung)
