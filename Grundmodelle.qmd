@@ -50,3 +50,95 @@
     -   Mündigkeit
     -   Rationale Motivation
 
+## Gerechtigkeit und Gleichheit
+
+Bitte lesen Sie den folgenden Text:
+
+[Peter Koller: Gerechtigkeit und Gleichheit](https://link.springer.com/chapter/10.1007/978-3-658-22107-2_20)
+
+```{r qr2,  echo=FALSE, warning=FALSE}
+library(qrcode)
+
+qr <- qr_code('https://link.springer.com/chapter/10.1007/978-3-658-22107-2_20')
+#plot(qr)
+
+generate_svg(qr, filename = "qr.svg")
+
+```
+
+![QR-Code](qr.svg){width=60% }
+
+### Gerechtigkeit als Teilbereich der Moral
+
+* **Bewertungsmaßstäbe und Richtlinien des sozialen Handelns**
+
+* **Moralische Standards:**
+  * Gelten für Personen, die sie autonom anerkennen
+  * Beanspruchen allgemeine Geltung
+  * Haben besonderes Gewicht
+
+- Anwendungsfeld: Interessenkonkurrenz
+
+- Wem wird Gerechtigkeit zu- bzw. abgesprochen:
+
+  - Personen
+
+  - Handlungen
+
+  - Handlungsregeln/Institutionen
+
+  - sozialen Verhältnissen
+
+  - gesellschaftlichen Ordnungen
+
+  - internationales System/ globale Wirtschaftsordnung
+
+-Formelle Gerechtigkeit:
+
+  - Gleiches gleich behandeln
+
+  - soziales Handeln soll (nachvollziehbaren) Regeln folgen
+
+- Materiale Gerechtigkeit:
+
+  - Inhaltliche Füllung schwierig: z.B. Arrows Unmöglichkeitstheorem
+
+- Vier Arten von Gerechtigkeit
+
+  - Distributive Gerechtigkeit  
+  $\rightarrow$ Gleichverteilung, sofern keine Gründe für Ungleichverteilung vorliegen
+
+  - Kontraktuale Rerechtigkeit  
+  $\rightarrow$ Ausschluss von Irreführung/Betrug
+
+  - Politische Gerechtigkeit (Herrschaftsverhältnisse)  
+  $\rightarrow$ Entscheidungen im Sinne Interesse der Beherrschten, Grundlage: allgemeine Regeln, Inhalt: allgemein annehmbare Zwecke
+
+  - Korrektive Rerechtigkeit (Unrechtsverhältnisse)  
+  $\rightarrow$ Korrektur von Unrecht
+
+### Soziale Gerechtigkeit
+
+- Ausgangspunkt: Grundsätzliche moralische Gleichheit aller Menschen
+
+- Gesellschaft als Ort der individuellen Betätigung (Liberalismus) vs. Gesellschaft zum Zweck der gemeinsamen Daseinsbewältigung (Sozialismus)
+
+- Mittelweg (in enger Anlehnung an Koller): "Gesellschaft als ein soziales Gemeinwesen (...), das zwar seinen Mitgliedern als selbständigen Personen entsprechende Grundrechte einräumen muss, um ihnen ein selbstbestimmtes Leben zu garantieren, zugleich aber auch gemeinschaftliche Angelegenheiten einschließt, deren Vorteile und Obliegenheiten einer gerechten Verteilung gemäß dem Prinzip konditionaler Gleichbehandlung bedürfen."
+
+- Gesellschaft ist also:   
+  - Besitzgemeinschaft (natürliche Ressourcen, kulturelles Erbe)
+
+  - Kooperationsgemeinschaft (Rechte anderer respektieren, Teilnahme an politischer Willensbildung)
+
+  - Solidaritätsgemeinschaft (Solidaritätsversprechen und -verpflichtung)
+
+
+- Konditionale Gleichverteilung von Gütern
+
+  - Leistungsargument
+
+  - Freiheitsargument
+
+  - Bedürfnisargument   
+
+
