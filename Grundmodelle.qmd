@@ -1,1 +1,52 @@
-# Grundmodelle
+# Grundpositionen
+
+## Tugendethik
+
+-   Suche nach Charaktereigenschaften, die menschliche Triebe (in gewünschter Weise) steuern
+
+-   Ziel: Persönliche Vervollkommnung
+
+## Pflichtenethik
+
+-   Willensfreiheit verlangt die Überwindung menschlicher Neigungen.
+
+-   Wer aus einer Pflicht heraus handelt, d.h., wer die Einsicht in das moralisch Gebotene über seine menschlichen Neigungen stellt, handelt moralisch.
+
+## Utilitarismus/teleologische Ethik
+
+-   Teleologische Ethik: Die Folgen des Handelns sind entscheidend für die Beurteilung von Handlungen
+
+-   Spezialfall Utilitarismus: Die Summe der Nutzen in der Gesellschaft ist zu erhöhen (Problem: Konsequenzen für den/die Einzelne:n)
+
+-   Probleme
+
+    -   „Paradox der Quantität" (Durchschnittsnutzen kann sinken, Gesamtnutzen aber steigen)
+
+
+    -   Berücksichtigung des *tatsächlichen* Nutzens oder des Nutzens einer *hypothetischen gut informierten* Person?
+
+## Vertragstheorien
+
+-   Freie und gleiche/gleichberechtigte Individuen einigen sich auf Rechte und Pflichten
+
+-   Moral entsteht durch Übereinkunft
+
+-   Anwendungsfall: Einstimmige Einigung hinter dem Schleier des Nichtwissens
+
+## Diskursethik
+
+-   Ausgangspunkt: Es gibt keine objektiv begründbaren universellen Wertevorstellungen
+
+-   Gesucht: Ein Konsens über Wertungen
+
+-   Der Konsens kann nur aus einem Diskurs mit den folgenden Eigenschaften hervorgehen [@holzmannWirtschaftsethik2019]:
+
+    -   Beteiligung aller
+    -   Chancengleichheit
+    -   Zwanglosigkeit
+    -   Handlungsentlastung (kein Zeit- und Handlungsdruck)
+    -   Unbeschränkte Information
+    -   Universalisierbarkeit
+    -   Mündigkeit
+    -   Rationale Motivation
+
