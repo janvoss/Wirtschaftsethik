@@ -18,3 +18,75 @@
   - Künstliche Intelligenz 
   - Veränderungen der Global Governance  
   - \dots 
+
+## Ethik und Veränderung
+
+
+```{python}
+
+# Ethik und Veränderungen
+
+from graphviz import Digraph
+from IPython.display import display
+
+dot = Digraph()
+
+# Layout
+dot.attr(rankdir='LR')
+
+# Knoten
+
+
+dot.node('a', 'Veränderung')
+
+dot.node('b', 'Ethische Probleme')
+
+dot.node('c', 'Ethische Problemlage')
+
+dot.node('d', 'Veränderung')
+
+
+# Kanten
+dot.edge('a', 'b', label= 'verursacht')
+
+
+dot.edge('c', 'd', label= 'erfordert')
+
+# Display
+display(dot)
+```
+
+```{python}
+
+# Ethik und Veränderungen
+
+from graphviz import Digraph
+from IPython.display import display
+
+dot = Digraph()
+
+# Layout
+dot.attr(rankdir='LR',
+         nodesep='1.5')
+
+# Knoten
+
+
+dot.node('a', 'Ethische Problemlage')
+
+dot.node('b', 'Veränderung')
+
+
+
+# Kanten
+
+
+dot.edge('a', 'b', label= 'erfordert', constraint='false')
+
+dot.edge('a', 'b', style='invis')
+
+dot.edge('b', 'a', label= 'verursacht', constraint='false')
+
+# Display
+display(dot)
+```
