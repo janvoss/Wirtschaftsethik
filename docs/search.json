@@ -1,0 +1,32 @@
+[
+  {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "1  Einleitung",
+    "section": "",
+    "text": "1.1 Fragestellungen",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einleitung</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#fragestellungen",
+    "href": "intro.html#fragestellungen",
+    "title": "1  Einleitung",
+    "section": "",
+    "text": "(Wie und wieso) lassen sich Entscheidungen on ökonomischen Kontext ethisch bewerten?\nGibt es Maßstäbe für die gerechte Verteilung von Gewinnen und Belastungen aus betrieblichen und gesellschaftlichen Veränderungsprozessen?\nWelches Ausmaß und unter welchen Umständen ist Ungleichheit gerecht?\nSind wir zu mehr als zur Einhaltung von Gesetzen und Verträgen verpflichtet?\nWelche ethischen Herausforderungen bringen mit sich:\n\nWirtschaftsordnung\nökonomische Ungleichheit\nKlimawandel\n\nKlimaschutzpolitik\n\nKünstliche Intelligenz\nVeränderungen der Global Governance",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einleitung</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#ethik-und-veränderung",
+    "href": "intro.html#ethik-und-veränderung",
+    "title": "1  Einleitung",
+    "section": "1.2 Ethik und Veränderung",
+    "text": "1.2 Ethik und Veränderung\n\n\nCode\n# Ethik und Veränderungen\n\nfrom graphviz import Digraph\nfrom IPython.display import display\n\ndot = Digraph()\n\n# Layout\ndot.attr(rankdir='LR')\n\n# Knoten\n\n\ndot.node('a', 'Veränderung')\n\ndot.node('b', 'Ethische Probleme')\n\ndot.node('c', 'Ethische Problemlage')\n\ndot.node('d', 'Veränderung')\n\n\n# Kanten\ndot.edge('a', 'b', label= 'verursacht')\n\n\ndot.edge('c', 'd', label= 'erfordert')\n\n# Display\ndisplay(dot)\n\n\n\n\n\n\n\n\n\n\n\nCode\n# Ethik und Veränderungen\n\nfrom graphviz import Digraph\nfrom IPython.display import display\n\ndot = Digraph()\n\n# Layout\ndot.attr(rankdir='LR',\n         nodesep='1.5')\n\n# Knoten\n\n\ndot.node('a', 'Ethische Problemlage')\n\ndot.node('b', 'Veränderung')\n\n\n\n# Kanten\n\n\ndot.edge('a', 'b', label= 'erfordert', constraint='false')\n\ndot.edge('a', 'b', style='invis')\n\ndot.edge('b', 'a', label= 'verursacht', constraint='false')\n\n# Display\ndisplay(dot)",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einleitung</span>"
+    ]
+  }
+]
