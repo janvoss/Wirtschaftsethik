@@ -6,13 +6,13 @@ library(qrcode)
 qr <- qr_code('https://janvoss.github.io/Wirtschaftsethik')
 #plot(qr)
 
-generate_svg(qr, filename = "qr.svg")
+generate_svg(qr, filename = "qr-Titel.svg")
 
 ```
 
 |       ${}$        |  ${}$  |
 |:-----------------:|:--------------------------------------------------:|
-| ![logo](logo.png) |    ![](qr.svg){width="30%"}              |
+| ![logo](logo.png) |    ![](qr-Titel.svg){width="30%"}              |
 
 :::{.callout-note 
     icon=false 
