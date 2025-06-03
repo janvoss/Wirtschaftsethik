@@ -39,106 +39,148 @@
 
 -   Gesucht: Ein Konsens über Wertungen
 
--   Der Konsens kann nur aus einem Diskurs mit den folgenden Eigenschaften hervorgehen [@holzmannWirtschaftsethik2019]:
+-   Der Konsens kann nur aus einem Diskurs mit den folgenden Eigenschaften hervorgehen [@holzmann_wirtschaftsethik_2019]:
 
-    -   Beteiligung aller
-    -   Chancengleichheit
-    -   Zwanglosigkeit
-    -   Handlungsentlastung (kein Zeit- und Handlungsdruck)
-    -   Unbeschränkte Information
-    -   Universalisierbarkeit
-    -   Mündigkeit
-    -   Rationale Motivation
+1. **Beteiligung aller** – Jeder darf am Diskurs teilnehmen und eigene Argumente einbringen.
+
+2. **Chancengleichheit** – Alle Argumente zählen gleich, unabhängig von Person oder Position.
+
+3. **Zwanglosigkeit** – Nur das bessere Argument zählt, kein anderer Zwang ist erlaubt.
+
+4. **Handlungsentlastung** – Kein Zeit- oder Handlungsdruck beeinflusst das Argument.
+
+5. **Unbeschränkte Information** – Alle verfügen über die gleiche Informationsbasis.
+
+6. **Universalisierbarkeit** – Argumente müssen allgemeingültig sein, nicht nur individuell.
+
+7. **Mündigkeit** – Alle argumentieren vernünftig, widerspruchsfrei und meinen, was sie sagen.
+
+8. **Rationale Motivation** – Unvoreingenommenes Abwägen aller Argumente, Konsensfindung angestrebt.
+
 
 ## Gerechtigkeit und Gleichheit
 
-Bitte lesen Sie den folgenden Text:
-
-[Peter Koller: Gerechtigkeit und Gleichheit](https://link.springer.com/chapter/10.1007/978-3-658-22107-2_20)
-
-```{r qr2,  echo=FALSE, warning=FALSE}
-library(qrcode)
-
-qr <- qr_code('https://link.springer.com/chapter/10.1007/978-3-658-22107-2_20')
-#plot(qr)
-
-generate_svg(qr, filename = "qr.svg")
-
-```
-
-![QR-Code](qr.svg){width=60% }
-
-### Gerechtigkeit als Teilbereich der Moral
-
-* **Bewertungsmaßstäbe und Richtlinien des sozialen Handelns**
-
-* **Moralische Standards:**
-  * Gelten für Personen, die sie autonom anerkennen
-  * Beanspruchen allgemeine Geltung
-  * Haben besonderes Gewicht
-
-- Anwendungsfeld: Interessenkonkurrenz
-
-- Wem wird Gerechtigkeit zu- bzw. abgesprochen:
-
-  - Personen
-
-  - Handlungen
-
-  - Handlungsregeln/Institutionen
-
-  - sozialen Verhältnissen
-
-  - gesellschaftlichen Ordnungen
-
-  - internationales System/ globale Wirtschaftsordnung
-
--Formelle Gerechtigkeit:
-
-  - Gleiches gleich behandeln
-
-  - soziales Handeln soll (nachvollziehbaren) Regeln folgen
-
-- Materiale Gerechtigkeit:
-
-  - Inhaltliche Füllung schwierig: z.B. Arrows Unmöglichkeitstheorem
-
-- Vier Arten von Gerechtigkeit
-
-  - Distributive Gerechtigkeit  
-  $\rightarrow$ Gleichverteilung, sofern keine Gründe für Ungleichverteilung vorliegen
-
-  - Kontraktuale Rerechtigkeit  
-  $\rightarrow$ Ausschluss von Irreführung/Betrug
-
-  - Politische Gerechtigkeit (Herrschaftsverhältnisse)  
-  $\rightarrow$ Entscheidungen im Sinne Interesse der Beherrschten, Grundlage: allgemeine Regeln, Inhalt: allgemein annehmbare Zwecke
-
-  - Korrektive Rerechtigkeit (Unrechtsverhältnisse)  
-  $\rightarrow$ Korrektur von Unrecht
-
-### Soziale Gerechtigkeit
-
-- Ausgangspunkt: Grundsätzliche moralische Gleichheit aller Menschen
-
-- Gesellschaft als Ort der individuellen Betätigung (Liberalismus) vs. Gesellschaft zum Zweck der gemeinsamen Daseinsbewältigung (Sozialismus)
-
-- Mittelweg (in enger Anlehnung an Koller): "Gesellschaft als ein soziales Gemeinwesen (...), das zwar seinen Mitgliedern als selbständigen Personen entsprechende Grundrechte einräumen muss, um ihnen ein selbstbestimmtes Leben zu garantieren, zugleich aber auch gemeinschaftliche Angelegenheiten einschließt, deren Vorteile und Obliegenheiten einer gerechten Verteilung gemäß dem Prinzip konditionaler Gleichbehandlung bedürfen."
-
-- Gesellschaft ist also:   
-  - Besitzgemeinschaft (natürliche Ressourcen, kulturelles Erbe)
-
-  - Kooperationsgemeinschaft (Rechte anderer respektieren, Teilnahme an politischer Willensbildung)
-
-  - Solidaritätsgemeinschaft (Solidaritätsversprechen und -verpflichtung)
+Das Folgende basiert auf @koller_gerechtigkeit_2021
 
 
-- Konditionale Gleichverteilung von Gütern
+- **1. Historische Entwicklung des Gerechtigkeitsbegriffs:**
 
-  - Leistungsargument
+  - Der heutige Gerechtigkeitsbegriff hat sich in mehreren Phasen herauskristallisiert:
+  
+    - **Antike (Platon, Aristoteles):** Gerechtigkeit primär als Richtlinie interpersonalen Handelns und personale Tugend.
+    
+    - **Mittelalter (Scholastische Philosophie):** Ausweitung des Gegenstands auf soziale Institutionen (Herrschafts- und Wirtschaftsordnungen).
+    
+    - **Neuzeit (Aufklärung):** Aufwertung zum übergreifenden Grundprinzip politischer Moral.
+    - **Heute:** Gerechtigkeit als umfassender Richtwert sozialen Handelns, der Werte wie Freiheit, Gleichheit und Solidarität integriert und auf gesellschaftliche, staatliche und wirtschaftliche Ordnungen angewendet wird.
 
-  - Freiheitsargument
+- **2. Das Vokabular von Gerechtigkeit und Gleichheit:**
 
-  - Bedürfnisargument   
+  - **Gegenstände der Gerechtigkeit:**
+    - Personen  
+    - Handlungen  
+    - Regeln/Institutionen  
+    - soziale Verhältnisse  
+    - gesellschaftliche Ordnungen 
+    - internationales System
+    
+  - **Formale Gerechtigkeit:**
+    - Handlungen müssen allgemeinen Regeln folgen, die unter gleichartigen Umständen gleiche Behandlung verlangen ("Gleiches gleich behandeln")
+    
+  - **Materiale Gerechtigkeit:**  
+     Bezieht sich auf die Kriterien für die Gerechtigkeit der Regeln selbst.
+     
+  - **Vier grundlegende Arten von (materialer) Gerechtigkeit:**
+  
+    - **Distributive (Verteilungs-) Gerechtigkeit:** Aufteilung gemeinsamer Güter/Lasten, konditionale Gleichbehandlung.
+    
+    - **Kontraktuale (Tausch-) Gerechtigkeit:** Vertragsverhältnisse und Markttransaktionen, erfordert ausgewogene Bedingungen, Freiwilligkeit, Ausschluss von Betrug, ausreichende Information.
+    
+    - **Politische Gerechtigkeit:** Herrschaftsverhältnisse, Unparteilichkeit, allgemeine Vertretbarkeit von Herrschaft.
+    
+    - **Korrektive Gerechtigkeit:** Reaktion auf Unrecht durch Wiedergutmachung oder Strafe, Angemessenheit der Sanktionen.
+    
+  - Die Gerechtigkeit ganzer sozialer Formationen bemisst sich an der Gesamtheit dieser vier Arten.
+  
+  - **Verklammerung von Gerechtigkeit und Gleichheit:**
+    - Formale Gerechtigkeit enthält eine Gleichheitsforderung.
+    
+    - Distributive Gerechtigkeit baut auf der **Idee des gleichen Werts jedes Menschen auf**.
 
+- **3. Die Ideen sozialer Gerechtigkeit und Gleichheit in der Moderne:**
+  - **Normative Grundidee:** Grundsätzliche moralische Gleichheit aller Menschen; gleicher Wert und gleiche Achtung.
+  
+  - **Geltung für gesellschaftliche Ordnungen:** Gerechtigkeitsforderungen gelten für gesellschaftliche Ordnungen als Ganzes.
+  
+  - **Gesellschaftsauffassung:** Wandel von atomistisch/individualistisch zu kollektiv/kommunitär.
+  
+  - **Soziale Gerechtigkeit:** Gesamtheit der Gerechtigkeitserfordernisse für die Grundordnung einer staatlich verfassten Gesellschaft.
+  
+  - **Kontroverse über distributive soziale Gerechtigkeit:**
+  
+    - Liberale: Markt als Verteilungsmechanismus.
+    
+    - Linke: Forderung nach gleichmäßigerer Verteilung sozialer Chancen und ökonomischer Mittel.
+    
+  - **Kritik von Hayek:** Distributive Gerechtigkeit gilt nicht für große Gesellschaften (spontane Ordnungen).
+  
+  - **Entgegnung** (folgt hier eher JV als Peter Koller): Soziale Gerechtigkeit ist zunächst eine Leerformel. Es lassen sich aber Maßstäbe für Verteilungsergebnisse formulieren, die eine poltische Gemeinschaft nicht gewillt ist zu akzeptieren
+  
+  - **Gesellschaft als soziales Gemeinwesen:**
+    - **Besitzgemeinschaft:** Gemeinbesitz an Ressourcen/Kultur; Anspruch auf Teilhabe.
+    
+    - **Kooperationsgemeinschaft:** Mitglieder akzeptieren Verhaltensbeschränkungen und leisten Beiträge.
+    
+    - **Solidaritätsgemeinschaft:** Unterstützung für Hilfsbedürftige, Pflicht zum Beitrag zur sozialen Sicherung.
+    
+  - **Gegenstand der sozialen Verteilungsgerechtigkeit:** Fundamentale gesellschaftliche Güter (Rechte, Freiheiten, Teilhabe, soziale Positionen, Ressourcen).
+  
+  - **Basaler Grundsatz:** *Gleichverteilung, sofern Ungleichverteilung nicht durch triftige Gründe gerechtfertigt ist*.
+  
+  - **Rechtfertigungsgründe für Ungleichheiten:**
+    - **Leistungsargument:** Ungleichheiten zulässig bei ungleichen Leistungen/Beiträgen, wenn alle profitieren.
+    
+    - **Freiheitsargument:** Ungleichheiten zulässig, wenn sie aus selbständigem Handeln im Rahmen gerechtfertigter Rechte resultieren.
+    
+    - **Bedürfnisargument:** Ungleiche Unterstützung für Bedürftige gerechtfertigt, wenn jedes Mitglied profitieren könnte.
+    
+  - **Anwendung der Rechtfertigungsgründe:**
+  
+    - *Keine Gründe* für Ungleichverteilung bei Rechten, Freiheiten, Teilhaberechten.
+    
+    - *Plausible Gründe* für Ungleichheiten bei sozialen Positionen und Ressourcen.
 
+- **4. Soziale Verteilungsgerechtigkeit und Sozialstaat:**
+
+  - **Fünf Grundpostulate der sozialen Verteilungsgerechtigkeit:**
+  
+    - **Rechtliche Gleichheit:** Gleiche Rechte und Pflichten auf Basis allgemeiner Gesetze.
+    
+    - **Bürgerliche Freiheit:** Gleiche Freiheit zur Lebensgestaltung.
+    
+    - **Demokratische Teilhabe:** Gleichberechtigte Mitwirkung an öffentlicher Willensbildung.
+    
+    - **Soziale Chancengleichheit:** Soziale Positionen müssen allen offenstehen; materielle Chancengleichheit umstritten.
+    
+    - **Ökonomische Ausgewogenheit:** Wirtschaftliche Ungleichheiten zulässig, wenn sie für Effizienz erforderlich und begrenzt sind, sodass alle profitieren.
+    
+  - **Implikation für die politische Ordnung:** Demokratische Gesellschaftsordnung mit regulierter Marktwirtschaft und Sozialstaat.
+  
+
+  - **Notwendige sozialstaatliche Institutionen:**
+    - Öffentliches Bildungswesen.
+    - Materielle Grundsicherung.
+    - Aktive Beschäftigungspolitik (JV: warum?)
+    - Soziales Gesundheitswesen.
+    
+
+- **5. Fazit und Ausblick:**
+  - Konzepte von Gerechtigkeit und Gleichheit haben einen festen Bedeutungskern, sind aber in Ausprägung kontrovers.
+  
+  - Vorherrschende Vorstellung sozialer Gerechtigkeit basiert auf rechtlicher Gleichheit, bürgerlicher Freiheit, demokratischer Beteiligung, sozialer Chancengleichheit und wirtschaftlicher Ausgewogenheit.
+  
+  - Diese Vorstellung legt eine demokratische Ordnung mit regulierter Marktwirtschaft und Sozialstaat nahe.
+  
+  - Verwirklichung und Sicherung dieser Forderungen wird zunehmend transnational gesucht werden müssen; nationale Politik reicht nicht mehr aus.
+  
+  - Herausforderung bereits bei Menschenrechten, noch schwieriger bei sozioökonomischen Erfordernissen.
