@@ -6,6 +6,60 @@
 
 ## Internationale Beziehungen
 
+### Gerechtigkeit und Verantwortung
+
+```{python}
+
+# Wirtschaftsolitik und Wirtschaftspsychologie
+
+from graphviz import Digraph
+from IPython.display import display
+
+dot = Digraph()
+
+# Layout
+dot.attr(rankdir='LR',
+         nodesep='1,5')
+
+# Knoten
+dot.node('a', 'Gerechtigkeit',
+           shape='box', 
+           style='filled,rounded',
+           fillcolor='#0000ff33',
+           color='#0000ff',
+           penwidth='1.5',
+           width='2'
+           )
+dot.node('c', 'Verantwortung',
+           shape= 'box',
+           style='filled,rounded',
+           fillcolor='#ff000033',
+           color='#ff0000',
+           penwidth='1.5',
+           width='2'
+           )
+
+# Kanten
+#dot.edge('a', 'c', constraint= 'false', style='invis')
+dot.edge('a', 'c', constraint= 'false', label='fragt nach')
+
+
+dot.edge('a', 'c', style= 'invis')
+#dot.edge('a', 'b', style= 'invis')
+#dot.edge('b', 'c', style= 'invis')
+#dot.edge('c', 'a', constraint= 'false', style='invis')
+dot.edge('c', 'a', constraint= 'false', label='für')
+
+# Display
+display(dot)
+
+```
+
+
+### Relationale und Nicht-relationale Verantwortung
+
+### Zurechnungsgründe für Verantwortung
+
 ## Klimawandel
 
 ## Künstliche Intelligenz

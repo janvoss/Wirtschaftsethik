@@ -174,7 +174,7 @@
     "href": "Anwendungen.html#internationale-beziehungen",
     "title": "4  Anwendungen",
     "section": "4.3 Internationale Beziehungen",
-    "text": "4.3 Internationale Beziehungen",
+    "text": "4.3 Internationale Beziehungen\n\n4.3.1 Gerechtigkeit und Verantwortung\n\n\nCode\n# Wirtschaftsolitik und Wirtschaftspsychologie\n\nfrom graphviz import Digraph\nfrom IPython.display import display\n\ndot = Digraph()\n\n# Layout\ndot.attr(rankdir='LR',\n         nodesep='1,5')\n\n# Knoten\ndot.node('a', 'Gerechtigkeit',\n           shape='box', \n           style='filled,rounded',\n           fillcolor='#0000ff33',\n           color='#0000ff',\n           penwidth='1.5',\n           width='2'\n           )\ndot.node('c', 'Verantwortung',\n           shape= 'box',\n           style='filled,rounded',\n           fillcolor='#ff000033',\n           color='#ff0000',\n           penwidth='1.5',\n           width='2'\n           )\n\n# Kanten\n#dot.edge('a', 'c', constraint= 'false', style='invis')\ndot.edge('a', 'c', constraint= 'false', label='fragt nach')\n\n\ndot.edge('a', 'c', style= 'invis')\n#dot.edge('a', 'b', style= 'invis')\n#dot.edge('b', 'c', style= 'invis')\n#dot.edge('c', 'a', constraint= 'false', style='invis')\ndot.edge('c', 'a', constraint= 'false', label='für')\n\n# Display\ndisplay(dot)\n\n\n\n\n\n\n\n\n\n\n\n4.3.2 Relationale und Nicht-relationale Verantwortung\n\n\n4.3.3 Zurechnungsgründe für Verantwortung",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Anwendungen</span>"
     ]
