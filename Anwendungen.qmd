@@ -9,6 +9,9 @@
 ### Gerechtigkeit und Verantwortung
 
 ```{python}
+#| message: false
+#| warning: false
+#| fig-cap: Nach @hahn_globale_2017
 
 from graphviz import Digraph
 from IPython.display import display
@@ -54,13 +57,146 @@ display(dot)
 ```
 
 
+### Verantwortungssubjekte
+
+```{python}
+#| message: false
+#| warning: false
+
+from graphviz import Source
+from IPython.display import display
+
+dot = '''
+digraph G {
+    rankdir=TD;
+    node [shape=plaintext, width=3];
+    edge [style=invis];
+
+    subgraph cluster_0 {
+        label = "Verantwortungssubjekt";
+        labelloc = "t";
+        fontsize = 18;
+        style = "filled,rounded";
+        color = "Deepskyblue";
+
+        // Cluster 1
+        subgraph cluster_1 {
+            label = "Individuum";
+            labelloc = "t";
+           # { a1 -> a2 -> a3; }
+            a1 [label="unmittelbare individuelle\l Verantwortung\l \l  \l"];
+        }
+
+        // Cluster 2
+        subgraph cluster_2 {
+            label = "Gesellschaft";
+            labelloc = "t";
+            penwidth = 1;
+          #  {b1 -> b2 -> b3 -> b4; }
+            b1 [label="Die Verantwortung ist nicht\l einem einzelenen Individuum zuzuordnen\l- Zivilgesellschaft\l- Staat\l"];
+        }
+    }
+}
+'''
+
+src = Source(dot, format="svg")
+display(src)
+```
+
+
 ### Relationale und Nicht-relationale Verantwortung
 
-- Grundsätzlich 
 
-  
+```{python}
+#| message: false
+#| warning: false
+#| fig-cap: Nach @hahn_globale_2017
+
+from graphviz import Source
+from IPython.display import display
+
+dot = '''
+digraph G {
+    rankdir=TD;
+    node [shape=plaintext, width=3];
+    edge [style=invis];
+
+    subgraph cluster_0 {
+        label = "Verantwortung";
+        labelloc = "t";
+        fontsize = 18;
+        style = "filled,rounded";
+        color = "Cornflowerblue";
+
+        // Cluster 1
+        subgraph cluster_1 {
+            label = "Relational";
+            labelloc = "t";
+            { a1 -> a2; }
+            a1 [label="Beruht auf besonderen\l Beziehungen\l"];
+            a2 [label="- gleicher Staat\l- historische Verbundenheit\l- ...\l"];
+        }
+
+        // Cluster 2
+        subgraph cluster_2 {
+            label = "Nicht-relational";
+            labelloc = "t";
+            penwidth = 1;
+            {b1 -> b2; }
+            b1 [label="Besteht unabhängig von\l besonderen Beziehungen\l"];
+            b2 [label="- Unterstützung bei\l   Hungersnot\l- Naturkatastrophen\l- ...\l"];
+        }
+    }
+}
+'''
+
+src = Source(dot, format="svg")
+display(src)
+```
+
+Die immer engere Vernetzung der Welt (Globalisierung) legt den Gedanken nache, dass es immer mehr relationale Gründe für die Zuschreibung von Verantwortung geben kann [@hahn_globale_2017].
 
 ### Zurechnungsgründe für Verantwortung
+[@hahn_globale_2017]
+
+- Haftbarkeit
+
+  - Moralische Verantwortung (Schuld)
+
+  - Folgerverantwortung (vorhersehbare Nebeneffekte)
+
+  - Kausale Verantwortung (unvorhergesehene Nebeneffekte)
+
+- Profitieren von Unrecht
+
+- Fähigkeiten
+
+- Zugehörigkeit zu einer Gemeinschaft
+
+
+### Positionen
+
+Verantwortung erwächst aus
+
+- der **Fähigkeit** zu helfen
+
+- der **Haftbarkeit** und dem **Profitieren**
+
+- der **Zugehörigkeit** zu einer (nationalen) Gemeinschaft. Globale Verantwortung nur für
+
+  - Historischer Verantwortung (Wiedergutmachung)
+  
+  - Haftbarkeit
+  
+  - Naturkatastrophen
+  
+  - Grundlegende Menschenrechtsansprüche
+
+- **Verbundenheit**  
+  Teilnahme an einem System voneinander abhängiger Kooperations- und Wettbewerbsprozesse
+
+
+### Diskussion
 
 ## Klimawandel
 
