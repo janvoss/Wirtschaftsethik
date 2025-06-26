@@ -10,8 +10,6 @@
 
 ```{python}
 
-# Wirtschaftsolitik und Wirtschaftspsychologie
-
 from graphviz import Digraph
 from IPython.display import display
 
