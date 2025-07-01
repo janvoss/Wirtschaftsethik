@@ -206,3 +206,15 @@ Wir lesen die [Kurzfassung von @noauthor_stellungnahme_2023](https://www.ethikra
 
 
 ![](qr-KI.svg){width="60%"} 
+
+**Fragen zur Diskussion**
+
+- Was unterscheidet KI von menschlicher Intelligenz/Vernunft?
+
+- Kann KI Verantwortung übernehmen?
+
+- (Inwiefern) gefährdet KI die menschliche Autorenschaft menschlichen Handelns?
+
+- Welche Rolle sollte/kann KI (nicht) in der Bildung übernehmen?
+
+- Wie kann KI die öffentliche Meinungsbildung beeinflussen?
