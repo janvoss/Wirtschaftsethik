@@ -1,5 +1,4 @@
 
-
 ```{r qr,  echo=FALSE, warning=FALSE}
 library(qrcode)
 
@@ -11,8 +10,6 @@ generate_svg(qr, filename = "qr-Titel.svg")
 ```
 
 ```{r qr-KI,  echo=FALSE, warning=FALSE}
-
-# Hier geparkt. qr-Code wird bei "Anwendungen" im Unterabschnitt KI eingebunden. Da dort auch python ist, ist der R-Code hier
 
 library(qrcode)
 
