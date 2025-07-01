@@ -207,16 +207,187 @@ Wir lesen die [Kurzfassung von @noauthor_stellungnahme_2023](https://www.ethikra
 
 ![](qr-KI.svg){width="60%"} 
 
-**Fragen zur Diskussion**
+### Fragen zur Diskussion
 
-- Was unterscheidet KI von menschlicher Intelligenz/Vernunft?
+#### Was unterscheidet KI von menschlicher Intelligenz/Vernunft?
 
-- Kann KI Verantwortung übernehmen?
+- Der Deutsche Ethikrat stellt einen normativ grundlegenden Unterschied zwischen Mensch und Maschine fest.
+- Künstliche Intelligenz (KI) und menschliche Intelligenz bzw. Vernunft unterscheiden sich in mehreren zentralen Aspekten:
 
-- (Inwiefern) gefährdet KI die menschliche Autorenschaft menschlichen Handelns?
+- Qualitativer vs. Quantitativer Unterschied der Intelligenzbegriffe:
+  - Unterscheidung zwischen enger/schwacher KI und breiter/starker KI.
+  - Enge KI simuliert menschliche Fähigkeiten in einem klar umrissenen Bereich für spezifische Aufgaben.
+  - Breite KI erweitert das Spektrum über einzelne Domänen hinaus.
+  - Entstehung einer starken KI wäre ein qualitativer Sprung: starke KI hätte mentale Zustände, Einsichtsfähigkeit und Emotionen.
+  - Philosophisch werden solche Visionen bezweifelt oder als problematisch angesehen.
+  - Der Begriff „Intelligenz“ in „Künstliche Intelligenz“ ist eher metaphorisch zu verstehen und bedarf genauerer Klärung.
 
-- Welche Rolle sollte/kann KI (nicht) in der Bildung übernehmen?
+- Vernunft (Reason):
+  - KI-Systeme verfügen weder über theoretische noch praktische Vernunft.
+  - Menschliche Vernunft ist die Fähigkeit, sich zu orientieren, selbstverantwortlich zu handeln und dem Leben Struktur zu geben.
+  - Intelligenz ist eine Voraussetzung, aber nicht hinreichend für Vernunft.
+  - Vernunft ist ein komplexes Beziehungsgefüge von Denk-, Reflexions- und Operationsformen, eingebettet in soziale und kulturelle Kontexte.
+  - Theoretische Vernunft (Erkenntnisgewinn): Menschliches Gedächtnis und Urteilspraxis unterscheiden sich fundamental von technischen Speichern. KI-Systeme haben kein Sinnverstehen, keine Intentionalität und keine Referenz auf außersprachliche Wirklichkeit.
+  - Praktische Vernunft (verantwortliches Handeln, gutes Leben): Erfordert moralisches Verständnis, Unterscheidungsvermögen, Einfühlungsvermögen, Abwägung, reflektierten Umgang mit Regeln, intuitives Erfassen komplexer Situationen, Urteilsvermögen, Begründungsfähigkeit und Affektkontrolle.
+  - Menschliche Vernunft ist verleiblicht (embodied) und untrennbar mit Sinnlichkeit, Leiblichkeit, Sozialität und Kulturalität verbunden.
+  - Sie ist immer in die konkrete soziale Umwelt eingebunden und operiert gründegeleitet, Ausdruck akzeptierter Werte und Normen.
+  - Es ist fraglich, ob eine derart gründegeleitete, multidimensionale und soziokulturell eingebettete Praxis jemals für Maschinen plausibel sein könnte.
 
-- Wie kann KI die öffentliche Meinungsbildung beeinflussen?
+#### Kann KI Verantwortung übernehmen?
+
+- KI-Systeme können keine Verantwortung übernehmen.
+  - Moralische Verantwortung können nur natürliche Personen mit Handlungsfähigkeit übernehmen.
+  - Die Zuschreibung des Personenstatus an Maschinen ist weder aktuell noch absehbar angemessen.
+  - Verantwortung kann nur von Menschen übernommen werden, die hinter den Systemen stehen, ggf. im Rahmen institutioneller Verantwortung.
+
+#### (Inwiefern) gefährdet KI die menschliche Autorenschaft menschlichen Handelns?
+
+- Der Deutsche Ethikrat befasst sich ausführlich mit der Frage, inwiefern Künstliche Intelligenz (KI) die menschliche Autorschaft menschlichen Handelns gefährdet oder beeinflusst und stellt einen normativ grundlegenden Unterschied zwischen Mensch und Maschine fest.
+
+- Grundlagen menschlicher Autorschaft:
+  - Eng verknüpft mit menschlicher Vernunft, Handlungsfähigkeit und Verantwortungsfähigkeit.
+
+- Handlungsbegriff und Intentionalität:
+  - Menschliches Handeln ist zweckgerichtet, beabsichtigt und kontrolliert.
+  - Maschinen handeln nicht zweckgerichtet und haben keine Absichten.
+  - Maschinen verursachen Veränderungen nicht absichtlich und sind daher nicht moralisch oder rechtlich verantwortlich.
+  - Das Konzept der Autorschaft verweist auf die menschliche Erfahrung, sich selbst und andere als Urheber von Ereignissen zu sehen.
+  - Grundlage für menschliche Autonomie und Freiheit.
+
+- Vernunftfähigkeit:
+  - Menschliche Vernunft (theoretisch und praktisch) ermöglicht selbstverantwortliches Handeln und Lebensgestaltung.
+  - Intelligenz ist notwendig, aber nicht hinreichend.
+  - KI-Systeme besitzen keine theoretische oder praktische Vernunft, kein Sinnverstehen, keine Intentionalität und keinen Bezug zur Wirklichkeit.
+  - Praktische Vernunft erfordert moralisches Verständnis, Einfühlungsvermögen, Abwägung, Urteilsvermögen und Affektkontrolle, eingebettet in soziale und kulturelle Kontexte.
+  - Es ist fraglich, ob Maschinen jemals eine derartig komplexe, kohärente Praxis entwickeln können.
+
+- Verantwortung:
+  - Moralische Verantwortung können nur natürliche Personen mit Handlungsfähigkeit übernehmen.
+  - Maschinen können keine Verantwortung tragen, da ihnen der Personenstatus fehlt.
+  - Verantwortung liegt immer bei den Menschen hinter den Systemen.
+
+- Gefährdungen der menschlichen Autorschaft durch KI:
+  - Die Delegation menschlicher Tätigkeiten an Maschinen kann Autorschaft und Handlungsmöglichkeiten erweitern oder vermindern.
+
+  1. Automation Bias und unkritische Delegation von Verantwortung:
+     - Menschen vertrauen algorithmischen Ergebnissen oft mehr als menschlichen Entscheidungen.
+     - Verantwortung wird (zumindest unbewusst) an "Quasi-Akteure" delegiert.
+     - KI kann allmählich zum eigentlichen "Entscheider" werden, menschliche Autorschaft und Verantwortung werden ausgehöhlt.
+     - In der Medizin: Vernachlässigung von Sorgfaltspflichten, Kompetenzverlust.
+     - In der Verwaltung: Unkritische Übernahme von Systemempfehlungen, bis nur noch automatisierte Abläufe verbleiben.
+     - Der Ethikrat fordert, KI zur Entscheidungsunterstützung und nicht zur Entscheidungsersetzung einzusetzen.
+
+  2. Verlust menschlicher Kompetenzen und Fertigkeiten (Deskilling):
+     - KI-Nutzung kann menschliche Fähigkeiten schwächen oder verkümmern lassen.
+     - Besonders riskant in kritischen Bereichen wie Gesundheitswesen und Bildung.
+     - Gefahr, dass Gesellschaften zu abhängig werden und bei Ausfall der Technologie anfällig sind.
+
+  3. Algorithmen-basierte Einschränkung rationaler Auseinandersetzung und Freiheit:
+     - Algorithmische Kuratierung kann rationale Auseinandersetzung mit Alternativen einschränken.
+     - "Chilling-Effekte": Menschen ziehen sich aus öffentlichem Diskurs zurück, aus Angst vor Überwachung und Auswertung.
+     - Umfangreiche Datenerfassung für KI-Anwendungen beeinträchtigt Privatsphäre und macht anfällig für Benachteiligungen oder Manipulation.
+
+  4. Statistische Stratifizierung und Diskriminierung:
+     - KI-Systeme reproduzieren und verstärken Stereotypen und gesellschaftliche Ungleichheiten.
+     - Individuen können durch statistisch getroffene Diagnosen oder Prognosen ungerechtfertigt benachteiligt werden.
+     - Der Ethikrat betont die Wichtigkeit von Einzelfallbeurteilungen und sieht KI als Hilfsmittel, nicht als finales Entscheidungsinstrument.
+
+  5. Abhängigkeiten und mangelnde Transparenz:
+     - Integration von KI in kritische Infrastrukturen schafft Abhängigkeiten und gefährdet Autonomie.
+     - KI-Systeme sind oft nicht transparent oder nachvollziehbar (Blackbox-Charakter).
+     - Komplexität erschwert Kontrolle und Zuschreibung von Verantwortung.
+
+- Schlussfolgerung des Deutschen Ethikrates:
+  - Zentrales Ziel und Maßstab ethischer Bewertung: Stärkung menschlicher Autorschaft.
+  - Auswirkungen von KI müssen differenziert betrachtet werden, da Erweiterungen von Handlungsmöglichkeiten für einige Gruppen mit Einschränkungen für andere (v.a. vulnerable Gruppen) einhergehen können.
+  - Gefahr: Funktionale Verbesserungen können unbemerkt in Ersetzung moralischer Kompetenz und Verantwortung übergehen.
+
+
+#### Welche Rolle sollte/kann KI (nicht) in der Bildung übernehmen?
+
+- Der Deutsche Ethikrat hat sich mit der Rolle von KI in der Bildung beschäftigt und Chancen, Risiken sowie normative Grenzen formuliert.
+
+- **Grundlegendes Verständnis von Bildung und menschlicher Autorschaft**
+  - Bildung orientiert sich an der Fähigkeit zu freiem, vernünftigem Handeln.
+  - Bildung umfasst Orientierungswissen, reflexive Urteilskraft, Entscheidungsstärke, kulturelles Lernen, emotionale und motivationale Aspekte.
+  - Lehr- und Lerngeschehen ist eine dynamische Interaktion zwischen Personen.
+  - KI-Einsatz muss fördern, dass Menschen zu Selbstbestimmung und Verantwortung befähigt werden.
+
+- **Potenzielle Rollen und Chancen von KI in der Bildung**
+  - Personalisierung des Lernens und Entlastung von Lehrkräften durch adaptive Lernprofile und Automatisierung von Routineaufgaben.
+  - Potenziell objektivere und fairere Bewertung durch datenbasierte Erkenntnisse.
+  - Verbesserte Zugangschancen und Inklusion durch Abbau sprachlicher oder räumlicher Barrieren.
+  - Unterstützung in spezifischen Lernabschnitten durch intelligente Tutorsysteme.
+  - Förderung des Eigenstudiums durch Bereitstellung von KI-Tools für Lernende.
+
+- **Grenzen und Risiken von KI in der Bildung**
+  - Kein Ersatz für personale Vermittlung und Interaktion; Schule bleibt wichtiger Sozialraum.
+  - Gefahr des Kompetenzverlusts (Deskilling) durch zu starke KI-Nutzung.
+  - Risiken für Datenschutz, Überwachung, Stigmatisierung und Beeinträchtigung der Autonomie.
+  - Kontroverse um "Classroom Analytics" wie Attention Monitoring oder Affect Recognition mittels Audio-/Videodaten.
+  - Mögliche negative Auswirkungen auf Motivation und Problemlösefähigkeit der Lernenden.
+  - Automation Bias: Gefahr der unkritischen Übernahme von Systemempfehlungen und Verlust menschlicher Autorschaft.
+  - Verhinderung einer vollständigen Ersetzung von Lehrkräften; pädagogische Begleitung bleibt unverzichtbar.
+
+- **Leitprinzipien und Empfehlungen des Ethikrates für den Einsatz von KI**
+  - Bildung als Zweck: KI-Einsatz soll sich an grundlegenden Bildungszielen orientieren, nicht an technischer Machbarkeit.
+  - Schutz von Autonomie und Privatheit für Lehrende und Lernende.
+  - Einführung von Standards und Zertifizierungssystemen mit transparenten Erfolgskriterien.
+  - Interdisziplinäre Zusammenarbeit bei Entwicklung, Erprobung und Zertifizierung von KI-Produkten.
+  - Minimierung von Bias und Berücksichtigung von Anthropomorphisierungstendenzen.
+  - Erhöhung der Nutzungskompetenz durch Aus-, Fort- und Weiterbildung für Lehrkräfte, Lernende und Eltern.
+  - Verstärkte Forschung und Evaluation zu Effekten auf Kompetenz- und Persönlichkeitsentwicklung.
+  - Sicherstellung von Datensouveränität und gemeinwohlorientierter Datennutzung.
+  - Stärkung menschlicher Autorschaft als ethische Richtschnur, insbesondere für vulnerable Gruppen.
+
+- **Zusammenfassung**
+  - KI kann Bildung unterstützen und erweitern, z.B. durch Personalisierung und Abbau von Barrieren.
+  - KI darf nie personale Interaktion oder menschliche Urheberschaft ersetzen.
+  - Einsatz nur unter strengen ethischen und datenschutzrechtlichen Vorgaben, um negative Auswirkungen wie Kompetenzverlust oder unkritische Abhängigkeiten zu vermeiden.
+
+
+#### Wie kann KI die öffentliche Meinungsbildung beeinflussen?
+
+- **Algorithmusgesteuerte Personalisierung und Inhaltsauswahl:**
+  - Großteil des Informationsaustauschs über algorithmisch gestützte Plattformen und soziale Medien.
+  - Auswahl der Inhalte erfolgt überwiegend durch Algorithmen, die Nutzern personalisierte Inhalte präsentieren.
+  - Auswahlkriterien sind eng mit ökonomischen Faktoren und werbebasierten Geschäftsmodellen verknüpft.
+  - Plattformen sammeln umfangreiche Daten über Nutzer (Profiling), um Inhalte zu personalisieren.
+  - Sensationelle oder emotional intensive Inhalte verbreiten sich besonders schnell und weit.
+
+- **Auswirkungen auf die Informationsqualität:**
+  - Mechanismen begünstigen die Verbreitung von Falschnachrichten und Verschwörungstheorien.
+  - Entstehung von Filterblasen und Echokammern, die alternative Perspektiven ausblenden.
+  - Algorithmen schränken die Freiheit ein, qualitativ hochwertige Informationen zu finden.
+
+- **Auswirkungen auf die Diskursqualität:**
+  - KI-gestützte Plattformen erleichtern Teilhabe und Vernetzung.
+  - Gefahr politischer Polarisierung und Verrohung des Diskurses durch emotional/moralisch aufgeladene Inhalte.
+  - Algorithmen bevorzugen Beiträge mit starken emotionalen Reaktionen, was Kommunikationsstile verschärft.
+  - Politische Werbung und Manipulation (Microtargeting) durch datenbasierte Profile möglich.
+  - Einsatz von Fake-Accounts und Bots kann Diskurse verzerren und Botschaften verstärken.
+
+- **Content-Moderation durch KI:**
+  - Plattformen setzen menschliche und algorithmische Systeme zur Moderation problematischer Inhalte ein.
+  - Algorithmen können anstößige Inhalte filtern und große Datenmengen verarbeiten.
+  - Automatisierte Methoden berücksichtigen oft nicht den sozialen/kulturellen Kontext ("Overblocking").
+  - Übermäßige Löschungen/Sperrungen können als Eingriff in Meinungs- und Pressefreiheit wahrgenommen werden und zu "Chilling-Effekten" führen.
+
+- **Auswirkungen auf menschliche Autorschaft und Handlungsmöglichkeiten:**
+  - Delegation von Kuratierungs- und Moderationsprozessen an Algorithmen bringt Komfort und Effizienz.
+  - Mögliche Einschränkung menschlicher Handlungsspielräume und persönlicher Freiheit.
+  - Ethik: Ziel sollte die Stärkung menschlicher Autorschaft sein.
+
+- **Empfehlungen für den Umgang mit KI in der öffentlichen Meinungsbildung (Deutscher Ethikrat):**
+  - Regulierung und Transparenz: Klare rechtliche Vorgaben zu Kuratierung und Moderation, externe Kontrolle der Algorithmen.
+  - Zugriff auf wissenschaftsrelevante Daten: Unabhängige Forschung zu Wirkungsweisen und Einfluss der Plattformen ermöglichen.
+  - Schutzinteressen berücksichtigen: Offenlegung und Datenzugang kontextsensitiv regeln, Datenschutz und Geschäftsgeheimnisse schützen.
+  - Regulierung von personalisierter Werbung, Profiling und Microtargeting: Bedingungen für Erforschung und Überprüfung schaffen, negative Auswirkungen verhindern.
+  - Bessere Regulierung von Online-Marketing und Datenhandel: Effektiver Schutz der Grundrechte und Minimierung negativer Effekte auf den Diskurs.
+  - Machtbeschränkung und Kontrolle: Unternehmen mit monopolartiger Macht zu Pluralismus und Diskriminierungsschutz verpflichten.
+  - Erweiterung der Nutzerautonomie: Inhalte auch ohne Personalisierung anbieten, mehr Wahlmöglichkeiten für Nutzer, bewusste Anzeige von Gegenpositionen.
+  - Förderung kritischer Rezeption: Hinweisfunktionen entwickeln, die kritische Auseinandersetzung vor Teilen/Reagieren fördern (z.B. Quellenprüfung).
+  - Alternative Infrastruktur: Aufbau einer digitalen Infrastruktur in öffentlich-rechtlicher Verantwortung als Alternative zu kommerziellen Plattformen.
+
 
 [Platzhalter]::
