@@ -10,6 +10,20 @@ generate_svg(qr, filename = "qr-Titel.svg")
 
 ```
 
+```{r qr-KI,  echo=FALSE, warning=FALSE}
+
+# Hier geparkt. qr-Code wird bei "Anwendungen" im Unterabschnitt KI eingebunden. Da dort auch python ist, ist der R-Code hier
+
+library(qrcode)
+
+qr <- qr_code('https://www.ethikrat.org/fileadmin/Publikationen/Stellungnahmen/deutsch/stellungnahme-mensch-und-maschine-kurzfassung.pdf')
+#plot(qr)
+
+generate_svg(qr, filename = "qr-KI.svg")
+
+```
+
+
 |       ${}$        |  ${}$  |
 |:-----------------:|:--------------------------------------------------:|
 | ![logo](logo.png) |    ![](qr-Titel.svg){width="30%"}              |

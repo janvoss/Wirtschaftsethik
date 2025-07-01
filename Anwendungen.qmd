@@ -201,3 +201,8 @@ Verantwortung erwächst aus
 ## Klimawandel
 
 ## Künstliche Intelligenz
+
+Wir lesen die [Kurzfassung von @noauthor_stellungnahme_2023](https://www.ethikrat.org/fileadmin/Publikationen/Stellungnahmen/deutsch/stellungnahme-mensch-und-maschine-kurzfassung.pdf)
+
+
+![](qr-KI.svg){width="60%"} 
