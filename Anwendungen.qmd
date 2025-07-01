@@ -218,3 +218,5 @@ Wir lesen die [Kurzfassung von @noauthor_stellungnahme_2023](https://www.ethikra
 - Welche Rolle sollte/kann KI (nicht) in der Bildung übernehmen?
 
 - Wie kann KI die öffentliche Meinungsbildung beeinflussen?
+
+[Platzhalter]::

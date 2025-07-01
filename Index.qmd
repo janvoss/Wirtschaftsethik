@@ -9,6 +9,8 @@ generate_svg(qr, filename = "qr-Titel.svg")
 
 ```
 
+[## Code hier geparkt für Abschnitt Anwendungen/KI. Da dort auch Python-Code steht, wird er hier ausgeführt]::
+
 ```{r qr-KI,  echo=FALSE, warning=FALSE}
 
 library(qrcode)

@@ -152,51 +152,51 @@
   {
     "objectID": "Anwendungen.html",
     "href": "Anwendungen.html",
-    "title": "5  Anwendungen",
+    "title": "4  Anwendungen",
     "section": "",
-    "text": "5.1 Wirtschaftsordnung",
+    "text": "4.1 Wirtschaftsordnung",
     "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Anwendungen</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Anwendungen</span>"
     ]
   },
   {
     "objectID": "Anwendungen.html#soziale-gerechtigkeit",
     "href": "Anwendungen.html#soziale-gerechtigkeit",
-    "title": "5  Anwendungen",
-    "section": "5.2 Soziale Gerechtigkeit",
-    "text": "5.2 Soziale Gerechtigkeit",
+    "title": "4  Anwendungen",
+    "section": "4.2 Soziale Gerechtigkeit",
+    "text": "4.2 Soziale Gerechtigkeit",
     "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Anwendungen</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Anwendungen</span>"
     ]
   },
   {
     "objectID": "Anwendungen.html#internationale-beziehungen",
     "href": "Anwendungen.html#internationale-beziehungen",
-    "title": "5  Anwendungen",
-    "section": "5.3 Internationale Beziehungen",
-    "text": "5.3 Internationale Beziehungen\n\n5.3.1 Gerechtigkeit und Verantwortung\n\n\nCode\nfrom graphviz import Digraph\nfrom IPython.display import display\n\ndot = Digraph()\n\n# Layout\ndot.attr(rankdir='LR',\n         nodesep='1,5')\n\n# Knoten\ndot.node('a', 'Gerechtigkeit',\n           shape='box', \n           style='filled,rounded',\n           fillcolor='#0000ff33',\n           color='#0000ff',\n           penwidth='1.5',\n           width='2'\n           )\ndot.node('c', 'Verantwortung',\n           shape= 'box',\n           style='filled,rounded',\n           fillcolor='#ff000033',\n           color='#ff0000',\n           penwidth='1.5',\n           width='2'\n           )\n\n# Kanten\n#dot.edge('a', 'c', constraint= 'false', style='invis')\ndot.edge('a', 'c', constraint= 'false', label='fragt nach')\n\n\ndot.edge('a', 'c', style= 'invis')\n#dot.edge('a', 'b', style= 'invis')\n#dot.edge('b', 'c', style= 'invis')\n#dot.edge('c', 'a', constraint= 'false', style='invis')\ndot.edge('c', 'a', constraint= 'false', label='für')\n\n# Display\ndisplay(dot)\n\n\n\n\n\nNach Hahn (2017)\n\n\n\n\n\n\n5.3.2 Verantwortungssubjekte\n\n\nCode\nfrom graphviz import Source\nfrom IPython.display import display\n\ndot = '''\ndigraph G {\n    rankdir=TD;\n    node [shape=plaintext, width=3];\n    edge [style=invis];\n\n    subgraph cluster_0 {\n        label = \"Verantwortungssubjekt\";\n        labelloc = \"t\";\n        fontsize = 18;\n        style = \"filled,rounded\";\n        color = \"Deepskyblue\";\n\n        // Cluster 1\n        subgraph cluster_1 {\n            label = \"Individuum\";\n            labelloc = \"t\";\n           # { a1 -&gt; a2 -&gt; a3; }\n            a1 [label=\"unmittelbare individuelle\\l Verantwortung\\l \\l  \\l\"];\n        }\n\n        // Cluster 2\n        subgraph cluster_2 {\n            label = \"Gesellschaft\";\n            labelloc = \"t\";\n            penwidth = 1;\n          #  {b1 -&gt; b2 -&gt; b3 -&gt; b4; }\n            b1 [label=\"Die Verantwortung ist nicht\\l einem einzelenen Individuum zuzuordnen\\l- Zivilgesellschaft\\l- Staat\\l\"];\n        }\n    }\n}\n'''\n\nsrc = Source(dot, format=\"svg\")\ndisplay(src)\n\n\n\n\n\n\n\n\n\n\n\n5.3.3 Relationale und Nicht-relationale Verantwortung\n\n\nCode\nfrom graphviz import Source\nfrom IPython.display import display\n\ndot = '''\ndigraph G {\n    rankdir=TD;\n    node [shape=plaintext, width=3];\n    edge [style=invis];\n\n    subgraph cluster_0 {\n        label = \"Verantwortung\";\n        labelloc = \"t\";\n        fontsize = 18;\n        style = \"filled,rounded\";\n        color = \"Cornflowerblue\";\n\n        // Cluster 1\n        subgraph cluster_1 {\n            label = \"Relational\";\n            labelloc = \"t\";\n            { a1 -&gt; a2; }\n            a1 [label=\"Beruht auf besonderen\\l Beziehungen\\l\"];\n            a2 [label=\"- gleicher Staat\\l- historische Verbundenheit\\l- ...\\l\"];\n        }\n\n        // Cluster 2\n        subgraph cluster_2 {\n            label = \"Nicht-relational\";\n            labelloc = \"t\";\n            penwidth = 1;\n            {b1 -&gt; b2; }\n            b1 [label=\"Besteht unabhängig von\\l besonderen Beziehungen\\l\"];\n            b2 [label=\"- Unterstützung bei\\l   Hungersnot\\l- Naturkatastrophen\\l- ...\\l\"];\n        }\n    }\n}\n'''\n\nsrc = Source(dot, format=\"svg\")\ndisplay(src)\n\n\n\n\n\nNach Hahn (2017)\n\n\n\n\nDie immer engere Vernetzung der Welt (Globalisierung) legt den Gedanken nache, dass es immer mehr relationale Gründe für die Zuschreibung von Verantwortung geben kann (Hahn 2017).\n\n\n5.3.4 Zurechnungsgründe für Verantwortung\n(Hahn 2017)\n\nHaftbarkeit\n\nMoralische Verantwortung (Schuld)\nFolgerverantwortung (vorhersehbare Nebeneffekte)\nKausale Verantwortung (unvorhergesehene Nebeneffekte)\n\nProfitieren von Unrecht\nFähigkeiten\nZugehörigkeit zu einer Gemeinschaft\n\n\n\n5.3.5 Positionen\nVerantwortung erwächst aus\n\nder Fähigkeit zu helfen\nder Haftbarkeit und dem Profitieren\nder Zugehörigkeit zu einer (nationalen) Gemeinschaft. Globale Verantwortung nur für\n\nHistorischer Verantwortung (Wiedergutmachung)\nHaftbarkeit\nNaturkatastrophen\nGrundlegende Menschenrechtsansprüche\n\nVerbundenheit\nTeilnahme an einem System voneinander abhängiger Kooperations- und Wettbewerbsprozesse\n\n\n\n5.3.6 Diskussion",
+    "title": "4  Anwendungen",
+    "section": "4.3 Internationale Beziehungen",
+    "text": "4.3 Internationale Beziehungen\n\n4.3.1 Gerechtigkeit und Verantwortung\n\n\nCode\nfrom graphviz import Digraph\nfrom IPython.display import display\n\ndot = Digraph()\n\n# Layout\ndot.attr(rankdir='LR',\n         nodesep='1,5')\n\n# Knoten\ndot.node('a', 'Gerechtigkeit',\n           shape='box', \n           style='filled,rounded',\n           fillcolor='#0000ff33',\n           color='#0000ff',\n           penwidth='1.5',\n           width='2'\n           )\ndot.node('c', 'Verantwortung',\n           shape= 'box',\n           style='filled,rounded',\n           fillcolor='#ff000033',\n           color='#ff0000',\n           penwidth='1.5',\n           width='2'\n           )\n\n# Kanten\n#dot.edge('a', 'c', constraint= 'false', style='invis')\ndot.edge('a', 'c', constraint= 'false', label='fragt nach')\n\n\ndot.edge('a', 'c', style= 'invis')\n#dot.edge('a', 'b', style= 'invis')\n#dot.edge('b', 'c', style= 'invis')\n#dot.edge('c', 'a', constraint= 'false', style='invis')\ndot.edge('c', 'a', constraint= 'false', label='für')\n\n# Display\ndisplay(dot)\n\n\n\n\n\nNach Hahn (2017)\n\n\n\n\n\n\n4.3.2 Verantwortungssubjekte\n\n\nCode\nfrom graphviz import Source\nfrom IPython.display import display\n\ndot = '''\ndigraph G {\n    rankdir=TD;\n    node [shape=plaintext, width=3];\n    edge [style=invis];\n\n    subgraph cluster_0 {\n        label = \"Verantwortungssubjekt\";\n        labelloc = \"t\";\n        fontsize = 18;\n        style = \"filled,rounded\";\n        color = \"Deepskyblue\";\n\n        // Cluster 1\n        subgraph cluster_1 {\n            label = \"Individuum\";\n            labelloc = \"t\";\n           # { a1 -&gt; a2 -&gt; a3; }\n            a1 [label=\"unmittelbare individuelle\\l Verantwortung\\l \\l  \\l\"];\n        }\n\n        // Cluster 2\n        subgraph cluster_2 {\n            label = \"Gesellschaft\";\n            labelloc = \"t\";\n            penwidth = 1;\n          #  {b1 -&gt; b2 -&gt; b3 -&gt; b4; }\n            b1 [label=\"Die Verantwortung ist nicht\\l einem einzelenen Individuum zuzuordnen\\l- Zivilgesellschaft\\l- Staat\\l\"];\n        }\n    }\n}\n'''\n\nsrc = Source(dot, format=\"svg\")\ndisplay(src)\n\n\n\n\n\n\n\n\n\n\n\n4.3.3 Relationale und Nicht-relationale Verantwortung\n\n\nCode\nfrom graphviz import Source\nfrom IPython.display import display\n\ndot = '''\ndigraph G {\n    rankdir=TD;\n    node [shape=plaintext, width=3];\n    edge [style=invis];\n\n    subgraph cluster_0 {\n        label = \"Verantwortung\";\n        labelloc = \"t\";\n        fontsize = 18;\n        style = \"filled,rounded\";\n        color = \"Cornflowerblue\";\n\n        // Cluster 1\n        subgraph cluster_1 {\n            label = \"Relational\";\n            labelloc = \"t\";\n            { a1 -&gt; a2; }\n            a1 [label=\"Beruht auf besonderen\\l Beziehungen\\l\"];\n            a2 [label=\"- gleicher Staat\\l- historische Verbundenheit\\l- ...\\l\"];\n        }\n\n        // Cluster 2\n        subgraph cluster_2 {\n            label = \"Nicht-relational\";\n            labelloc = \"t\";\n            penwidth = 1;\n            {b1 -&gt; b2; }\n            b1 [label=\"Besteht unabhängig von\\l besonderen Beziehungen\\l\"];\n            b2 [label=\"- Unterstützung bei\\l   Hungersnot\\l- Naturkatastrophen\\l- ...\\l\"];\n        }\n    }\n}\n'''\n\nsrc = Source(dot, format=\"svg\")\ndisplay(src)\n\n\n\n\n\nNach Hahn (2017)\n\n\n\n\nDie immer engere Vernetzung der Welt (Globalisierung) legt den Gedanken nache, dass es immer mehr relationale Gründe für die Zuschreibung von Verantwortung geben kann (Hahn 2017).\n\n\n4.3.4 Zurechnungsgründe für Verantwortung\n(Hahn 2017)\n\nHaftbarkeit\n\nMoralische Verantwortung (Schuld)\nFolgerverantwortung (vorhersehbare Nebeneffekte)\nKausale Verantwortung (unvorhergesehene Nebeneffekte)\n\nProfitieren von Unrecht\nFähigkeiten\nZugehörigkeit zu einer Gemeinschaft\n\n\n\n4.3.5 Positionen\nVerantwortung erwächst aus\n\nder Fähigkeit zu helfen\nder Haftbarkeit und dem Profitieren\nder Zugehörigkeit zu einer (nationalen) Gemeinschaft. Globale Verantwortung nur für\n\nHistorischer Verantwortung (Wiedergutmachung)\nHaftbarkeit\nNaturkatastrophen\nGrundlegende Menschenrechtsansprüche\n\nVerbundenheit\nTeilnahme an einem System voneinander abhängiger Kooperations- und Wettbewerbsprozesse\n\n\n\n4.3.6 Diskussion",
     "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Anwendungen</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Anwendungen</span>"
     ]
   },
   {
     "objectID": "Anwendungen.html#klimawandel",
     "href": "Anwendungen.html#klimawandel",
-    "title": "5  Anwendungen",
-    "section": "5.4 Klimawandel",
-    "text": "5.4 Klimawandel",
+    "title": "4  Anwendungen",
+    "section": "4.4 Klimawandel",
+    "text": "4.4 Klimawandel",
     "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Anwendungen</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Anwendungen</span>"
     ]
   },
   {
     "objectID": "Anwendungen.html#künstliche-intelligenz",
     "href": "Anwendungen.html#künstliche-intelligenz",
-    "title": "5  Anwendungen",
-    "section": "5.5 Künstliche Intelligenz",
-    "text": "5.5 Künstliche Intelligenz\nWir lesen die Kurzfassung von Deutscher Ethikrat (2023)\n\nFragen zur Diskussion\n\nWas unterscheidet KI von menschlicher Intelligenz/Vernunft?\nKann KI Verantwortung übernehmen?\n(Inwiefern) gefährdet KI die menschliche Autorenschaft menschlichen Handelns?\nWelche Rolle sollte/kann KI (nicht) in der Bildung übernehmen?\nWie kann KI die öffentliche Meinungsbildung beeinflussen?\n\n\n\n\n\nDeutscher Ethikrat. 2023. “Stellungnahme: Mensch und Maschine – Herausforderungen durch Künstliche Intelligenz. Deutscher Ethikrat.” 2023. https://www.ethikrat.org/publikationen/stellungnahmen/mensch-und-maschine/.\n\n\nHahn, Henning. 2017. “Globale Verantwortung.” In Handbuch Verantwortung, edited by Ludger Heidbrink, Claus Langbehn, and Janina Loh, 525–42. Wiesbaden: Springer Fachmedien. https://doi.org/10.1007/978-3-658-06110-4_27.",
+    "title": "4  Anwendungen",
+    "section": "4.5 Künstliche Intelligenz",
+    "text": "4.5 Künstliche Intelligenz\nWir lesen die Kurzfassung von Deutscher Ethikrat (2023)\n\nFragen zur Diskussion\n\nWas unterscheidet KI von menschlicher Intelligenz/Vernunft?\nKann KI Verantwortung übernehmen?\n(Inwiefern) gefährdet KI die menschliche Autorenschaft menschlichen Handelns?\nWelche Rolle sollte/kann KI (nicht) in der Bildung übernehmen?\nWie kann KI die öffentliche Meinungsbildung beeinflussen?\n\n\n\n\n\nDeutscher Ethikrat. 2023. “Stellungnahme: Mensch und Maschine – Herausforderungen durch Künstliche Intelligenz. Deutscher Ethikrat.” 2023. https://www.ethikrat.org/publikationen/stellungnahmen/mensch-und-maschine/.\n\n\nHahn, Henning. 2017. “Globale Verantwortung.” In Handbuch Verantwortung, edited by Ludger Heidbrink, Claus Langbehn, and Janina Loh, 525–42. Wiesbaden: Springer Fachmedien. https://doi.org/10.1007/978-3-658-06110-4_27.",
     "crumbs": [
-      "<span class='chapter-number'>5</span>  <span class='chapter-title'>Anwendungen</span>"
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Anwendungen</span>"
     ]
   },
   {
