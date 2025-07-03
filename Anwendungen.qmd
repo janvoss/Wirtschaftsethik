@@ -215,7 +215,7 @@ Wir lesen die [Kurzfassung von @noauthor_stellungnahme_2023](https://www.ethikra
 - Künstliche Intelligenz (KI) und menschliche Intelligenz bzw. Vernunft unterscheiden sich in mehreren zentralen Aspekten:
 
 - Qualitativer vs. Quantitativer Unterschied der Intelligenzbegriffe:
-  - Unterscheidung zwischen enger/schwacher KI und breiter/starker KI.
+  - Unterscheidung zwischen enger/breiter KI und schwacher/starker KI.
   - Enge KI simuliert menschliche Fähigkeiten in einem klar umrissenen Bereich für spezifische Aufgaben.
   - Breite KI erweitert das Spektrum über einzelne Domänen hinaus.
   - Entstehung einer starken KI wäre ein qualitativer Sprung: starke KI hätte mentale Zustände, Einsichtsfähigkeit und Emotionen.
