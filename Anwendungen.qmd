@@ -397,4 +397,13 @@ Wir lesen die [Kurzfassung von @noauthor_stellungnahme_2023](https://www.ethikra
   - Alternative Infrastruktur: Aufbau einer digitalen Infrastruktur in öffentlich-rechtlicher Verantwortung als Alternative zu kommerziellen Plattformen.
 
 
-[Platzhalter]::
+## Post Scriptum zur künstlichen Intelligenz
+
+### Vision der 1980er Jahre: War Games
+
+<blockquote class="twitter-tweet" data-media-max-width="560" data-dnt="true"><p lang="en" dir="ltr">42 years ago Today, the movie WarGames was released. <br><br>A fascinating snapshot of Western popular culture in the 1980s, celebrating the home computing pioneering years.<a href="https://t.co/4EY9uTDkAz">pic.twitter.com/4EY9uTDkAz</a></p>&mdash; Massimo (@Rainmaker1973) <a href="https://twitter.com/Rainmaker1973/status/1929788892426735749?ref_src=twsrc%5Etfw">June 3, 2025</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+### Ein aktuelles Paper: KI im wiederholten Gefangenendilemma
+
+@payne_strategic_2025 lassen unterschiedliche LLMs in einem wiederholten Gefangenendilemma gegeneinander (und gegen weitere Strategien) antreten
+
