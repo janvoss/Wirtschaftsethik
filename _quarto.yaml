@@ -6,7 +6,7 @@ book:
   title: "Wirtschaftsethik"
   author: "Prof. Dr. Jan S. Voßwinkel"
   # date: "2024"
-  subtitle: "Wintersemester 2025/25"
+  subtitle: "Wintersemester 2025/26"
   #lang: de
   language:  _language.yml
   repo-url: https://github.com/janvoss/Wirtschaftsethik.git
