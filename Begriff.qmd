@@ -26,31 +26,10 @@ Abgrenzung über
 
 $\rightarrow$ Was ist bezüglich der Entität, vor bzw. gegenüber der man Verantwortung trägt, vorstellbar?
 
-Systematisierung von Verhaltensregeln anhand der Form der Regelüberwachung in sehr enger Anlehnung an Voigt (2009)
-
-```{r Regeln, echo=F, message=F, warning=F, cache=F}
-
-library(tidyverse)
-
-df <- data.frame(Regel=c("Konvention", "Ethische Regel", "Sitte", "Formelle private Regel", "Regel positiven Rechts"),
-                 "Überwachung" = c("Selbstüberwachung", "imperative Selbstbindung","informelle Überwachung durch andere Akteure", "organisierte private Überwachung", "organisierte staatliche Überwachung"),
-                 'Institutionenkategorie'= c("intern vom Typ 1", "intern vom Typ 2",
-                                             "intern vom Typ 3", "intern vom Typ 4",
-                                             "extern"),
-                 'Beispiel'=c("Regeln der Sprache", "Kategorischer Imperativ, privater Trainingsplan", "gesellschaftliche Umgangsformen", "Regeln des Sports", "Privat- und Strafrecht, öffentliches Recht"))
-
-
-library(knitr)
-# library(kableExtra)
-kable(df) #%>% 
-  #kable_styling(#bootstrap_options = c("responsive")
-   # )
-
-```
 
 ### Verantwortungsbegriff
 
-Elemente und Beziehungen des Verantwortungsbegriffs nach @lohStrukturenUndRelata2017 ![Abbildung: Jan S. Voßwinkel](./Tikz/Verantwortung2.svg)
+Elemente und Beziehungen des Verantwortungsbegriffs nach @loh_strukturen_2017 ![Abbildung: Jan S. Voßwinkel](./Tikz/Verantwortung2.svg)
 
 **Subjekt**
 
@@ -81,159 +60,60 @@ Elemente und Beziehungen des Verantwortungsbegriffs nach @lohStrukturenUndRelata
 
 -   Anreize für Rationalität
 
--   Verantwortung bewährt sich in einem Umfeld ohne etablierte Verfahrensregeln, in dem pragmatisches Handeln in komlexen Situationen erforderlich ist [@heidbrinkDefinitionenUndVoraussetzungen2017]
+-   Verantwortung bewährt sich in einem Umfeld ohne etablierte Verfahrensregeln, in dem pragmatisches Handeln in komlexen Situationen erforderlich ist [@heidbrink_definitionen_2017]
 
 ### Grenzen der Verantwortung: Systemverantwortung
 
-```{tikz,  fig.ext = 'png', cache=F, echo=F,  out.width="50%"}
+```{python}
+#| message: false
+#| warning: false
 
-\usetikzlibrary{calc}
-\usetikzlibrary{matrix}
-\usetikzlibrary{positioning}
-
-\begin{tikzpicture}
-
-\sffamily % Keine Serifen
-
-\renewcommand{\familydefault}{\sfdefault} 
-
-\matrix[matrix of math nodes,every odd row/.style={align=right},every even row/.style={align=left},every node/.style={text width=1.5cm},row sep=0.35cm,column sep=0.2cm] (m) {
- 5&3\\ 
- 5&3\\
- 1&2\\
-1&2\\
-};
-\draw (m.north east) rectangle (m.south west);
-\draw (m.north) -- (m.south);
-\draw (m.east) -- (m.west);
-
-\coordinate (a) at ($(m.north west)!0.25!(m.north east)$);
-\coordinate (b) at ($(m.north west)!0.75!(m.north east)$);
-\node[above=5pt of a,anchor=base] {links};
-\node[above=5pt of b,anchor=base] {rechts};
-
-\coordinate (c) at ($(m.north west)!0.25!(m.south west)$);
-\coordinate (d) at ($(m.north west)!0.75!(m.south west)$);
-%\node[left=0pt of c, red]{c};
-\node[left=12pt of c,text width=1.5cm,rotate=90,align=center,anchor=center]  {oben};
-\node[left=12pt of d,text width=1.5cm,rotate=90,align=center,anchor=center]  {unten};
+# import numpy as np
 
 
-\node[above=18pt of m.north] (Spaltenspieler) {Annalena};
-\node[left=30pt of m.west,rotate=90,align=center,anchor=center] {Christian};
+# Zufällige Ganzzahlen zwischen 0 und 9 generieren
 
 
-%\draw [-latex, blue, very thick]
-%    (m-1-2.center) edge (m-1-1)
-  %  ($(m-2-1.south)+(-0.55,0)$) edge ($(m-4-1.north)+(-0.55,0)$)
-   % (m-3-1.east) edge (m-3-2.center)
-    %($(m-4-2.north)+(-0.55,0)$) to ($(m-2-2.south)+(-0.55,0)$)
-;
+A = 0
+B = 4
+C = 1
+D = 6
+a = 4
+b = 1)
+c = 0
+d = 6
 
-\node[above=5pt of Spaltenspieler]  {Effizientes Gleichgewicht};
+# Formatierte Bimatrix ausgeben
+# print(f"     l    r\n o  {A},{a}  {C},{c}\n # u  {B},{b}  {D},{d}")
 
-\end{tikzpicture}
+from lets_plot import *
 
+LetsPlot.setup_html()
+
+ggplot() + \
+geom_text(x=- .5, y= 2   , label=a) +\
+geom_text(x=-1.5, y=  .75, label=A) +\
+geom_text(x=- .5, y=-1   , label=b) +\
+geom_text(x=-1.5, y=-2.25, label=B) +\
+geom_text(x= 1.5, y= 2   , label=c) +\
+geom_text(x=  .5, y=  .75, label=C) +\
+geom_text(x= 1.5, y=-1   , label=d) +\
+geom_text(x=  .5, y=-2.25, label=D) +\
+geom_text(x=-1  , y= 3.3 , label='links')+\
+geom_text(x= 1  , y= 3.3 , label='rechts')+\
+geom_text(x=-2.2, y= 1.375, angle=90, label='oben')+\
+geom_text(x=-2.2, y=-1.625, angle=90, label='unten')+\
+geom_text(x= 0 , y= 4 ,
+          fontface = "bold", label='Spieler 2')+\
+geom_text(x=-2.7 , y= 0 , angle=90,
+          fontface = "bold", label='Spieler 1')+\
+geom_segment(x=-2,  xend= 2, y= 0, yend= 0) +\
+geom_segment(x=-2,  xend= 2, y= 3, yend= 3) +\
+geom_segment(x=-2,  xend= 2, y=-3, yend=-3) +\
+geom_segment(x=-2,  xend=-2, y=-3, yend= 3) +\
+geom_segment(x= 0,  xend= 0, y=-3, yend= 3) +\
+geom_segment(x= 2,  xend= 2, y=-3, yend= 3) +\
+theme_void()+\
+labs(title='Auszahlungen in einem simultanen Spiel: Effizientes Gleichgewicht')
 ```
 
-```{tikz,  fig.ext = 'png', cache=F, echo=F, ,  out.width="50%"}
-
-\usetikzlibrary{calc}
-\usetikzlibrary{matrix}
-\usetikzlibrary{positioning}
-
-\begin{tikzpicture}
-
-\sffamily % Keine Serifen
-
-\renewcommand{\familydefault}{\sfdefault} 
-
-\matrix[matrix of math nodes,every odd row/.style={align=right},every even row/.style={align=left},every node/.style={text width=1.5cm},row sep=0.35cm,column sep=0.2cm] (m) {
- 5&3\\ 
- 5&3\\
- 1&5\\
-1&5\\
-};
-\draw (m.north east) rectangle (m.south west);
-\draw (m.north) -- (m.south);
-\draw (m.east) -- (m.west);
-
-\coordinate (a) at ($(m.north west)!0.25!(m.north east)$);
-\coordinate (b) at ($(m.north west)!0.75!(m.north east)$);
-\node[above=5pt of a,anchor=base] {links};
-\node[above=5pt of b,anchor=base] {rechts};
-
-\coordinate (c) at ($(m.north west)!0.25!(m.south west)$);
-\coordinate (d) at ($(m.north west)!0.75!(m.south west)$);
-%\node[left=0pt of c, red]{c};
-\node[left=12pt of c,text width=1.5cm,rotate=90,align=center,anchor=center]  {oben};
-\node[left=12pt of d,text width=1.5cm,rotate=90,align=center,anchor=center]  {unten};
-
-
-\node[above=18pt of m.north] (Spaltenspieler) {Annalena};
-\node[left=30pt of m.west,rotate=90,align=center,anchor=center] {Christian};
-
-
-%\draw [-latex, blue, very thick]
-%    (m-1-2.center) edge (m-1-1)
-  %  ($(m-2-1.south)+(-0.55,0)$) edge ($(m-4-1.north)+(-0.55,0)$)
-   % (m-3-1.east) edge (m-3-2.center)
-    %($(m-4-2.north)+(-0.55,0)$) to ($(m-2-2.south)+(-0.55,0)$)
-;
-
-\node[above=5pt of Spaltenspieler]  {Zwei Gleichgewichte};
-
-\end{tikzpicture}
-
-```
-
-```{tikz,  fig.ext = 'png', cache=F, echo=F, ,  out.width="50%"}
-
-\usetikzlibrary{calc}
-\usetikzlibrary{matrix}
-\usetikzlibrary{positioning}
-
-\begin{tikzpicture}
-
-\sffamily % Keine Serifen
-
-\renewcommand{\familydefault}{\sfdefault} 
-
-\matrix[matrix of math nodes,every odd row/.style={align=right},every even row/.style={align=left},every node/.style={text width=1.5cm},row sep=0.35cm,column sep=0.2cm] (m) {
-5&10\\ 
- 5&1\\
- 1&3\\
-10&3\\
-};
-\draw (m.north east) rectangle (m.south west);
-\draw (m.north) -- (m.south);
-\draw (m.east) -- (m.west);
-
-\coordinate (a) at ($(m.north west)!0.25!(m.north east)$);
-\coordinate (b) at ($(m.north west)!0.75!(m.north east)$);
-\node[above=5pt of a,anchor=base] {links};
-\node[above=5pt of b,anchor=base] {rechts};
-
-\coordinate (c) at ($(m.north west)!0.25!(m.south west)$);
-\coordinate (d) at ($(m.north west)!0.75!(m.south west)$);
-%\node[left=0pt of c, red]{c};
-\node[left=12pt of c,text width=1.5cm,rotate=90,align=center,anchor=center]  {oben};
-\node[left=12pt of d,text width=1.5cm,rotate=90,align=center,anchor=center]  {unten};
-
-
-\node[above=18pt of m.north] (Spaltenspieler) {Annalena};
-\node[left=30pt of m.west,rotate=90,align=center,anchor=center] {Christian};
-
-
-%\draw [-latex, blue, very thick]
-%    (m-1-2.center) edge (m-1-1)
-  %  ($(m-2-1.south)+(-0.55,0)$) edge ($(m-4-1.north)+(-0.55,0)$)
-   % (m-3-1.east) edge (m-3-2.center)
-    %($(m-4-2.north)+(-0.55,0)$) to ($(m-2-2.south)+(-0.55,0)$)
-;
-
-\node[above=5pt of Spaltenspieler]  {Ineffizientes Gleichgewicht};
-
-\end{tikzpicture}
-
-```

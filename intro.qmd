@@ -17,13 +17,15 @@
   - Klimaschutzpolitik  
   - Künstliche Intelligenz 
   - Veränderungen der Global Governance  
-  - \dots 
+  - $\dots$ 
 
 ## Ethik und Veränderung
 
 
 ```{python}
-
+#| eval: false
+#| include: false
+#| 
 # Ethik und Veränderungen
 
 from graphviz import Digraph
