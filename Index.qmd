@@ -37,7 +37,7 @@ generate_svg(qr, filename = "qr-KI.svg")
 
 - Modul: 209-034 Governance und Transformation ([Modulhandbuch](https://www.hfwu.de/fileadmin/user_upload/FAVM/ZuB/Module/Modulhandbuch_spob_zub_2022_WiSe_Stand_2022_WiSe.pdf)) 
 
-- Weitere Veranstaltung im ModuL:
+- Weitere Veranstaltung im Modul:
 
   - Wirtschaftlicher Wandel und Global Governance
   
