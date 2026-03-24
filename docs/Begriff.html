@@ -294,11 +294,66 @@ window.Quarto = {
 
 <section id="ethik" class="level2" data-number="2.1">
 <h2 data-number="2.1" class="anchored" data-anchor-id="ethik"><span class="header-section-number">2.1</span> Ethik</h2>
-<div class="quarto-figure quarto-figure-center">
+<div id="5024eead" class="cell" data-message="false" data-execution_count="1">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> graphviz</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> IPython.display <span class="im">import</span> display</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Erstellung des Digraph-Objekts</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>dot <span class="op">=</span> graphviz.Digraph(comment<span class="op">=</span><span class="st">'Unterscheidung Ethik Moral Sitte'</span>, <span class="bu">format</span><span class="op">=</span><span class="st">'png'</span>)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Globale Layout-Einstellungen</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>dot.attr(rankdir<span class="op">=</span><span class="st">'BT'</span>, size<span class="op">=</span><span class="st">'10,10'</span>) <span class="co"># Bottom-to-Top: Von der Praxis zur Theorie</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>dot.attr(<span class="st">'node'</span>, shape<span class="op">=</span><span class="st">'rectangle'</span>, style<span class="op">=</span><span class="st">'filled,rounded'</span>, fontname<span class="op">=</span><span class="st">'Arial'</span>, fontsize<span class="op">=</span><span class="st">'11'</span>)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>dot.attr(<span class="st">'edge'</span>, fontname<span class="op">=</span><span class="st">'Arial'</span>, fontsize<span class="op">=</span><span class="st">'10'</span>)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co"># --- Ebene 3: Theorie/Reflexion (Die Meta-Ebene) ---</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>dot.node(<span class="st">'Ethik'</span>, <span class="st">'ETHIK</span><span class="ch">\n</span><span class="st">(Wissenschaft von der Moral)'</span>, fillcolor<span class="op">=</span><span class="st">'#AED6F1'</span>, penwidth<span class="op">=</span><span class="st">'2'</span>)</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>dot.node(<span class="st">'Reflexion'</span>, <span class="st">'Methodische Reflexion</span><span class="ch">\n</span><span class="st">(Begründung &amp; Prüfung)'</span>, shape<span class="op">=</span><span class="st">'ellipse'</span>, fillcolor<span class="op">=</span><span class="st">'#EBF5FB'</span>)</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="co"># --- Ebene 2: Das Regelsystem (Die Norm-Ebene) ---</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>dot.node(<span class="st">'Moral'</span>, <span class="st">'MORAL</span><span class="ch">\n</span><span class="st">(Gesellschaftliches Regelsystem)'</span>, fillcolor<span class="op">=</span><span class="st">'#F9E79F'</span>)</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>dot.node(<span class="st">'Werte'</span>, <span class="st">'Werte</span><span class="ch">\n</span><span class="st">(Gerechtigkeit, Freiheit, Würde)'</span>, shape<span class="op">=</span><span class="st">'none'</span>, fontcolor<span class="op">=</span><span class="st">'#7D6608'</span>)</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="co"># --- Ebene 1: Die Praxis (Die Handlungs-Ebene) ---</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>dot.node(<span class="st">'Sitte'</span>, <span class="st">'SITTE</span><span class="ch">\n</span><span class="st">(Gelebte Praxis &amp; Tradition)'</span>, fillcolor<span class="op">=</span><span class="st">'#FAD7A0'</span>)</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>dot.node(<span class="st">'Praxis'</span>, <span class="st">'Uninterfragte Gewohnheit</span><span class="ch">\n</span><span class="st">(Konventionen)'</span>, shape<span class="op">=</span><span class="st">'none'</span>, fontcolor<span class="op">=</span><span class="st">'#7E5109'</span>)</span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="co"># --- Sonderform: Das Individuum ---</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>dot.node(<span class="st">'Ethos'</span>, <span class="st">'ETHOS</span><span class="ch">\n</span><span class="st">(Individuelle Maximen &amp;</span><span class="ch">\n</span><span class="st">Selbstverpflichtung)'</span>, fillcolor<span class="op">=</span><span class="st">'#D5F5E3'</span>)</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="co"># --- Verbindungen ---</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="co"># Von der Praxis zur Moral</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>dot.edge(<span class="st">'Sitte'</span>, <span class="st">'Moral'</span>, label<span class="op">=</span><span class="st">'basiert auf'</span>)</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>dot.edge(<span class="st">'Praxis'</span>, <span class="st">'Sitte'</span>, style<span class="op">=</span><span class="st">'dotted'</span>)</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a><span class="co"># Von der Moral zur Ethik</span></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>dot.edge(<span class="st">'Moral'</span>, <span class="st">'Ethik'</span>, label<span class="op">=</span><span class="st">'ist Forschungsgegenstand von'</span>)</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>dot.edge(<span class="st">'Ethik'</span>, <span class="st">'Reflexion'</span>, arrowhead<span class="op">=</span><span class="st">'none'</span>, style<span class="op">=</span><span class="st">'dashed'</span>)</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>dot.edge(<span class="st">'Reflexion'</span>, <span class="st">'Moral'</span>, label<span class="op">=</span><span class="st">'hinterfragt / begründet'</span>, color<span class="op">=</span><span class="st">'blue'</span>)</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a><span class="co"># Werte fundamentieren die Moral</span></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>dot.edge(<span class="st">'Werte'</span>, <span class="st">'Moral'</span>, style<span class="op">=</span><span class="st">'dotted'</span>)</span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a><span class="co"># Ethos-Bezug</span></span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>dot.edge(<span class="st">'Ethos'</span>, <span class="st">'Sitte'</span>, label<span class="op">=</span><span class="st">'prägt / wird geprägt durch'</span>, <span class="bu">dir</span><span class="op">=</span><span class="st">'both'</span>)</span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>dot.edge(<span class="st">'Ethos'</span>, <span class="st">'Ethik'</span>, label<span class="op">=</span><span class="st">'reflektiert über'</span>, style<span class="op">=</span><span class="st">'dashed'</span>)</span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a><span class="co"># Wirtschaftsethik-Beispiel (optional als Notiz)</span></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a><span class="co">#dot.node('Note', 'Wirtschaftsethik-Beispiel:\nEthik = Wirtschaftsethik\nMoral = Wirtschaftsmoral\nSitte = Wirtschaftspraxis',</span></span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a><span class="co">#         shape='note', fillcolor='#FEF9E7', fontsize='9')</span></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a><span class="co"># Anzeige des Diagramms</span></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>display(dot)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<div>
 <figure class="figure">
-<p><img src="./Tikz/Moral-Sitte-Ethik.svg" class="img-fluid figure-img"></p>
-<figcaption>Abbildung: Jan S. Voßwinkel</figcaption>
+<p><img src="Begriff_files/figure-html/cell-2-output-1.svg" class="img-fluid figure-img"></p>
 </figure>
+</div>
+</div>
 </div>
 </section>
 <section id="wirtschaftsethik" class="level2" data-number="2.2">
@@ -308,6 +363,70 @@ window.Quarto = {
 <li><p>den Gegenstand: Analyse ethische Fragen im Zusammehang mit wirtschaftlichem Handeln</p></li>
 <li><p>die Methode: Analyse ethischer Fragen unter Rückgriff auf wirtschaftswissenschaftliche Grundmodelle und Methoden</p></li>
 </ul>
+<div id="e589db53" class="cell" data-message="false" data-execution_count="2">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> graphviz</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> IPython.display <span class="im">import</span> display</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Erstellung des Digraph-Objekts</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>dot <span class="op">=</span> graphviz.Digraph(comment<span class="op">=</span><span class="st">'Systematik der Wirtschaftsethik'</span>, <span class="bu">format</span><span class="op">=</span><span class="st">'png'</span>)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Globale Layout-Einstellungen</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>dot.attr(rankdir<span class="op">=</span><span class="st">'TB'</span>, size<span class="op">=</span><span class="st">'12,12'</span>)</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>dot.attr(<span class="st">'node'</span>, shape<span class="op">=</span><span class="st">'rectangle'</span>, style<span class="op">=</span><span class="st">'filled,rounded'</span>, fontname<span class="op">=</span><span class="st">'Arial'</span>, fontsize<span class="op">=</span><span class="st">'11'</span>)</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>dot.attr(<span class="st">'edge'</span>, fontname<span class="op">=</span><span class="st">'Arial'</span>, fontsize<span class="op">=</span><span class="st">'9'</span>)</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Zentrale Definition</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>dot.node(<span class="st">'WE'</span>, <span class="st">'Wirtschaftsethik</span><span class="ch">\n</span><span class="st">(Reflexion moralischer Grundlagen)'</span>, fillcolor<span class="op">=</span><span class="st">'#2C3E50'</span>, fontcolor<span class="op">=</span><span class="st">'white'</span>, penwidth<span class="op">=</span><span class="st">'2'</span>)</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="co"># --- Ebene 1: Die drei Analyseebenen ---</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> dot.subgraph(name<span class="op">=</span><span class="st">'cluster_ebenen'</span>) <span class="im">as</span> c:</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>    c.attr(label<span class="op">=</span><span class="st">'Analyseebenen'</span>, style<span class="op">=</span><span class="st">'dashed'</span>, color<span class="op">=</span><span class="st">'gray'</span>)</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>    c.node(<span class="st">'Macro'</span>, <span class="st">'Makroebene</span><span class="ch">\n</span><span class="st">(Wirtschaftsordnung / Staat)'</span>, fillcolor<span class="op">=</span><span class="st">'#AED6F1'</span>)</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>    c.node(<span class="st">'Meso'</span>, <span class="st">'Mesoebene</span><span class="ch">\n</span><span class="st">(Unternehmensethik / Organisation)'</span>, fillcolor<span class="op">=</span><span class="st">'#AED6F1'</span>)</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>    c.node(<span class="st">'Micro'</span>, <span class="st">'Mikroebene</span><span class="ch">\n</span><span class="st">(Individualethik / Akteure)'</span>, fillcolor<span class="op">=</span><span class="st">'#AED6F1'</span>)</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a><span class="co"># --- Ebene 2: Theoretische Grundpositionen ---</span></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>dot.node(<span class="st">'Homann'</span>, <span class="st">'Ökonomische Ethik</span><span class="ch">\n</span><span class="st">(Karl Homann)'</span>, fillcolor<span class="op">=</span><span class="st">'#D5F5E3'</span>)</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>dot.node(<span class="st">'Ulrich'</span>, <span class="st">'Integrative Wirtschaftsethik</span><span class="ch">\n</span><span class="st">(Peter Ulrich)'</span>, fillcolor<span class="op">=</span><span class="st">'#D5F5E3'</span>)</span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>dot.node(<span class="st">'Wieland'</span>, <span class="st">'Governanceethik</span><span class="ch">\n</span><span class="st">(Josef Wieland)'</span>, fillcolor<span class="op">=</span><span class="st">'#D5F5E3'</span>)</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>dot.node(<span class="st">'Behavioral'</span>, <span class="st">'Behavioral Business Ethics</span><span class="ch">\n</span><span class="st">(Deskriptive Perspektive)'</span>, fillcolor<span class="op">=</span><span class="st">'#FCF3CF'</span>)</span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a><span class="co"># --- Ebene 3: Kernkonzepte &amp; Ziele ---</span></span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a><span class="co">#dot.node('Goal', 'Ziel: Versöhnung von\nEffizienz &amp; Moral', fillcolor='#F1948A', style='filled,bold')</span></span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>dot.node(<span class="st">'Welfare'</span>, <span class="st">'Zweck: Wohlfahrt &amp;</span><span class="ch">\n</span><span class="st">Gemeinwohl'</span>, fillcolor<span class="op">=</span><span class="st">'#F1948A'</span>)</span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a><span class="co"># --- Verbindungen ---</span></span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a><span class="co"># Von der Zentrale zu den Ebenen</span></span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>dot.edge(<span class="st">'WE'</span>, <span class="st">'Macro'</span>)</span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>dot.edge(<span class="st">'WE'</span>, <span class="st">'Meso'</span>)</span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>dot.edge(<span class="st">'WE'</span>, <span class="st">'Micro'</span>)</span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a><span class="co"># Zuordnung der Theorien (thematische Schwerpunkte)</span></span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a>dot.edge(<span class="st">'Macro'</span>, <span class="st">'Homann'</span>, label<span class="op">=</span><span class="st">'Fokus: Rahmenordnung'</span>)</span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>dot.edge(<span class="st">'WE'</span>, <span class="st">'Ulrich'</span>, label<span class="op">=</span><span class="st">'Kritische Prüfung'</span>)</span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a>dot.edge(<span class="st">'Meso'</span>, <span class="st">'Wieland'</span>, label<span class="op">=</span><span class="st">'Vertrauen &amp; Reputation'</span>)</span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a>dot.edge(<span class="st">'Micro'</span>, <span class="st">'Behavioral'</span>, label<span class="op">=</span><span class="st">'Empirisches Verhalten'</span>)</span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a><span class="co"># Integration der Konzepte</span></span>
+<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a>dot.edge(<span class="st">'Homann'</span>, <span class="st">'Welfare'</span>)</span>
+<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a>dot.edge(<span class="st">'Ulrich'</span>, <span class="st">'Welfare'</span>)</span>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>dot.edge(<span class="st">'Wieland'</span>, <span class="st">'Welfare'</span>)</span>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a>dot.edge(<span class="st">'Behavioral'</span>, <span class="st">'Welfare'</span>, label<span class="op">=</span><span class="st">'Kompatibilität prüfen'</span>)</span>
+<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a><span class="co"># dot.edge('Goal', 'Welfare')</span></span>
+<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a><span class="co"># Anzeige des Diagramms</span></span>
+<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a>display(dot)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Begriff_files/figure-html/cell-3-output-1.svg" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
 </section>
 <section id="ethik-und-verantwortung" class="level2" data-number="2.3">
 <h2 data-number="2.3" class="anchored" data-anchor-id="ethik-und-verantwortung"><span class="header-section-number">2.3</span> Ethik und Verantwortung</h2>
@@ -358,6 +477,79 @@ window.Quarto = {
 <li><p>Anreize für Rationalität</p></li>
 <li><p>Verantwortung bewährt sich in einem Umfeld ohne etablierte Verfahrensregeln, in dem pragmatisches Handeln in komlexen Situationen erforderlich ist <span class="citation" data-cites="heidbrink_definitionen_2017">(<a href="#ref-heidbrink_definitionen_2017" role="doc-biblioref">Heidbrink, 2017</a>)</span></p></li>
 </ul>
+<div id="7f02e30a" class="cell" data-message="false" data-execution_count="3">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> graphviz</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> IPython.display <span class="im">import</span> display</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Erstellung des Digraph-Objekts</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>dot <span class="op">=</span> graphviz.Digraph(comment<span class="op">=</span><span class="st">'Funktionen der Verantwortung'</span>, <span class="bu">format</span><span class="op">=</span><span class="st">'png'</span>)</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Globale Layout-Attribute</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>dot.attr(rankdir<span class="op">=</span><span class="st">'TB'</span>, size<span class="op">=</span><span class="st">'12,12'</span>)</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>dot.attr(<span class="st">'node'</span>, shape<span class="op">=</span><span class="st">'none'</span>, fontname<span class="op">=</span><span class="st">'Verdana'</span>, fontsize<span class="op">=</span><span class="st">'11'</span>)</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>dot.attr(<span class="st">'edge'</span>, color<span class="op">=</span><span class="st">'gray50'</span>, arrowhead<span class="op">=</span><span class="st">'vee'</span>)</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Zentrales Konzept</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>dot.node(<span class="st">'V'</span>, <span class="st">'&lt;&lt;TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="50" BGCOLOR="#2C3E50"&gt;'</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>              <span class="st">'&lt;tr&gt;&lt;td&gt;&lt;FONT COLOR="white" POINT-SIZE="16"&gt;&lt;B&gt;VERANTWORTUNG&lt;/B&gt;&lt;/FONT&gt;&lt;/td&gt;&lt;/tr&gt;'</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>              <span class="st">'&lt;/TABLE&gt;&gt;'</span>)</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="co"># --- Sektion 1: Soziale &amp; Relationale Dimension (Blau) ---</span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> dot.subgraph(name<span class="op">=</span><span class="st">'cluster_social'</span>) <span class="im">as</span> s:</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>    s.attr(label<span class="op">=</span><span class="st">'Soziale &amp; Relationale Ebene'</span>, fontname<span class="op">=</span><span class="st">'Verdana-Bold'</span>, color<span class="op">=</span><span class="st">'#3498DB'</span>)</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>    s.node(<span class="st">'S1'</span>, <span class="st">'Gegenseitige Rechtfertigung</span><span class="ch">\n</span><span class="st">&amp; Rechenschaft'</span>, shape<span class="op">=</span><span class="st">'box'</span>, fillcolor<span class="op">=</span><span class="st">'#AED6F1'</span>, style<span class="op">=</span><span class="st">'filled'</span>)</span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>    s.node(<span class="st">'S2'</span>, <span class="st">'Anerkennung als</span><span class="ch">\n</span><span class="st">autonomes Wesen'</span>, shape<span class="op">=</span><span class="st">'box'</span>, fillcolor<span class="op">=</span><span class="st">'#AED6F1'</span>, style<span class="op">=</span><span class="st">'filled'</span>)</span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>    s.node(<span class="st">'S3'</span>, <span class="st">'Respekt vs.</span><span class="ch">\n</span><span class="st">Objektstatus'</span>, shape<span class="op">=</span><span class="st">'box'</span>, fillcolor<span class="op">=</span><span class="st">'#AED6F1'</span>, style<span class="op">=</span><span class="st">'filled'</span>)</span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a><span class="co"># --- Sektion 2: Konstitutive &amp; Individuelle Dimension (Grün) ---</span></span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> dot.subgraph(name<span class="op">=</span><span class="st">'cluster_indiv'</span>) <span class="im">as</span> i:</span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>    i.attr(label<span class="op">=</span><span class="st">'Konstitution des Handlungsvermögens'</span>, fontname<span class="op">=</span><span class="st">'Verdana-Bold'</span>, color<span class="op">=</span><span class="st">'#27AE60'</span>)</span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>    i.node(<span class="st">'I1'</span>, <span class="st">'Rationale Selbststeuerung'</span>, shape<span class="op">=</span><span class="st">'box'</span>, fillcolor<span class="op">=</span><span class="st">'#ABEBC6'</span>, style<span class="op">=</span><span class="st">'filled'</span>)</span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>    i.node(<span class="st">'I2'</span>, <span class="st">'Moralische Urteilsbildung'</span>, shape<span class="op">=</span><span class="st">'box'</span>, fillcolor<span class="op">=</span><span class="st">'#ABEBC6'</span>, style<span class="op">=</span><span class="st">'filled'</span>)</span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>    i.node(<span class="st">'I3'</span>, <span class="st">'Bewältigung von Ungewissheit'</span>, shape<span class="op">=</span><span class="st">'box'</span>, fillcolor<span class="op">=</span><span class="st">'#ABEBC6'</span>, style<span class="op">=</span><span class="st">'filled'</span>)</span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a><span class="co"># --- Sektion 3: Wirtschaftliche Dimension (Gelb) ---</span></span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> dot.subgraph(name<span class="op">=</span><span class="st">'cluster_econ'</span>) <span class="im">as</span> e:</span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>    e.attr(label<span class="op">=</span><span class="st">'Wirtschaftlicher Koordinationsmechanismus'</span>, fontname<span class="op">=</span><span class="st">'Verdana-Bold'</span>, color<span class="op">=</span><span class="st">'#F1C40F'</span>)</span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>    e.node(<span class="st">'E1'</span>, <span class="st">'Korrektiv gegen</span><span class="ch">\n</span><span class="st">Marktversagen'</span>, shape<span class="op">=</span><span class="st">'box'</span>, fillcolor<span class="op">=</span><span class="st">'#FCF3CF'</span>, style<span class="op">=</span><span class="st">'filled'</span>)</span>
+<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>    e.node(<span class="st">'E2'</span>, <span class="st">'Senkung von</span><span class="ch">\n</span><span class="st">Transaktionskosten'</span>, shape<span class="op">=</span><span class="st">'box'</span>, fillcolor<span class="op">=</span><span class="st">'#FCF3CF'</span>, style<span class="op">=</span><span class="st">'filled'</span>)</span>
+<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>    e.node(<span class="st">'E3'</span>, <span class="st">'Vertrauen &amp; Reputation'</span>, shape<span class="op">=</span><span class="st">'box'</span>, fillcolor<span class="op">=</span><span class="st">'#FCF3CF'</span>, style<span class="op">=</span><span class="st">'filled'</span>)</span>
+<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a><span class="co"># --- Sektion 4: Stabilität &amp; Gerechtigkeit (Rot) ---</span></span>
+<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> dot.subgraph(name<span class="op">=</span><span class="st">'cluster_stab'</span>) <span class="im">as</span> st:</span>
+<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a>    st.attr(label<span class="op">=</span><span class="st">'Gesellschaftliche Stabilität'</span>, fontname<span class="op">=</span><span class="st">'Verdana-Bold'</span>, color<span class="op">=</span><span class="st">'#E74C3C'</span>)</span>
+<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a>    st.node(<span class="st">'ST1'</span>, <span class="st">'Ausgleich von</span><span class="ch">\n</span><span class="st">Interessenkonflikten'</span>, shape<span class="op">=</span><span class="st">'box'</span>, fillcolor<span class="op">=</span><span class="st">'#FADBD8'</span>, style<span class="op">=</span><span class="st">'filled'</span>)</span>
+<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a>    st.node(<span class="st">'ST2'</span>, <span class="st">'Wiedergutmachung</span><span class="ch">\n</span><span class="st">&amp; Korrektur'</span>, shape<span class="op">=</span><span class="st">'box'</span>, fillcolor<span class="op">=</span><span class="st">'#FADBD8'</span>, style<span class="op">=</span><span class="st">'filled'</span>)</span>
+<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a><span class="co"># Verbindungen</span></span>
+<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a>dot.edge(<span class="st">'V'</span>, <span class="st">'S1'</span>, label<span class="op">=</span><span class="st">'fungiert als'</span>)</span>
+<span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a>dot.edge(<span class="st">'S1'</span>, <span class="st">'S2'</span>, style<span class="op">=</span><span class="st">'dashed'</span>)</span>
+<span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a>dot.edge(<span class="st">'S2'</span>, <span class="st">'S3'</span>)</span>
+<span id="cb3-48"><a href="#cb3-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-49"><a href="#cb3-49" aria-hidden="true" tabindex="-1"></a>dot.edge(<span class="st">'V'</span>, <span class="st">'I1'</span>, label<span class="op">=</span><span class="st">'ermöglicht'</span>)</span>
+<span id="cb3-50"><a href="#cb3-50" aria-hidden="true" tabindex="-1"></a>dot.edge(<span class="st">'I1'</span>, <span class="st">'I2'</span>)</span>
+<span id="cb3-51"><a href="#cb3-51" aria-hidden="true" tabindex="-1"></a>dot.edge(<span class="st">'V'</span>, <span class="st">'I3'</span>)</span>
+<span id="cb3-52"><a href="#cb3-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-53"><a href="#cb3-53" aria-hidden="true" tabindex="-1"></a>dot.edge(<span class="st">'V'</span>, <span class="st">'E1'</span>, label<span class="op">=</span><span class="st">'steuert'</span>)</span>
+<span id="cb3-54"><a href="#cb3-54" aria-hidden="true" tabindex="-1"></a>dot.edge(<span class="st">'E3'</span>, <span class="st">'E2'</span>, label<span class="op">=</span><span class="st">'Mechanismus'</span>)</span>
+<span id="cb3-55"><a href="#cb3-55" aria-hidden="true" tabindex="-1"></a>dot.edge(<span class="st">'E1'</span>, <span class="st">'E3'</span>)</span>
+<span id="cb3-56"><a href="#cb3-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-57"><a href="#cb3-57" aria-hidden="true" tabindex="-1"></a>dot.edge(<span class="st">'V'</span>, <span class="st">'ST1'</span>, label<span class="op">=</span><span class="st">'sichert'</span>)</span>
+<span id="cb3-58"><a href="#cb3-58" aria-hidden="true" tabindex="-1"></a>dot.edge(<span class="st">'ST1'</span>, <span class="st">'ST2'</span>)</span>
+<span id="cb3-59"><a href="#cb3-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-60"><a href="#cb3-60" aria-hidden="true" tabindex="-1"></a><span class="co"># Anzeige des Diagramms</span></span>
+<span id="cb3-61"><a href="#cb3-61" aria-hidden="true" tabindex="-1"></a>display(dot)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Begriff_files/figure-html/cell-4-output-1.svg" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
 </section>
 <section id="grenzen-der-verantwortung-systemverantwortung" class="level3" data-number="2.3.4">
 <h3 data-number="2.3.4" class="anchored" data-anchor-id="grenzen-der-verantwortung-systemverantwortung"><span class="header-section-number">2.3.4</span> Grenzen der Verantwortung: Systemverantwortung</h3>
@@ -365,54 +557,54 @@ window.Quarto = {
 <li><p>In den folgenden spieltheoretischen Konstellationen hängt das Ergebnis von den (unabhängigen) Entscheidungen zweier Spieler ab.</p></li>
 <li><p>Wer ist für das Ergebnis (Gleichgewicht) verantwortlich?</p></li>
 </ul>
-<div id="517469dd" class="cell" data-message="false" data-execution_count="1">
+<div id="dccc00ab" class="cell" data-message="false" data-execution_count="4">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> <span class="dv">5</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>B <span class="op">=</span> <span class="dv">1</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>C <span class="op">=</span> <span class="dv">3</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>D <span class="op">=</span> <span class="dv">2</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">5</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="dv">1</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> <span class="dv">3</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>d <span class="op">=</span> <span class="dv">2</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Formatierte Bimatrix ausgeben</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co"># print(f"     l    r\n o  {A},{a}  {C},{c}\n # u  {B},{b}  {D},{d}")</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> lets_plot <span class="im">import</span> <span class="op">*</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>LetsPlot.setup_html()</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> <span class="op">\</span></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>geom_text(x<span class="op">=-</span> <span class="fl">.5</span>, y<span class="op">=</span> <span class="dv">2</span>   , label<span class="op">=</span>a) <span class="op">+\</span></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>geom_text(x<span class="op">=-</span><span class="fl">1.5</span>, y<span class="op">=</span>  <span class="fl">.75</span>, label<span class="op">=</span>A) <span class="op">+\</span></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>geom_text(x<span class="op">=-</span> <span class="fl">.5</span>, y<span class="op">=-</span><span class="dv">1</span>   , label<span class="op">=</span>b) <span class="op">+\</span></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>geom_text(x<span class="op">=-</span><span class="fl">1.5</span>, y<span class="op">=-</span><span class="fl">2.25</span>, label<span class="op">=</span>B) <span class="op">+\</span></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>geom_text(x<span class="op">=</span> <span class="fl">1.5</span>, y<span class="op">=</span> <span class="dv">2</span>   , label<span class="op">=</span>c) <span class="op">+\</span></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>geom_text(x<span class="op">=</span>  <span class="fl">.5</span>, y<span class="op">=</span>  <span class="fl">.75</span>, label<span class="op">=</span>C) <span class="op">+\</span></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>geom_text(x<span class="op">=</span> <span class="fl">1.5</span>, y<span class="op">=-</span><span class="dv">1</span>   , label<span class="op">=</span>d) <span class="op">+\</span></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>geom_text(x<span class="op">=</span>  <span class="fl">.5</span>, y<span class="op">=-</span><span class="fl">2.25</span>, label<span class="op">=</span>D) <span class="op">+\</span></span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>geom_text(x<span class="op">=-</span><span class="dv">1</span>  , y<span class="op">=</span> <span class="fl">3.3</span> , label<span class="op">=</span><span class="st">'links'</span>)<span class="op">+\</span></span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>geom_text(x<span class="op">=</span> <span class="dv">1</span>  , y<span class="op">=</span> <span class="fl">3.3</span> , label<span class="op">=</span><span class="st">'rechts'</span>)<span class="op">+\</span></span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>geom_text(x<span class="op">=-</span><span class="fl">2.2</span>, y<span class="op">=</span> <span class="fl">1.375</span>, angle<span class="op">=</span><span class="dv">90</span>, label<span class="op">=</span><span class="st">'oben'</span>)<span class="op">+\</span></span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>geom_text(x<span class="op">=-</span><span class="fl">2.2</span>, y<span class="op">=-</span><span class="fl">1.625</span>, angle<span class="op">=</span><span class="dv">90</span>, label<span class="op">=</span><span class="st">'unten'</span>)<span class="op">+\</span></span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>geom_text(x<span class="op">=</span> <span class="dv">0</span> , y<span class="op">=</span> <span class="dv">4</span> ,</span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>          fontface <span class="op">=</span> <span class="st">"bold"</span>, label<span class="op">=</span><span class="st">'Spieler 2'</span>)<span class="op">+\</span></span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>geom_text(x<span class="op">=-</span><span class="fl">2.7</span> , y<span class="op">=</span> <span class="dv">0</span> , angle<span class="op">=</span><span class="dv">90</span>,</span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>          fontface <span class="op">=</span> <span class="st">"bold"</span>, label<span class="op">=</span><span class="st">'Spieler 1'</span>)<span class="op">+\</span></span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>geom_segment(x<span class="op">=-</span><span class="dv">2</span>,  xend<span class="op">=</span> <span class="dv">2</span>, y<span class="op">=</span> <span class="dv">0</span>, yend<span class="op">=</span> <span class="dv">0</span>) <span class="op">+\</span></span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>geom_segment(x<span class="op">=-</span><span class="dv">2</span>,  xend<span class="op">=</span> <span class="dv">2</span>, y<span class="op">=</span> <span class="dv">3</span>, yend<span class="op">=</span> <span class="dv">3</span>) <span class="op">+\</span></span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>geom_segment(x<span class="op">=-</span><span class="dv">2</span>,  xend<span class="op">=</span> <span class="dv">2</span>, y<span class="op">=-</span><span class="dv">3</span>, yend<span class="op">=-</span><span class="dv">3</span>) <span class="op">+\</span></span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>geom_segment(x<span class="op">=-</span><span class="dv">2</span>,  xend<span class="op">=-</span><span class="dv">2</span>, y<span class="op">=-</span><span class="dv">3</span>, yend<span class="op">=</span> <span class="dv">3</span>) <span class="op">+\</span></span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>geom_segment(x<span class="op">=</span> <span class="dv">0</span>,  xend<span class="op">=</span> <span class="dv">0</span>, y<span class="op">=-</span><span class="dv">3</span>, yend<span class="op">=</span> <span class="dv">3</span>) <span class="op">+\</span></span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>geom_segment(x<span class="op">=</span> <span class="dv">2</span>,  xend<span class="op">=</span> <span class="dv">2</span>, y<span class="op">=-</span><span class="dv">3</span>, yend<span class="op">=</span> <span class="dv">3</span>) <span class="op">+\</span></span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>theme_void()<span class="op">+\</span></span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>labs(title<span class="op">=</span><span class="st">'Auszahlungen in einem simultanen Spiel: Effizientes Gleichgewicht'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>B <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>C <span class="op">=</span> <span class="dv">3</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>D <span class="op">=</span> <span class="dv">2</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> <span class="dv">3</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>d <span class="op">=</span> <span class="dv">2</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Formatierte Bimatrix ausgeben</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="co"># print(f"     l    r\n o  {A},{a}  {C},{c}\n # u  {B},{b}  {D},{d}")</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> lets_plot <span class="im">import</span> <span class="op">*</span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>LetsPlot.setup_html()</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> <span class="op">\</span></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>geom_text(x<span class="op">=-</span> <span class="fl">.5</span>, y<span class="op">=</span> <span class="dv">2</span>   , label<span class="op">=</span>a) <span class="op">+\</span></span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>geom_text(x<span class="op">=-</span><span class="fl">1.5</span>, y<span class="op">=</span>  <span class="fl">.75</span>, label<span class="op">=</span>A) <span class="op">+\</span></span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>geom_text(x<span class="op">=-</span> <span class="fl">.5</span>, y<span class="op">=-</span><span class="dv">1</span>   , label<span class="op">=</span>b) <span class="op">+\</span></span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>geom_text(x<span class="op">=-</span><span class="fl">1.5</span>, y<span class="op">=-</span><span class="fl">2.25</span>, label<span class="op">=</span>B) <span class="op">+\</span></span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>geom_text(x<span class="op">=</span> <span class="fl">1.5</span>, y<span class="op">=</span> <span class="dv">2</span>   , label<span class="op">=</span>c) <span class="op">+\</span></span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>geom_text(x<span class="op">=</span>  <span class="fl">.5</span>, y<span class="op">=</span>  <span class="fl">.75</span>, label<span class="op">=</span>C) <span class="op">+\</span></span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>geom_text(x<span class="op">=</span> <span class="fl">1.5</span>, y<span class="op">=-</span><span class="dv">1</span>   , label<span class="op">=</span>d) <span class="op">+\</span></span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>geom_text(x<span class="op">=</span>  <span class="fl">.5</span>, y<span class="op">=-</span><span class="fl">2.25</span>, label<span class="op">=</span>D) <span class="op">+\</span></span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>geom_text(x<span class="op">=-</span><span class="dv">1</span>  , y<span class="op">=</span> <span class="fl">3.3</span> , label<span class="op">=</span><span class="st">'links'</span>)<span class="op">+\</span></span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>geom_text(x<span class="op">=</span> <span class="dv">1</span>  , y<span class="op">=</span> <span class="fl">3.3</span> , label<span class="op">=</span><span class="st">'rechts'</span>)<span class="op">+\</span></span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a>geom_text(x<span class="op">=-</span><span class="fl">2.2</span>, y<span class="op">=</span> <span class="fl">1.375</span>, angle<span class="op">=</span><span class="dv">90</span>, label<span class="op">=</span><span class="st">'oben'</span>)<span class="op">+\</span></span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>geom_text(x<span class="op">=-</span><span class="fl">2.2</span>, y<span class="op">=-</span><span class="fl">1.625</span>, angle<span class="op">=</span><span class="dv">90</span>, label<span class="op">=</span><span class="st">'unten'</span>)<span class="op">+\</span></span>
+<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a>geom_text(x<span class="op">=</span> <span class="dv">0</span> , y<span class="op">=</span> <span class="dv">4</span> ,</span>
+<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a>          fontface <span class="op">=</span> <span class="st">"bold"</span>, label<span class="op">=</span><span class="st">'Spieler 2'</span>)<span class="op">+\</span></span>
+<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a>geom_text(x<span class="op">=-</span><span class="fl">2.7</span> , y<span class="op">=</span> <span class="dv">0</span> , angle<span class="op">=</span><span class="dv">90</span>,</span>
+<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a>          fontface <span class="op">=</span> <span class="st">"bold"</span>, label<span class="op">=</span><span class="st">'Spieler 1'</span>)<span class="op">+\</span></span>
+<span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a>geom_segment(x<span class="op">=-</span><span class="dv">2</span>,  xend<span class="op">=</span> <span class="dv">2</span>, y<span class="op">=</span> <span class="dv">0</span>, yend<span class="op">=</span> <span class="dv">0</span>) <span class="op">+\</span></span>
+<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a>geom_segment(x<span class="op">=-</span><span class="dv">2</span>,  xend<span class="op">=</span> <span class="dv">2</span>, y<span class="op">=</span> <span class="dv">3</span>, yend<span class="op">=</span> <span class="dv">3</span>) <span class="op">+\</span></span>
+<span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a>geom_segment(x<span class="op">=-</span><span class="dv">2</span>,  xend<span class="op">=</span> <span class="dv">2</span>, y<span class="op">=-</span><span class="dv">3</span>, yend<span class="op">=-</span><span class="dv">3</span>) <span class="op">+\</span></span>
+<span id="cb4-37"><a href="#cb4-37" aria-hidden="true" tabindex="-1"></a>geom_segment(x<span class="op">=-</span><span class="dv">2</span>,  xend<span class="op">=-</span><span class="dv">2</span>, y<span class="op">=-</span><span class="dv">3</span>, yend<span class="op">=</span> <span class="dv">3</span>) <span class="op">+\</span></span>
+<span id="cb4-38"><a href="#cb4-38" aria-hidden="true" tabindex="-1"></a>geom_segment(x<span class="op">=</span> <span class="dv">0</span>,  xend<span class="op">=</span> <span class="dv">0</span>, y<span class="op">=-</span><span class="dv">3</span>, yend<span class="op">=</span> <span class="dv">3</span>) <span class="op">+\</span></span>
+<span id="cb4-39"><a href="#cb4-39" aria-hidden="true" tabindex="-1"></a>geom_segment(x<span class="op">=</span> <span class="dv">2</span>,  xend<span class="op">=</span> <span class="dv">2</span>, y<span class="op">=-</span><span class="dv">3</span>, yend<span class="op">=</span> <span class="dv">3</span>) <span class="op">+\</span></span>
+<span id="cb4-40"><a href="#cb4-40" aria-hidden="true" tabindex="-1"></a>theme_void()<span class="op">+\</span></span>
+<span id="cb4-41"><a href="#cb4-41" aria-hidden="true" tabindex="-1"></a>labs(title<span class="op">=</span><span class="st">'Auszahlungen in einem simultanen Spiel: Effizientes Gleichgewicht'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-display">
 
-            <div id="X0v6Dc"></div>
+            <div id="Jh3ieO"></div>
             <script type="text/javascript" data-lets-plot-script="library">
                 if(!window.letsPlotCallQueue) {
                     window.letsPlotCallQueue = [];
@@ -436,16 +628,16 @@ window.Quarto = {
                         var div = document.createElement("div");
                         div.style.color = 'darkred';
                         div.textContent = 'Error loading Lets-Plot JS';
-                        document.getElementById("X0v6Dc").appendChild(div);
+                        document.getElementById("Jh3ieO").appendChild(div);
                     };
-                    var e = document.getElementById("X0v6Dc");
+                    var e = document.getElementById("Jh3ieO");
                     e.appendChild(script);
                 })()
             </script>
             
 </div>
-<div class="cell-output cell-output-display" data-execution_count="11">
-   <div id="ZMFKJj"></div>
+<div class="cell-output cell-output-display" data-execution_count="4">
+   <div id="9lsKKq"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
    
    (function() {
@@ -470,7 +662,7 @@ window.Quarto = {
        };
    }
    
-   const containerDiv = document.getElementById("ZMFKJj");
+   const containerDiv = document.getElementById("9lsKKq");
    let fig = null;
    
    function renderPlot() {
@@ -723,7 +915,7 @@ window.Quarto = {
 }
 }],
 "metainfo_list":[],
-"spec_id":"11"
+"spec_id":"1"
 };
            window.letsPlotCall(function() { fig = LetsPlot.buildPlotFromProcessedSpecs(plotSpec, containerDiv, sizing); });
        } else {
@@ -768,54 +960,54 @@ window.Quarto = {
    </script>
 </div>
 </div>
-<div id="eb0dcc25" class="cell" data-message="false" data-execution_count="2">
+<div id="30659762" class="cell" data-message="false" data-execution_count="5">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> <span class="dv">5</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>B <span class="op">=</span> <span class="dv">1</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>C <span class="op">=</span> <span class="dv">3</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>D <span class="op">=</span> <span class="dv">5</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">5</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="dv">1</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> <span class="dv">3</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>d <span class="op">=</span> <span class="dv">5</span></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Formatierte Bimatrix ausgeben</span></span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="co"># print(f"     l    r\n o  {A},{a}  {C},{c}\n # u  {B},{b}  {D},{d}")</span></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> lets_plot <span class="im">import</span> <span class="op">*</span></span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>LetsPlot.setup_html()</span>
-<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> <span class="op">\</span></span>
-<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>geom_text(x<span class="op">=-</span> <span class="fl">.5</span>, y<span class="op">=</span> <span class="dv">2</span>   , label<span class="op">=</span>a) <span class="op">+\</span></span>
-<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>geom_text(x<span class="op">=-</span><span class="fl">1.5</span>, y<span class="op">=</span>  <span class="fl">.75</span>, label<span class="op">=</span>A) <span class="op">+\</span></span>
-<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>geom_text(x<span class="op">=-</span> <span class="fl">.5</span>, y<span class="op">=-</span><span class="dv">1</span>   , label<span class="op">=</span>b) <span class="op">+\</span></span>
-<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>geom_text(x<span class="op">=-</span><span class="fl">1.5</span>, y<span class="op">=-</span><span class="fl">2.25</span>, label<span class="op">=</span>B) <span class="op">+\</span></span>
-<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>geom_text(x<span class="op">=</span> <span class="fl">1.5</span>, y<span class="op">=</span> <span class="dv">2</span>   , label<span class="op">=</span>c) <span class="op">+\</span></span>
-<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>geom_text(x<span class="op">=</span>  <span class="fl">.5</span>, y<span class="op">=</span>  <span class="fl">.75</span>, label<span class="op">=</span>C) <span class="op">+\</span></span>
-<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>geom_text(x<span class="op">=</span> <span class="fl">1.5</span>, y<span class="op">=-</span><span class="dv">1</span>   , label<span class="op">=</span>d) <span class="op">+\</span></span>
-<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>geom_text(x<span class="op">=</span>  <span class="fl">.5</span>, y<span class="op">=-</span><span class="fl">2.25</span>, label<span class="op">=</span>D) <span class="op">+\</span></span>
-<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>geom_text(x<span class="op">=-</span><span class="dv">1</span>  , y<span class="op">=</span> <span class="fl">3.3</span> , label<span class="op">=</span><span class="st">'links'</span>)<span class="op">+\</span></span>
-<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>geom_text(x<span class="op">=</span> <span class="dv">1</span>  , y<span class="op">=</span> <span class="fl">3.3</span> , label<span class="op">=</span><span class="st">'rechts'</span>)<span class="op">+\</span></span>
-<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>geom_text(x<span class="op">=-</span><span class="fl">2.2</span>, y<span class="op">=</span> <span class="fl">1.375</span>, angle<span class="op">=</span><span class="dv">90</span>, label<span class="op">=</span><span class="st">'oben'</span>)<span class="op">+\</span></span>
-<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>geom_text(x<span class="op">=-</span><span class="fl">2.2</span>, y<span class="op">=-</span><span class="fl">1.625</span>, angle<span class="op">=</span><span class="dv">90</span>, label<span class="op">=</span><span class="st">'unten'</span>)<span class="op">+\</span></span>
-<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>geom_text(x<span class="op">=</span> <span class="dv">0</span> , y<span class="op">=</span> <span class="dv">4</span> ,</span>
-<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>          fontface <span class="op">=</span> <span class="st">"bold"</span>, label<span class="op">=</span><span class="st">'Spieler 2'</span>)<span class="op">+\</span></span>
-<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>geom_text(x<span class="op">=-</span><span class="fl">2.7</span> , y<span class="op">=</span> <span class="dv">0</span> , angle<span class="op">=</span><span class="dv">90</span>,</span>
-<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>          fontface <span class="op">=</span> <span class="st">"bold"</span>, label<span class="op">=</span><span class="st">'Spieler 1'</span>)<span class="op">+\</span></span>
-<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>geom_segment(x<span class="op">=-</span><span class="dv">2</span>,  xend<span class="op">=</span> <span class="dv">2</span>, y<span class="op">=</span> <span class="dv">0</span>, yend<span class="op">=</span> <span class="dv">0</span>) <span class="op">+\</span></span>
-<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>geom_segment(x<span class="op">=-</span><span class="dv">2</span>,  xend<span class="op">=</span> <span class="dv">2</span>, y<span class="op">=</span> <span class="dv">3</span>, yend<span class="op">=</span> <span class="dv">3</span>) <span class="op">+\</span></span>
-<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>geom_segment(x<span class="op">=-</span><span class="dv">2</span>,  xend<span class="op">=</span> <span class="dv">2</span>, y<span class="op">=-</span><span class="dv">3</span>, yend<span class="op">=-</span><span class="dv">3</span>) <span class="op">+\</span></span>
-<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>geom_segment(x<span class="op">=-</span><span class="dv">2</span>,  xend<span class="op">=-</span><span class="dv">2</span>, y<span class="op">=-</span><span class="dv">3</span>, yend<span class="op">=</span> <span class="dv">3</span>) <span class="op">+\</span></span>
-<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>geom_segment(x<span class="op">=</span> <span class="dv">0</span>,  xend<span class="op">=</span> <span class="dv">0</span>, y<span class="op">=-</span><span class="dv">3</span>, yend<span class="op">=</span> <span class="dv">3</span>) <span class="op">+\</span></span>
-<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a>geom_segment(x<span class="op">=</span> <span class="dv">2</span>,  xend<span class="op">=</span> <span class="dv">2</span>, y<span class="op">=-</span><span class="dv">3</span>, yend<span class="op">=</span> <span class="dv">3</span>) <span class="op">+\</span></span>
-<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>theme_void()<span class="op">+\</span></span>
-<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a>labs(title<span class="op">=</span><span class="st">'Auszahlungen in einem simultanen Spiel: Zwei Gleichgewichte'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>B <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>C <span class="op">=</span> <span class="dv">3</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>D <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> <span class="dv">3</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>d <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Formatierte Bimatrix ausgeben</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="co"># print(f"     l    r\n o  {A},{a}  {C},{c}\n # u  {B},{b}  {D},{d}")</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> lets_plot <span class="im">import</span> <span class="op">*</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>LetsPlot.setup_html()</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> <span class="op">\</span></span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>geom_text(x<span class="op">=-</span> <span class="fl">.5</span>, y<span class="op">=</span> <span class="dv">2</span>   , label<span class="op">=</span>a) <span class="op">+\</span></span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>geom_text(x<span class="op">=-</span><span class="fl">1.5</span>, y<span class="op">=</span>  <span class="fl">.75</span>, label<span class="op">=</span>A) <span class="op">+\</span></span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>geom_text(x<span class="op">=-</span> <span class="fl">.5</span>, y<span class="op">=-</span><span class="dv">1</span>   , label<span class="op">=</span>b) <span class="op">+\</span></span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>geom_text(x<span class="op">=-</span><span class="fl">1.5</span>, y<span class="op">=-</span><span class="fl">2.25</span>, label<span class="op">=</span>B) <span class="op">+\</span></span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>geom_text(x<span class="op">=</span> <span class="fl">1.5</span>, y<span class="op">=</span> <span class="dv">2</span>   , label<span class="op">=</span>c) <span class="op">+\</span></span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>geom_text(x<span class="op">=</span>  <span class="fl">.5</span>, y<span class="op">=</span>  <span class="fl">.75</span>, label<span class="op">=</span>C) <span class="op">+\</span></span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>geom_text(x<span class="op">=</span> <span class="fl">1.5</span>, y<span class="op">=-</span><span class="dv">1</span>   , label<span class="op">=</span>d) <span class="op">+\</span></span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>geom_text(x<span class="op">=</span>  <span class="fl">.5</span>, y<span class="op">=-</span><span class="fl">2.25</span>, label<span class="op">=</span>D) <span class="op">+\</span></span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>geom_text(x<span class="op">=-</span><span class="dv">1</span>  , y<span class="op">=</span> <span class="fl">3.3</span> , label<span class="op">=</span><span class="st">'links'</span>)<span class="op">+\</span></span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>geom_text(x<span class="op">=</span> <span class="dv">1</span>  , y<span class="op">=</span> <span class="fl">3.3</span> , label<span class="op">=</span><span class="st">'rechts'</span>)<span class="op">+\</span></span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>geom_text(x<span class="op">=-</span><span class="fl">2.2</span>, y<span class="op">=</span> <span class="fl">1.375</span>, angle<span class="op">=</span><span class="dv">90</span>, label<span class="op">=</span><span class="st">'oben'</span>)<span class="op">+\</span></span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>geom_text(x<span class="op">=-</span><span class="fl">2.2</span>, y<span class="op">=-</span><span class="fl">1.625</span>, angle<span class="op">=</span><span class="dv">90</span>, label<span class="op">=</span><span class="st">'unten'</span>)<span class="op">+\</span></span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>geom_text(x<span class="op">=</span> <span class="dv">0</span> , y<span class="op">=</span> <span class="dv">4</span> ,</span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a>          fontface <span class="op">=</span> <span class="st">"bold"</span>, label<span class="op">=</span><span class="st">'Spieler 2'</span>)<span class="op">+\</span></span>
+<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a>geom_text(x<span class="op">=-</span><span class="fl">2.7</span> , y<span class="op">=</span> <span class="dv">0</span> , angle<span class="op">=</span><span class="dv">90</span>,</span>
+<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a>          fontface <span class="op">=</span> <span class="st">"bold"</span>, label<span class="op">=</span><span class="st">'Spieler 1'</span>)<span class="op">+\</span></span>
+<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a>geom_segment(x<span class="op">=-</span><span class="dv">2</span>,  xend<span class="op">=</span> <span class="dv">2</span>, y<span class="op">=</span> <span class="dv">0</span>, yend<span class="op">=</span> <span class="dv">0</span>) <span class="op">+\</span></span>
+<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a>geom_segment(x<span class="op">=-</span><span class="dv">2</span>,  xend<span class="op">=</span> <span class="dv">2</span>, y<span class="op">=</span> <span class="dv">3</span>, yend<span class="op">=</span> <span class="dv">3</span>) <span class="op">+\</span></span>
+<span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a>geom_segment(x<span class="op">=-</span><span class="dv">2</span>,  xend<span class="op">=</span> <span class="dv">2</span>, y<span class="op">=-</span><span class="dv">3</span>, yend<span class="op">=-</span><span class="dv">3</span>) <span class="op">+\</span></span>
+<span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a>geom_segment(x<span class="op">=-</span><span class="dv">2</span>,  xend<span class="op">=-</span><span class="dv">2</span>, y<span class="op">=-</span><span class="dv">3</span>, yend<span class="op">=</span> <span class="dv">3</span>) <span class="op">+\</span></span>
+<span id="cb5-38"><a href="#cb5-38" aria-hidden="true" tabindex="-1"></a>geom_segment(x<span class="op">=</span> <span class="dv">0</span>,  xend<span class="op">=</span> <span class="dv">0</span>, y<span class="op">=-</span><span class="dv">3</span>, yend<span class="op">=</span> <span class="dv">3</span>) <span class="op">+\</span></span>
+<span id="cb5-39"><a href="#cb5-39" aria-hidden="true" tabindex="-1"></a>geom_segment(x<span class="op">=</span> <span class="dv">2</span>,  xend<span class="op">=</span> <span class="dv">2</span>, y<span class="op">=-</span><span class="dv">3</span>, yend<span class="op">=</span> <span class="dv">3</span>) <span class="op">+\</span></span>
+<span id="cb5-40"><a href="#cb5-40" aria-hidden="true" tabindex="-1"></a>theme_void()<span class="op">+\</span></span>
+<span id="cb5-41"><a href="#cb5-41" aria-hidden="true" tabindex="-1"></a>labs(title<span class="op">=</span><span class="st">'Auszahlungen in einem simultanen Spiel: Zwei Gleichgewichte'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-display">
 
-            <div id="UBajgq"></div>
+            <div id="XlGiCc"></div>
             <script type="text/javascript" data-lets-plot-script="library">
                 if(!window.letsPlotCallQueue) {
                     window.letsPlotCallQueue = [];
@@ -839,16 +1031,16 @@ window.Quarto = {
                         var div = document.createElement("div");
                         div.style.color = 'darkred';
                         div.textContent = 'Error loading Lets-Plot JS';
-                        document.getElementById("UBajgq").appendChild(div);
+                        document.getElementById("XlGiCc").appendChild(div);
                     };
-                    var e = document.getElementById("UBajgq");
+                    var e = document.getElementById("XlGiCc");
                     e.appendChild(script);
                 })()
             </script>
             
 </div>
-<div class="cell-output cell-output-display" data-execution_count="12">
-   <div id="egSyjE"></div>
+<div class="cell-output cell-output-display" data-execution_count="5">
+   <div id="Liwg6E"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
    
    (function() {
@@ -873,7 +1065,7 @@ window.Quarto = {
        };
    }
    
-   const containerDiv = document.getElementById("egSyjE");
+   const containerDiv = document.getElementById("Liwg6E");
    let fig = null;
    
    function renderPlot() {
@@ -1126,7 +1318,7 @@ window.Quarto = {
 }
 }],
 "metainfo_list":[],
-"spec_id":"12"
+"spec_id":"2"
 };
            window.letsPlotCall(function() { fig = LetsPlot.buildPlotFromProcessedSpecs(plotSpec, containerDiv, sizing); });
        } else {
@@ -1171,54 +1363,54 @@ window.Quarto = {
    </script>
 </div>
 </div>
-<div id="6677735e" class="cell" data-message="false" data-execution_count="3">
+<div id="673e0a75" class="cell" data-message="false" data-execution_count="6">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> <span class="dv">5</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>B <span class="op">=</span> <span class="dv">10</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>C <span class="op">=</span> <span class="dv">1</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>D <span class="op">=</span> <span class="dv">3</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">5</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="dv">1</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> <span class="dv">10</span></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>d <span class="op">=</span> <span class="dv">3</span></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Formatierte Bimatrix ausgeben</span></span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="co"># print(f"     l    r\n o  {A},{a}  {C},{c}\n # u  {B},{b}  {D},{d}")</span></span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> lets_plot <span class="im">import</span> <span class="op">*</span></span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>LetsPlot.setup_html()</span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> <span class="op">\</span></span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>geom_text(x<span class="op">=-</span> <span class="fl">.5</span>, y<span class="op">=</span> <span class="dv">2</span>   , label<span class="op">=</span>a) <span class="op">+\</span></span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>geom_text(x<span class="op">=-</span><span class="fl">1.5</span>, y<span class="op">=</span>  <span class="fl">.75</span>, label<span class="op">=</span>A) <span class="op">+\</span></span>
-<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>geom_text(x<span class="op">=-</span> <span class="fl">.5</span>, y<span class="op">=-</span><span class="dv">1</span>   , label<span class="op">=</span>b) <span class="op">+\</span></span>
-<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>geom_text(x<span class="op">=-</span><span class="fl">1.5</span>, y<span class="op">=-</span><span class="fl">2.25</span>, label<span class="op">=</span>B) <span class="op">+\</span></span>
-<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>geom_text(x<span class="op">=</span> <span class="fl">1.5</span>, y<span class="op">=</span> <span class="dv">2</span>   , label<span class="op">=</span>c) <span class="op">+\</span></span>
-<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>geom_text(x<span class="op">=</span>  <span class="fl">.5</span>, y<span class="op">=</span>  <span class="fl">.75</span>, label<span class="op">=</span>C) <span class="op">+\</span></span>
-<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>geom_text(x<span class="op">=</span> <span class="fl">1.5</span>, y<span class="op">=-</span><span class="dv">1</span>   , label<span class="op">=</span>d) <span class="op">+\</span></span>
-<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>geom_text(x<span class="op">=</span>  <span class="fl">.5</span>, y<span class="op">=-</span><span class="fl">2.25</span>, label<span class="op">=</span>D) <span class="op">+\</span></span>
-<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a>geom_text(x<span class="op">=-</span><span class="dv">1</span>  , y<span class="op">=</span> <span class="fl">3.3</span> , label<span class="op">=</span><span class="st">'links'</span>)<span class="op">+\</span></span>
-<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>geom_text(x<span class="op">=</span> <span class="dv">1</span>  , y<span class="op">=</span> <span class="fl">3.3</span> , label<span class="op">=</span><span class="st">'rechts'</span>)<span class="op">+\</span></span>
-<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>geom_text(x<span class="op">=-</span><span class="fl">2.2</span>, y<span class="op">=</span> <span class="fl">1.375</span>, angle<span class="op">=</span><span class="dv">90</span>, label<span class="op">=</span><span class="st">'oben'</span>)<span class="op">+\</span></span>
-<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>geom_text(x<span class="op">=-</span><span class="fl">2.2</span>, y<span class="op">=-</span><span class="fl">1.625</span>, angle<span class="op">=</span><span class="dv">90</span>, label<span class="op">=</span><span class="st">'unten'</span>)<span class="op">+\</span></span>
-<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>geom_text(x<span class="op">=</span> <span class="dv">0</span> , y<span class="op">=</span> <span class="dv">4</span> ,</span>
-<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>          fontface <span class="op">=</span> <span class="st">"bold"</span>, label<span class="op">=</span><span class="st">'Spieler 2'</span>)<span class="op">+\</span></span>
-<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>geom_text(x<span class="op">=-</span><span class="fl">2.7</span> , y<span class="op">=</span> <span class="dv">0</span> , angle<span class="op">=</span><span class="dv">90</span>,</span>
-<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>          fontface <span class="op">=</span> <span class="st">"bold"</span>, label<span class="op">=</span><span class="st">'Spieler 1'</span>)<span class="op">+\</span></span>
-<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>geom_segment(x<span class="op">=-</span><span class="dv">2</span>,  xend<span class="op">=</span> <span class="dv">2</span>, y<span class="op">=</span> <span class="dv">0</span>, yend<span class="op">=</span> <span class="dv">0</span>) <span class="op">+\</span></span>
-<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>geom_segment(x<span class="op">=-</span><span class="dv">2</span>,  xend<span class="op">=</span> <span class="dv">2</span>, y<span class="op">=</span> <span class="dv">3</span>, yend<span class="op">=</span> <span class="dv">3</span>) <span class="op">+\</span></span>
-<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>geom_segment(x<span class="op">=-</span><span class="dv">2</span>,  xend<span class="op">=</span> <span class="dv">2</span>, y<span class="op">=-</span><span class="dv">3</span>, yend<span class="op">=-</span><span class="dv">3</span>) <span class="op">+\</span></span>
-<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a>geom_segment(x<span class="op">=-</span><span class="dv">2</span>,  xend<span class="op">=-</span><span class="dv">2</span>, y<span class="op">=-</span><span class="dv">3</span>, yend<span class="op">=</span> <span class="dv">3</span>) <span class="op">+\</span></span>
-<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a>geom_segment(x<span class="op">=</span> <span class="dv">0</span>,  xend<span class="op">=</span> <span class="dv">0</span>, y<span class="op">=-</span><span class="dv">3</span>, yend<span class="op">=</span> <span class="dv">3</span>) <span class="op">+\</span></span>
-<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a>geom_segment(x<span class="op">=</span> <span class="dv">2</span>,  xend<span class="op">=</span> <span class="dv">2</span>, y<span class="op">=-</span><span class="dv">3</span>, yend<span class="op">=</span> <span class="dv">3</span>) <span class="op">+\</span></span>
-<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a>theme_void()<span class="op">+\</span></span>
-<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a>labs(title<span class="op">=</span><span class="st">'Auszahlungen in einem simultanen Spiel: Ineffizientes Gleichgewicht'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>A <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>B <span class="op">=</span> <span class="dv">10</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>C <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>D <span class="op">=</span> <span class="dv">3</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> <span class="dv">10</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>d <span class="op">=</span> <span class="dv">3</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Formatierte Bimatrix ausgeben</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="co"># print(f"     l    r\n o  {A},{a}  {C},{c}\n # u  {B},{b}  {D},{d}")</span></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> lets_plot <span class="im">import</span> <span class="op">*</span></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>LetsPlot.setup_html()</span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>ggplot() <span class="op">+</span> <span class="op">\</span></span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>geom_text(x<span class="op">=-</span> <span class="fl">.5</span>, y<span class="op">=</span> <span class="dv">2</span>   , label<span class="op">=</span>a) <span class="op">+\</span></span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>geom_text(x<span class="op">=-</span><span class="fl">1.5</span>, y<span class="op">=</span>  <span class="fl">.75</span>, label<span class="op">=</span>A) <span class="op">+\</span></span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>geom_text(x<span class="op">=-</span> <span class="fl">.5</span>, y<span class="op">=-</span><span class="dv">1</span>   , label<span class="op">=</span>b) <span class="op">+\</span></span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>geom_text(x<span class="op">=-</span><span class="fl">1.5</span>, y<span class="op">=-</span><span class="fl">2.25</span>, label<span class="op">=</span>B) <span class="op">+\</span></span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a>geom_text(x<span class="op">=</span> <span class="fl">1.5</span>, y<span class="op">=</span> <span class="dv">2</span>   , label<span class="op">=</span>c) <span class="op">+\</span></span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>geom_text(x<span class="op">=</span>  <span class="fl">.5</span>, y<span class="op">=</span>  <span class="fl">.75</span>, label<span class="op">=</span>C) <span class="op">+\</span></span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>geom_text(x<span class="op">=</span> <span class="fl">1.5</span>, y<span class="op">=-</span><span class="dv">1</span>   , label<span class="op">=</span>d) <span class="op">+\</span></span>
+<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a>geom_text(x<span class="op">=</span>  <span class="fl">.5</span>, y<span class="op">=-</span><span class="fl">2.25</span>, label<span class="op">=</span>D) <span class="op">+\</span></span>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>geom_text(x<span class="op">=-</span><span class="dv">1</span>  , y<span class="op">=</span> <span class="fl">3.3</span> , label<span class="op">=</span><span class="st">'links'</span>)<span class="op">+\</span></span>
+<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a>geom_text(x<span class="op">=</span> <span class="dv">1</span>  , y<span class="op">=</span> <span class="fl">3.3</span> , label<span class="op">=</span><span class="st">'rechts'</span>)<span class="op">+\</span></span>
+<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a>geom_text(x<span class="op">=-</span><span class="fl">2.2</span>, y<span class="op">=</span> <span class="fl">1.375</span>, angle<span class="op">=</span><span class="dv">90</span>, label<span class="op">=</span><span class="st">'oben'</span>)<span class="op">+\</span></span>
+<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a>geom_text(x<span class="op">=-</span><span class="fl">2.2</span>, y<span class="op">=-</span><span class="fl">1.625</span>, angle<span class="op">=</span><span class="dv">90</span>, label<span class="op">=</span><span class="st">'unten'</span>)<span class="op">+\</span></span>
+<span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a>geom_text(x<span class="op">=</span> <span class="dv">0</span> , y<span class="op">=</span> <span class="dv">4</span> ,</span>
+<span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a>          fontface <span class="op">=</span> <span class="st">"bold"</span>, label<span class="op">=</span><span class="st">'Spieler 2'</span>)<span class="op">+\</span></span>
+<span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a>geom_text(x<span class="op">=-</span><span class="fl">2.7</span> , y<span class="op">=</span> <span class="dv">0</span> , angle<span class="op">=</span><span class="dv">90</span>,</span>
+<span id="cb6-33"><a href="#cb6-33" aria-hidden="true" tabindex="-1"></a>          fontface <span class="op">=</span> <span class="st">"bold"</span>, label<span class="op">=</span><span class="st">'Spieler 1'</span>)<span class="op">+\</span></span>
+<span id="cb6-34"><a href="#cb6-34" aria-hidden="true" tabindex="-1"></a>geom_segment(x<span class="op">=-</span><span class="dv">2</span>,  xend<span class="op">=</span> <span class="dv">2</span>, y<span class="op">=</span> <span class="dv">0</span>, yend<span class="op">=</span> <span class="dv">0</span>) <span class="op">+\</span></span>
+<span id="cb6-35"><a href="#cb6-35" aria-hidden="true" tabindex="-1"></a>geom_segment(x<span class="op">=-</span><span class="dv">2</span>,  xend<span class="op">=</span> <span class="dv">2</span>, y<span class="op">=</span> <span class="dv">3</span>, yend<span class="op">=</span> <span class="dv">3</span>) <span class="op">+\</span></span>
+<span id="cb6-36"><a href="#cb6-36" aria-hidden="true" tabindex="-1"></a>geom_segment(x<span class="op">=-</span><span class="dv">2</span>,  xend<span class="op">=</span> <span class="dv">2</span>, y<span class="op">=-</span><span class="dv">3</span>, yend<span class="op">=-</span><span class="dv">3</span>) <span class="op">+\</span></span>
+<span id="cb6-37"><a href="#cb6-37" aria-hidden="true" tabindex="-1"></a>geom_segment(x<span class="op">=-</span><span class="dv">2</span>,  xend<span class="op">=-</span><span class="dv">2</span>, y<span class="op">=-</span><span class="dv">3</span>, yend<span class="op">=</span> <span class="dv">3</span>) <span class="op">+\</span></span>
+<span id="cb6-38"><a href="#cb6-38" aria-hidden="true" tabindex="-1"></a>geom_segment(x<span class="op">=</span> <span class="dv">0</span>,  xend<span class="op">=</span> <span class="dv">0</span>, y<span class="op">=-</span><span class="dv">3</span>, yend<span class="op">=</span> <span class="dv">3</span>) <span class="op">+\</span></span>
+<span id="cb6-39"><a href="#cb6-39" aria-hidden="true" tabindex="-1"></a>geom_segment(x<span class="op">=</span> <span class="dv">2</span>,  xend<span class="op">=</span> <span class="dv">2</span>, y<span class="op">=-</span><span class="dv">3</span>, yend<span class="op">=</span> <span class="dv">3</span>) <span class="op">+\</span></span>
+<span id="cb6-40"><a href="#cb6-40" aria-hidden="true" tabindex="-1"></a>theme_void()<span class="op">+\</span></span>
+<span id="cb6-41"><a href="#cb6-41" aria-hidden="true" tabindex="-1"></a>labs(title<span class="op">=</span><span class="st">'Auszahlungen in einem simultanen Spiel: Ineffizientes Gleichgewicht'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-display">
 
-            <div id="qqgiRr"></div>
+            <div id="3R5LsW"></div>
             <script type="text/javascript" data-lets-plot-script="library">
                 if(!window.letsPlotCallQueue) {
                     window.letsPlotCallQueue = [];
@@ -1242,16 +1434,16 @@ window.Quarto = {
                         var div = document.createElement("div");
                         div.style.color = 'darkred';
                         div.textContent = 'Error loading Lets-Plot JS';
-                        document.getElementById("qqgiRr").appendChild(div);
+                        document.getElementById("3R5LsW").appendChild(div);
                     };
-                    var e = document.getElementById("qqgiRr");
+                    var e = document.getElementById("3R5LsW");
                     e.appendChild(script);
                 })()
             </script>
             
 </div>
-<div class="cell-output cell-output-display" data-execution_count="13">
-   <div id="pt4dzi"></div>
+<div class="cell-output cell-output-display" data-execution_count="6">
+   <div id="50NE0b"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
    
    (function() {
@@ -1276,7 +1468,7 @@ window.Quarto = {
        };
    }
    
-   const containerDiv = document.getElementById("pt4dzi");
+   const containerDiv = document.getElementById("50NE0b");
    let fig = null;
    
    function renderPlot() {
@@ -1529,7 +1721,7 @@ window.Quarto = {
 }
 }],
 "metainfo_list":[],
-"spec_id":"13"
+"spec_id":"3"
 };
            window.letsPlotCall(function() { fig = LetsPlot.buildPlotFromProcessedSpecs(plotSpec, containerDiv, sizing); });
        } else {

@@ -2,7 +2,61 @@
 
 ## Ethik
 
-![Abbildung: Jan S. Voßwinkel](./Tikz/Moral-Sitte-Ethik.svg)
+```{python}
+#| message: false
+#| warning: false
+
+import graphviz
+from IPython.display import display
+
+# Erstellung des Digraph-Objekts
+dot = graphviz.Digraph(comment='Unterscheidung Ethik Moral Sitte', format='png')
+
+# Globale Layout-Einstellungen
+dot.attr(rankdir='BT', size='10,10') # Bottom-to-Top: Von der Praxis zur Theorie
+dot.attr('node', shape='rectangle', style='filled,rounded', fontname='Arial', fontsize='11')
+dot.attr('edge', fontname='Arial', fontsize='10')
+
+# --- Ebene 3: Theorie/Reflexion (Die Meta-Ebene) ---
+dot.node('Ethik', 'ETHIK\n(Wissenschaft von der Moral)', fillcolor='#AED6F1', penwidth='2')
+dot.node('Reflexion', 'Methodische Reflexion\n(Begründung & Prüfung)', shape='ellipse', fillcolor='#EBF5FB')
+
+# --- Ebene 2: Das Regelsystem (Die Norm-Ebene) ---
+dot.node('Moral', 'MORAL\n(Gesellschaftliches Regelsystem)', fillcolor='#F9E79F')
+dot.node('Werte', 'Werte\n(Gerechtigkeit, Freiheit, Würde)', shape='none', fontcolor='#7D6608')
+
+# --- Ebene 1: Die Praxis (Die Handlungs-Ebene) ---
+dot.node('Sitte', 'SITTE\n(Gelebte Praxis & Tradition)', fillcolor='#FAD7A0')
+dot.node('Praxis', 'Uninterfragte Gewohnheit\n(Konventionen)', shape='none', fontcolor='#7E5109')
+
+# --- Sonderform: Das Individuum ---
+dot.node('Ethos', 'ETHOS\n(Individuelle Maximen &\nSelbstverpflichtung)', fillcolor='#D5F5E3')
+
+# --- Verbindungen ---
+# Von der Praxis zur Moral
+dot.edge('Sitte', 'Moral', label='basiert auf')
+dot.edge('Praxis', 'Sitte', style='dotted')
+
+# Von der Moral zur Ethik
+dot.edge('Moral', 'Ethik', label='ist Forschungsgegenstand von')
+dot.edge('Ethik', 'Reflexion', arrowhead='none', style='dashed')
+dot.edge('Reflexion', 'Moral', label='hinterfragt / begründet', color='blue')
+
+# Werte fundamentieren die Moral
+dot.edge('Werte', 'Moral', style='dotted')
+
+# Ethos-Bezug
+dot.edge('Ethos', 'Sitte', label='prägt / wird geprägt durch', dir='both')
+dot.edge('Ethos', 'Ethik', label='reflektiert über', style='dashed')
+
+# Wirtschaftsethik-Beispiel (optional als Notiz)
+#dot.node('Note', 'Wirtschaftsethik-Beispiel:\nEthik = Wirtschaftsethik\nMoral = Wirtschaftsmoral\nSitte = Wirtschaftspraxis',
+#         shape='note', fillcolor='#FEF9E7', fontsize='9')
+
+# Anzeige des Diagramms
+display(dot)
+```
+
 
 ## *Wirtschafts*ethik
 
@@ -11,6 +65,66 @@ Abgrenzung über
 -   den Gegenstand: Analyse ethische Fragen im Zusammehang mit wirtschaftlichem Handeln
 
 -   die Methode: Analyse ethischer Fragen unter Rückgriff auf wirtschaftswissenschaftliche Grundmodelle und Methoden
+
+
+```{python}
+#| message: false
+#| warning: false
+
+import graphviz
+from IPython.display import display
+
+# Erstellung des Digraph-Objekts
+dot = graphviz.Digraph(comment='Systematik der Wirtschaftsethik', format='png')
+
+# Globale Layout-Einstellungen
+dot.attr(rankdir='TB', size='12,12')
+dot.attr('node', shape='rectangle', style='filled,rounded', fontname='Arial', fontsize='11')
+dot.attr('edge', fontname='Arial', fontsize='9')
+
+# Zentrale Definition
+dot.node('WE', 'Wirtschaftsethik\n(Reflexion moralischer Grundlagen)', fillcolor='#2C3E50', fontcolor='white', penwidth='2')
+
+# --- Ebene 1: Die drei Analyseebenen ---
+with dot.subgraph(name='cluster_ebenen') as c:
+    c.attr(label='Analyseebenen', style='dashed', color='gray')
+    c.node('Macro', 'Makroebene\n(Wirtschaftsordnung / Staat)', fillcolor='#AED6F1')
+    c.node('Meso', 'Mesoebene\n(Unternehmensethik / Organisation)', fillcolor='#AED6F1')
+    c.node('Micro', 'Mikroebene\n(Individualethik / Akteure)', fillcolor='#AED6F1')
+
+# --- Ebene 2: Theoretische Grundpositionen ---
+dot.node('Homann', 'Ökonomische Ethik\n(Karl Homann)', fillcolor='#D5F5E3')
+dot.node('Ulrich', 'Integrative Wirtschaftsethik\n(Peter Ulrich)', fillcolor='#D5F5E3')
+dot.node('Wieland', 'Governanceethik\n(Josef Wieland)', fillcolor='#D5F5E3')
+dot.node('Behavioral', 'Behavioral Business Ethics\n(Deskriptive Perspektive)', fillcolor='#FCF3CF')
+
+# --- Ebene 3: Kernkonzepte & Ziele ---
+#dot.node('Goal', 'Ziel: Versöhnung von\nEffizienz & Moral', fillcolor='#F1948A', style='filled,bold')
+dot.node('Welfare', 'Zweck: Wohlfahrt &\nGemeinwohl', fillcolor='#F1948A')
+
+# --- Verbindungen ---
+# Von der Zentrale zu den Ebenen
+dot.edge('WE', 'Macro')
+dot.edge('WE', 'Meso')
+dot.edge('WE', 'Micro')
+
+# Zuordnung der Theorien (thematische Schwerpunkte)
+dot.edge('Macro', 'Homann', label='Fokus: Rahmenordnung')
+dot.edge('WE', 'Ulrich', label='Kritische Prüfung')
+dot.edge('Meso', 'Wieland', label='Vertrauen & Reputation')
+dot.edge('Micro', 'Behavioral', label='Empirisches Verhalten')
+
+# Integration der Konzepte
+dot.edge('Homann', 'Welfare')
+dot.edge('Ulrich', 'Welfare')
+dot.edge('Wieland', 'Welfare')
+dot.edge('Behavioral', 'Welfare', label='Kompatibilität prüfen')
+# dot.edge('Goal', 'Welfare')
+
+# Anzeige des Diagramms
+display(dot)
+```
+
 
 ## Ethik und Verantwortung
 
@@ -61,6 +175,75 @@ Elemente und Beziehungen des Verantwortungsbegriffs nach @loh_strukturen_2017 ![
 -   Anreize für Rationalität
 
 -   Verantwortung bewährt sich in einem Umfeld ohne etablierte Verfahrensregeln, in dem pragmatisches Handeln in komlexen Situationen erforderlich ist [@heidbrink_definitionen_2017]
+
+```{python}
+#| message: false
+#| warning: false
+
+import graphviz
+from IPython.display import display
+
+# Erstellung des Digraph-Objekts
+dot = graphviz.Digraph(comment='Funktionen der Verantwortung', format='png')
+
+# Globale Layout-Attribute
+dot.attr(rankdir='TB', size='12,12')
+dot.attr('node', shape='none', fontname='Verdana', fontsize='11')
+dot.attr('edge', color='gray50', arrowhead='vee')
+
+# Zentrales Konzept
+dot.node('V', '<<TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" CELLPADDING="50" BGCOLOR="#2C3E50">'
+              '<tr><td><FONT COLOR="white" POINT-SIZE="16"><B>VERANTWORTUNG</B></FONT></td></tr>'
+              '</TABLE>>')
+
+# --- Sektion 1: Soziale & Relationale Dimension (Blau) ---
+with dot.subgraph(name='cluster_social') as s:
+    s.attr(label='Soziale & Relationale Ebene', fontname='Verdana-Bold', color='#3498DB')
+    s.node('S1', 'Gegenseitige Rechtfertigung\n& Rechenschaft', shape='box', fillcolor='#AED6F1', style='filled')
+    s.node('S2', 'Anerkennung als\nautonomes Wesen', shape='box', fillcolor='#AED6F1', style='filled')
+    s.node('S3', 'Respekt vs.\nObjektstatus', shape='box', fillcolor='#AED6F1', style='filled')
+
+# --- Sektion 2: Konstitutive & Individuelle Dimension (Grün) ---
+with dot.subgraph(name='cluster_indiv') as i:
+    i.attr(label='Konstitution des Handlungsvermögens', fontname='Verdana-Bold', color='#27AE60')
+    i.node('I1', 'Rationale Selbststeuerung', shape='box', fillcolor='#ABEBC6', style='filled')
+    i.node('I2', 'Moralische Urteilsbildung', shape='box', fillcolor='#ABEBC6', style='filled')
+    i.node('I3', 'Bewältigung von Ungewissheit', shape='box', fillcolor='#ABEBC6', style='filled')
+
+# --- Sektion 3: Wirtschaftliche Dimension (Gelb) ---
+with dot.subgraph(name='cluster_econ') as e:
+    e.attr(label='Wirtschaftlicher Koordinationsmechanismus', fontname='Verdana-Bold', color='#F1C40F')
+    e.node('E1', 'Korrektiv gegen\nMarktversagen', shape='box', fillcolor='#FCF3CF', style='filled')
+    e.node('E2', 'Senkung von\nTransaktionskosten', shape='box', fillcolor='#FCF3CF', style='filled')
+    e.node('E3', 'Vertrauen & Reputation', shape='box', fillcolor='#FCF3CF', style='filled')
+
+# --- Sektion 4: Stabilität & Gerechtigkeit (Rot) ---
+with dot.subgraph(name='cluster_stab') as st:
+    st.attr(label='Gesellschaftliche Stabilität', fontname='Verdana-Bold', color='#E74C3C')
+    st.node('ST1', 'Ausgleich von\nInteressenkonflikten', shape='box', fillcolor='#FADBD8', style='filled')
+    st.node('ST2', 'Wiedergutmachung\n& Korrektur', shape='box', fillcolor='#FADBD8', style='filled')
+
+# Verbindungen
+dot.edge('V', 'S1', label='fungiert als')
+dot.edge('S1', 'S2', style='dashed')
+dot.edge('S2', 'S3')
+
+dot.edge('V', 'I1', label='ermöglicht')
+dot.edge('I1', 'I2')
+dot.edge('V', 'I3')
+
+dot.edge('V', 'E1', label='steuert')
+dot.edge('E3', 'E2', label='Mechanismus')
+dot.edge('E1', 'E3')
+
+dot.edge('V', 'ST1', label='sichert')
+dot.edge('ST1', 'ST2')
+
+# Anzeige des Diagramms
+display(dot)
+```
+
+
 
 ### Grenzen der Verantwortung: Systemverantwortung
 
