@@ -57,6 +57,21 @@ dot.edge('Ethos', 'Ethik', label='reflektiert über', style='dashed')
 display(dot)
 ```
 
+::: {.callout-important icon="false" collapse="true"}
+# Der Text zum Bild {.unnumbered}
+
+Die Begriffe Ethik, Moral und Sitte werden im alltäglichen Sprachgebrauch oft synonym verwendet, da sie etymologisch beide auf Wörter für Brauch, Charakter oder Gewohnheit aus dem Griechischen beziehungsweise Lateinischen zurückzuführen sind. In der wissenschaftlichen und philosophischen Analyse ist es jedoch notwendig, diese Begriffe präzise voneinander abzugrenzen, um unterschiedliche Ebenen des menschlichen Handelns und der Normsetzung zu beschreiben [@holzmann_wirtschaftsethik_2019].
+
+Unter der Moral versteht man ein existierendes Regelungssystem einer Gesellschaft, das von der Mehrheit der Mitglieder akzeptiert wird und sich auf die zwischenmenschliche Interaktion bezieht. Sie dient der Bewertung von Handlungen in die Kategorien Gut und Schlecht beziehungsweise Richtig und Falsch. Die Moral basiert auf gesellschaftlichen Wertvorstellungen, also auf abstrakten Leitvorstellungen darüber, was als erstrebenswert gilt, wie etwa Gerechtigkeit, Freiheit oder Würde [@holzmann_wirtschaftsethik_2019]. Da die Moral die Summe der zu einem bestimmten Zeitpunkt geltenden sozialen Einstellungen darstellt, ist sie zeit- und kulturabhängig und somit einem ständigen Wandel unterworfen [@conrad_wirtschaftsethik_2016].
+
+Der Begriff Sitte umschreibt die praktische Verfolgung dieser vorgegebenen moralischen Vorstellungen, die zumeist aus Gewohnheit, Tradition oder Übereinkunft erfolgt, ohne dass die dahinterliegenden Regeln ständig hinterfragt werden. Sitten sind somit die ungeschriebenen Regeln des gesellschaftlichen Zusammenlebens, die oft durch Erziehung und Sozialisation weitergegeben werden. Während die Moral das Bewertungssystem darstellt, bezeichnet die Sitte eher die gelebte Praxis und die konventionelle Einhaltung dieses Systems innerhalb einer Gemeinschaft [@conrad_wirtschaftsethik_2016; @holzmann_wirtschaftsethik_2019].
+
+Die Ethik hingegen wird als die Wissenschaft von der Moral oder als praktische Philosophie definiert \[@conrad_wirtschaftsethik_2016; @luhmann_wirtschaftsethik_2019
+
+\]. Ihre Hauptaufgabe ist das methodisch-systematische Nachdenken über die gängige Praxis sowie über die etablierten Moralvorstellungen. Die Ethik ist somit eine Reflexionsebene, die untersucht, ob und warum bestimmte moralische Urteile gerechtfertigt sind oder wie Normen in Konfliktfällen begründet werden können. Ein wesentliches Merkmal der Ethik ist, dass sie berücksichtigt, dass ein moralisches Sollen stets ein reales Können der Akteure voraussetzt. Sie liefert Begründungen für Normen und entwickelt Methoden, um moralisches Verhalten zu prüfen, wie beispielsweise den kategorischen Imperativ [@holzmann_wirtschaftsethik_2019].
+
+Ergänzend zu diesen gesellschaftsbezogenen Begriffen steht das Ethos, welches die individuellen Regeln und wertenden Maximen umfasst, die sich eine Person oder eine spezifische Gruppe für sich selbst setzt. Das persönliche Ethos bildet sich auf der Grundlage von Erziehung und eigener Reflexion über soziale Erfahrungen heraus. In der Wirtschaftsethik zeigt sich die Unterscheidung dieser Ebenen beispielsweise darin, dass die Wirtschaftspraxis das tatsächliche Handeln beschreibt, während die Wirtschaftsmoral die akzeptierten Regeln innerhalb der Wirtschaft umfasst und die Wirtschaftsethik diese Praxis und Moral kritisch reflektiert. Letztlich ermöglicht die Unterscheidung zwischen der Ebene der Praxis, der Moral und der Ethik eine differenzierte Analyse menschlichen Verhaltens und seiner normativen Grundlagen [@holzmann_wirtschaftsethik_2019].
+:::
 
 ## *Wirtschafts*ethik
 
@@ -65,7 +80,6 @@ Abgrenzung über
 -   den Gegenstand: Analyse ethische Fragen im Zusammehang mit wirtschaftlichem Handeln
 
 -   die Methode: Analyse ethischer Fragen unter Rückgriff auf wirtschaftswissenschaftliche Grundmodelle und Methoden
-
 
 ```{python}
 #| message: false
@@ -125,7 +139,6 @@ dot.edge('Behavioral', 'Welfare', label='Kompatibilität prüfen')
 display(dot)
 ```
 
-
 ## Ethik und Verantwortung
 
 ### Verhaltensregeln und Regelüberwachung
@@ -139,7 +152,6 @@ display(dot)
     -   eine **Entität, vor** bzw. gegenüber **der man die Verantwortung trägt.**
 
 $\rightarrow$ Was ist bezüglich der Entität, vor bzw. gegenüber der man Verantwortung trägt, vorstellbar?
-
 
 ### Verantwortungsbegriff
 
@@ -243,13 +255,11 @@ dot.edge('ST1', 'ST2')
 display(dot)
 ```
 
-
-
 ### Grenzen der Verantwortung: Systemverantwortung
 
-- In den folgenden spieltheoretischen Konstellationen hängt das Ergebnis von den (unabhängigen) Entscheidungen zweier Spieler ab. 
+-   In den folgenden spieltheoretischen Konstellationen hängt das Ergebnis von den (unabhängigen) Entscheidungen zweier Spieler ab.
 
-- Wer ist für das Ergebnis (Gleichgewicht) verantwortlich?
+-   Wer ist für das Ergebnis (Gleichgewicht) verantwortlich?
 
 ```{python}
 #| message: false
@@ -299,7 +309,6 @@ theme_void()+\
 labs(title='Auszahlungen in einem simultanen Spiel: Effizientes Gleichgewicht')
 ```
 
-
 ```{python}
 #| message: false
 #| warning: false
@@ -346,7 +355,6 @@ geom_segment(x= 2,  xend= 2, y=-3, yend= 3) +\
 theme_void()+\
 labs(title='Auszahlungen in einem simultanen Spiel: Zwei Gleichgewichte')
 ```
-
 
 ```{python}
 #| message: false

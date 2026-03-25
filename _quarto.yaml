@@ -7,7 +7,7 @@ book:
   author: "Prof. Dr. Jan S. Voßwinkel"
   # date: "2024"
   subtitle: "Sommersemester 2026"
-  #lang: de
+  #lang: de-De
   language:  _language.yml
   repo-url: https://github.com/janvoss/Wirtschaftsethik.git
 #  issued: "Sommersemester 2024"
