@@ -192,6 +192,24 @@ Elemente und Beziehungen des Verantwortungsbegriffs nach @loh_strukturen_2017 ![
     -   Risiko vs. Unsicherheit
     -   Wissensbeschaffung zumutbar?
 
+::: {.callout-important icon="false" collapse="true"}
+# Der Text zum Bild {.unnumbered}
+
+Vgl. zum Folgenden @loh_strukturen_2017.
+
+Janina Loh beschreibt die Verantwortung in ihrem theoretischen Entwurf als ein dezidiert relationales Konzept, dessen begriffliches Skelett aus fünf notwendigen Relationselementen besteht. Diese fünf Relata leitet sie aus einer etymologisch fundierten Minimaldefinition ab, nach der Verantwortung bedeutet, dass eine Person aufgrund einer spezifischen psychomotivationalen Verfassung in der Lage ist, im normativen Sinne für etwas Rede und Antwort zu stehen. Die Struktur dieser Verantwortungsbeziehung ist nach Lohs Auffassung holistisch geprägt, was bedeutet, dass die einzelnen Elemente in einem wechselseitigen Abhängigkeitsverhältnis stehen und sich gegenseitig präzisieren.
+
+Das erste dieser fünf Relata ist das Subjekt oder die Trägerin beziehungsweise der Träger der Verantwortung, womit die Frage nach dem Wer beantwortet wird. Das Subjekt muss über die erforderlichen Kompetenzen und Fähigkeiten verfügen, um überhaupt als adressierbar für Verantwortungszuschreibungen zu gelten. Loh weist darauf hin, dass die Verantwortung traditionell als ein individualistisches Prinzip verstanden wird, das eng mit dem Konzept der Personalität verknüpft ist, wobei zur näheren Bestimmung dieses Elements die Unterscheidung zwischen Individualität und Kollektivität als notwendige Subkategorie herangezogen werden muss.
+
+Das zweite Relatum stellt das Objekt oder den Gegenstand der Verantwortung dar und adressiert die Frage nach dem Wofür. Obwohl Menschen im Alltag Verantwortung für Lebewesen, Dinge oder Ereignisse übernehmen, lässt sich nach Lohs Analyse letztlich jeder Verantwortungsgegenstand in eine Verantwortung für Handlungen und Handlungsfolgen übersetzen. Zur vollständigen Definition dieses Relatums in einem konkreten Kontext gehört zudem die zeitliche Einordnung als entweder prospektive oder retrospektive Verantwortung sowie die Bestimmung des Grades als entweder partikularer oder universaler Gegenstand.
+
+Als drittes Relatum fungiert die Instanz der Verantwortung, die die Frage nach dem Wovor klärt. Dies ist die Autorität, vor der das Subjekt Rechenschaft ablegt und die für diese Rolle über die gleichen personalen Grundvoraussetzungen verfügen muss wie das Subjekt selbst, um das Handeln des Gegenübers verstehen zu können. Innerhalb des Diskurses wird hierbei zwischen internen Instanzen wie dem Gewissen oder der Vernunft und externen Instanzen wie einem weltlichen Gericht oder einer religiösen Instanz differenziert.
+
+Das vierte Relatum ist die Adressatin oder der Adressat der Verantwortung, womit Loh die Frage nach dem Warum beziehungsweise dem Gegenüber der Verantwortungsbeziehung beantwortet. Der Adressat stellt den eigentlichen Grund für das Bestehen einer Verantwortlichkeit dar, da er diejenige Entität verkörpert, die vom Handeln des Subjekts betroffen ist oder deren Werte durch das Handeln tangiert werden. Loh betont die Eigenständigkeit dieses Elements gegenüber der Instanz, da ein Adressat im Gegensatz zur Instanz nicht selbst fähig sein muss, Rede und Antwort zu stehen, sondern lediglich den normativen Bezugspunkt der Betroffenheit markiert.
+
+Das fünfte Relatum bilden schließlich die normativen Kriterien, die das Inwiefern der Verantwortung definieren. Diese Kriterien stellen den Maßstab und den normativen Bezugsrahmen dar, anhand dessen beurteilt wird, ob ein Subjekt rechtmäßig gehandelt hat. Da die Verantwortung als Begriff selbst keine inhaltlichen Normen vorgibt, bezeichnet Loh dieses Element als parasitär gegenüber seinem normativen Fundament, das aus Werten, Gesetzen, Pflichten oder Prinzipien bestehen kann. Die Bestimmung des jeweiligen Verantwortungsbereichs, wie etwa die Differenzierung zwischen moralischer, politischer oder rechtlicher Verantwortung, dient dabei als Subkategorie zur Präzisierung dieses fünften Relationselements.
+:::
+
 ### Funktionen der Verantwortung
 
 -   Anreize für Rationalität
@@ -201,6 +219,7 @@ Elemente und Beziehungen des Verantwortungsbegriffs nach @loh_strukturen_2017 ![
 ```{python}
 #| message: false
 #| warning: false
+#| fig-cap: "Funktionen der Verantwortung"
 
 import graphviz
 from IPython.display import display
@@ -264,6 +283,93 @@ dot.edge('ST1', 'ST2')
 # Anzeige des Diagramms
 display(dot)
 ```
+
+::: {.callout-important icon="false" collapse="true"}
+# Der Text zum Bild {.unnumbered}
+
+Verantwortung fungiert primär als ein System der gegenseitigen Rechtfertigung und Mitberatung, durch das die Mitglieder einer Gesellschaft die Regeln ihres Zusammenlebens festlegen [@scanlon_what_2000; @lenman_compatibilism_2006]. Sie ermöglicht es, Handlungen vor anderen zu begründen und Rechenschaft über das eigene Tun abzulegen, was für eine stabile soziale Ordnung unerlässlich ist [@holzmann_wirtschaftsethik_2019; @loh_strukturen_2017; @williams_verantwortung_2017]. Dabei dient die Praxis des Zur-Verantwortung-Ziehens nicht nur der Kontrolle schädlichen Verhaltens, sondern drückt eine fundamentale Form der gegenseitigen Anerkennung und des Respekts aus [@lenman_compatibilism_2006; @scanlon_what_2000; @williams_verantwortung_2017]. Jemanden für sein Handeln verantwortlich zu machen bedeutet, ihn als ein autonomes, vernunftbegabtes Wesen ernst zu nehmen und ihn nicht lediglich als Objekt oder wie ein Kind zu behandeln [@lenman_compatibilism_2006; @scanlon_what_2000].
+
+Darüber hinaus hat die Verantwortung eine wesentliche Funktion für die Konstitution des menschlichen Handlungsvermögens selbst. Erst durch die soziale Erwartung, Rede und Antwort stehen zu müssen, entwickeln Individuen die Fähigkeit zur rationalen Selbststeuerung und zur moralischen Urteilsbildung. In diesem Sinne wirkt die Verantwortungspraxis als Korrektiv, das dem Einzelnen hilft, die Konsequenzen seines Handelns für andere besser wahrzunehmen [@williams_verantwortung_2017]. In komplexen Gesellschaften dient sie zudem der Bewältigung von Ungewissheit, indem sie Kriterien für die Zurechnung von Handlungsfolgen bereitstellt, selbst wenn diese nicht unmittelbar beabsichtigt waren [@heidbrink_definitionen_2017].
+
+Im wirtschaftlichen Kontext übernimmt die Verantwortung die Rolle eines Koordinationsmechanismus, der über rein materielle Anreize hinausgeht [@holzmann_wirtschaftsethik_2019; @williams_verantwortung_2017]. Sie fungiert als Korrektiv gegen Marktversagen, indem sie Akteure dazu anhält, die Auswirkungen ihres Handelns auf unbeteiligte Dritte zu berücksichtigen [@conrad_wirtschaftsethik_2016]. In Form von Vertrauen und Reputation senkt sie Transaktionskosten und ermöglicht so erst komplexe Kooperationen, die auf die Verlässlichkeit der Partner angewiesen sind [@conrad_wirtschaftsethik_2016; @holzmann_wirtschaftsethik_2019]. Zudem dient sie dem Ausgleich von Interessenkonflikten in sozialen Dilemmata, in denen das kurzfristige Eigeninteresse dem langfristigen Gemeinwohl widerspricht [@conrad_wirtschaftsethik_2016; @heidbrink_definitionen_2017; @holzmann_wirtschaftsethik_2019]. Letztlich trägt die Verantwortung zur inneren Stabilität einer Gesellschaft bei, indem sie Unrecht durch Wiedergutmachung oder Strafe korrigiert und so das Vertrauen in die Gerechtigkeit der Ordnung aufrechterhält [@koller_gerechtigkeit_2021; @williams_verantwortung_2017].
+:::
+
+### Verantwortung und Determinismus
+
+```{python}
+#| message: false
+#| warning: false
+#| fig-cap: "Verantwortung und Determinismus"
+
+import graphviz
+from IPython.display import display
+
+# Erstellung des Digraph-Objekts
+dot = graphviz.Digraph(comment='Verantwortung und Vernunft', format='png')
+
+# Globale Layout-Einstellungen
+dot.attr(rankdir='TB', size='12,12')
+dot.attr('node', shape='rectangle', style='filled,rounded', fontname='Helvetica', fontsize='11')
+dot.attr('edge', fontname='Helvetica', fontsize='10')
+
+# --- Zentrale Achse: Das Konstitutionsverhältnis ---
+dot.node('SP', 'Soziale Praxis der Verantwortung\n(Rechenschaftspflicht)', fillcolor='#AED6F1')
+dot.node('IV', 'Individuelle Vernunft\n(Handlungsfähigkeit)', fillcolor='#D5F5E3')
+
+# Wechselseitige Beziehung
+dot.edge('SP', 'IV', label='konstituiert & stabilisiert', penwidth='2', color='#2E86C1')
+dot.edge('IV', 'SP', label='ermöglicht Teilnahme', penwidth='2', color='#28B463')
+
+# --- Sektion 1: Der Anreizmechanismus (Lenman) ---
+with dot.subgraph(name='cluster_incentive') as c:
+    c.attr(label='Funktion als Anreiz', style='dashed', color='gray')
+    c.node('Worms', 'Lenmans Würmer\n(Keine Verantwortung = Fantasie-Moral)', fillcolor='#FADBD8')
+    c.node('Delib', 'Erzwungene Deliberation\n(Reflexion der Folgen)', fillcolor='#D6EAF8')
+    c.edge('Worms', 'Delib', style='invis') # Invisible edge for vertical alignment
+    c.edge('Worms', 'SP', label='Kontrast', style='dotted')
+    c.edge('SP', 'Delib', label='erzeugt Notwendigkeit')
+
+# --- Sektion 2: Ökonomische Perspektive ---
+with dot.subgraph(name='cluster_econ') as e:
+    e.attr(label='Wirtschafts- & Spieltheorie', style='dashed', color='gray')
+    e.node('HO', 'Homo Oeconomicus\n(Nutzenmaximierung)', fillcolor='#FCF3CF')
+    e.node('Sanktion', 'Sanktionen / Reputation\n(Kostenfaktoren)', fillcolor='#FCF3CF')
+    e.edge('HO', 'Sanktion', style='invis') # Invisible edge for vertical alignment
+    e.edge('HO', 'Sanktion', label='kalkuliert')
+    e.edge('Sanktion', 'IV', label='transformiert Eigeninteresse\nin Kooperation')
+
+# --- Sektion 3: Kompatibilismus & Determinismus ---
+with dot.subgraph(name='cluster_det') as d:
+    d.attr(label='Metaphysische Brücke', style='dashed', color='gray')
+    d.node('Det', 'Determinismus\n(Kausale Kette)', fillcolor='#EAECEE')
+    d.node('KF', 'Verantwortung als\nKausaler Faktor', fillcolor='#D2B4DE')
+    d.edge('Det', 'KF', style='invis') # Invisible edge for vertical alignment
+    dot.edge('Det', 'KF', label='integriert')
+    dot.edge('SP', 'KF', label='wirkt als')
+    dot.edge('KF', 'IV', label='determiniert Gründe')
+
+# --- Abschluss: Die Person ---
+dot.node('Person', 'Selbstkonstitution\n(Zurechnungsfähige Person)', shape='doubleoctagon', fillcolor='#F5B7B1')
+dot.edge('IV', 'Person', label='führt zur')
+dot.edge('SP', 'Person', label='erkennt an als')
+
+# Anzeige des Diagramms
+display(dot)
+```
+
+::: {.callout-important icon="false" collapse="true"}
+# Der Text zum Bild {.unnumbered}
+
+Die Verknüpfung von Verantwortung und Vernunft lässt sich als ein wechselseitiges Konstitutionsverhältnis beschreiben, in dem die soziale Praxis des Zur-Verantwortung-Ziehens eine wesentliche Voraussetzung für die Entwicklung und Aufrechterhaltung rationaler Handlungsfähigkeit bildet [@williams_verantwortung_2017]. Vernunftbegabte Wesen zeichnen sich dadurch aus, dass sie die Fähigkeit besitzen, Gründe zu erkennen, abzuwägen und ihr Handeln danach auszurichten, was als moralisches oder rationales Vermögen bezeichnet wird [@williams_verantwortung_2017]. Diese Fähigkeit ist jedoch nicht lediglich eine isolierte Eigenschaft des Individuums, sondern besitzt eine entscheidende soziale Dimension, da sie durch die Erwartungen der Gemeinschaft an die Rechenschaftspflicht des Einzelnen gestärkt oder geschwächt wird [@williams_verantwortung_2017]. Ohne eine Gesellschaft, die bereit und imstande ist, ihre Mitglieder unter fairen Bedingungen zur Verantwortung zu ziehen, erweisen sich die individuellen Fähigkeiten zum rationalen Denken und moralischen Urteilen oft als zu schwach. In diesem Sinne fungiert die Praxis der Verantwortung als ein System der gegenseitigen Rechtfertigung, das den Einzelnen dazu anhält, die Perspektiven anderer einzunehmen und sein Handeln im Licht allgemeiner Normen zu reflektieren [@lenman_compatibilism_2006; @williams_verantwortung_2017].
+
+Die Funktion der Verantwortung als Anreizmechanismus zeigt sich besonders deutlich darin, dass die Erwartung, Rede und Antwort stehen zu müssen, die Notwendigkeit zur deliberativen Auseinandersetzung mit den Handlungsfolgen erst erzwingt [@williams_verantwortung_2017]. James Lenman illustriert dies am Beispiel einer fiktiven Rasse von Würmern, die zwar von moralischen Idealen träumen, aber aufgrund ihrer Charakterschwäche unfähig sind, diese in die Tat umzusetzen [@lenman_compatibilism_2006]. Da von diesen Wesen kein anderes Handeln zu erwarten ist, werden sie nicht zur Rechenschaft gezogen, wodurch ihre Moral eine reine Fantasie ohne praktische Konsequenzen bleibt. Erst wenn ein Akteur als autonomes Wesen ernst genommen und mit moralischen Forderungen konfrontiert wird, entsteht für ihn ein realer Grund, seine Impulse zu kontrollieren und sein Verhalten an Werten auszurichten. Die Praxis des Zur-Verantwortung-Ziehens drückt somit eine fundamentale Anerkennung der Person als rational handelndes Wesen aus und ist gleichzeitig das Instrument, das dieses Handlungsvermögen stabilisiert [@lenman_compatibilism_2006].
+
+Innerhalb einer wirtschaftsethischen oder spieltheoretischen Perspektive wird Verantwortung häufig als ein System von Restriktionen und Anreizen verstanden, das die Nutzenkalkulation rationaler Akteure beeinflusst [@conrad_wirtschaftsethik_2016]. Der sogenannte Homo Oeconomicus entscheidet sich stets für diejenige Alternative, die seinen individuellen Nettonutzen maximiert, wobei gesellschaftliche Sanktionen bei Normverletzungen als Kostenfaktoren in diese Rechnung einfließen. Die Institution der Verantwortung verändert somit die Rahmenbedingungen, unter denen Entscheidungen getroffen werden, indem sie unkooperatives oder schädliches Verhalten mit materiellen oder immateriellen Nachteilen wie Tadel, Reputationsverlust oder rechtlichen Strafen belegt. Dies ermöglicht es, eigennützige Motive in gemeinschaftsdienliche Ergebnisse zu transformieren, da das rationale Subjekt erkennt, dass langfristige Kooperation und die Einhaltung von Regeln vorteilhafter sind als kurzfristige Ausbeutungsgewinne.
+
+Diese Sichtweise erlaubt es, das Prinzip der Verantwortung auch unter der Annahme des Determinismus zu bejahen. Der Determinismus geht davon aus, dass alle menschlichen Handlungen durch physische und psychische Ursache-Wirkungs-Beziehungen vorherbestimmt sind. Inkompatibilistische Positionen folgern daraus oft, dass Verantwortung unmöglich sei, da dem Akteur alternative Handlungsmöglichkeiten fehlten. Der Kompatibilismus hält dem entgegen, dass Verantwortung auch in einer kausal geschlossenen Welt sinnvoll bleibt, sofern die Handlungen dem rationalen Urteilsvermögen des Akteurs entspringen und durch Gründe beeinflussbar sind. Verantwortung fungiert hier als ein zusätzlicher kausaler Faktor innerhalb der Motivationskette. Wenn die soziale Umwelt Verantwortung zuschreibt und Sanktionen androht, schafft sie neue Gründe, die in den Entscheidungsprozess des Subjekts einfließen und dessen Handeln determinieren können. Die Wirksamkeit von Verantwortung hängt also nicht von einer metaphysischen Freiheit ab, sondern von der Empfänglichkeit des Handelnden für normative Erwägungen.
+
+Letztlich führt die Übernahme von Verantwortung dazu, dass Personen lernen, sich selbst als Urheber ihrer Taten zu begreifen und ihre Werte aktiv zu reflektieren. Dieser Prozess der Selbstkonstitution ist eine notwendige Pflicht des Erwachsenwerdens, durch die Individuen lernen, ihre eigenen Impulse im Licht gesellschaftlicher Ansprüche zu bewerten. Die Fähigkeit zur rationalen Selbststeuerung wird somit erst durch die Einbindung in eine moralische Gemeinschaft vollendet, in der das Individuum akzeptiert, dass seine Handlungen als Ausdruck seines Charakters gewertet werden. Verantwortung ist somit kein äußeres Übel, das die Freiheit beschneidet, sondern das konstitutive Element, das aus einem bloßen Naturwesen ein vernünftiges, zurechnungsfähiges Mitglied der Gesellschaft macht.
+:::
 
 ### Grenzen der Verantwortung: Systemverantwortung
 
