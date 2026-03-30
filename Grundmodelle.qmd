@@ -169,6 +169,81 @@ display(dot)
 
 -   Spezialfall Utilitarismus: Die Summe der Nutzen in der Gesellschaft ist zu erhöhen (Problem: Konsequenzen für den/die Einzelne:n)
 
+```{python}
+#| message: false
+#| warning: false
+#| fig-cap: "Utilitarismus"
+
+import graphviz
+from IPython.display import display
+
+# Erstellung des Digraph-Objekts
+dot = graphviz.Digraph(comment='Systematik des Utilitarismus', format='png')
+
+# Globale Layout-Attribute
+dot.attr(rankdir='TB', size='12,12')
+dot.attr('node', shape='rectangle', style='filled,rounded', fontname='Arial', fontsize='11')
+dot.attr('edge', fontname='Arial', fontsize='10')
+
+# Zentrale Instanz
+dot.node('U', 'UTILITARISMUS\n(Das größte Glück der größten Zahl)', fillcolor='#2C3E50', fontcolor='white', penwidth='2')
+
+# --- Sektion 1: Die 4 Grundprinzipien (Blau) ---
+with dot.subgraph(name='cluster_principles') as p:
+    p.attr(label='Die 4 Grundprinzipien', style='dashed', color='#3498DB')
+    p.node('P1', 'Konsequenzprinzip\n(Folgen statt Absicht)', fillcolor='#AED6F1')
+    p.node('P2', 'Utilitätsprinzip\n(Nutzenmaximierung)', fillcolor='#AED6F1')
+    p.node('P3', 'Hedonismusprinzip\n(Freude vs. Leid)', fillcolor='#AED6F1')
+    p.node('P4', 'Allgemeinheitsprinzip\n(Wohlergehen aller Betroffenen)', fillcolor='#AED6F1')
+    # Unsichtbare Kanten, um vertikale Anordnung zu erzwingen
+    p.edge('P1', 'P2', style='invis')
+    p.edge('P2', 'P3', style='invis')
+    p.edge('P3', 'P4', style='invis')
+
+# --- Sektion 2: Varianten & Denker (Grün) ---
+with dot.subgraph(name='cluster_variants') as v:
+    v.attr(label='Varianten & Konzepte', style='dashed', color='#27AE60')
+    v.node('Bentham', 'Jeremy Bentham\n(Quantitativ / Glückskalkül)', fillcolor='#ABEBC6')
+    v.node('Mill', 'John Stuart Mill\n(Qualitativ / Geistige Freude)', fillcolor='#ABEBC6')
+    v.node('Regel', 'Regelutilitarismus\n(Nutzen von Regeln)', fillcolor='#D5F5E3')
+    v.node('Negativ', 'Negativer Utilitarismus\n(Leidvermeidung Prio)', fillcolor='#D5F5E3')
+    # Unsichtbare Kanten, um vertikale Anordnung zu erzwingen
+    v.edge('Bentham', 'Mill', style='invis')
+    v.edge('Mill', 'Regel', style='invis')
+    v.edge('Regel', 'Negativ', style='invis')
+
+# --- Sektion 3: Wirtschaft & Menschbild (Gelb) ---
+with dot.subgraph(name='cluster_econ') as e:
+    e.attr(label='Ökonomischer Kontext', style='dashed', color='#F1C40F')
+    e.node('HO', 'Homo Oeconomicus\n(Rationaler Maximierer)', fillcolor='#FCF3CF')
+    e.node('Welfare', 'Wohlfahrtstheorie\n(Aggregierter Nutzen)', fillcolor='#FCF3CF')
+    # Unsichtbare Kanten, um vertikale Anordnung zu erzwingen
+    e.edge('HO', 'Welfare', style='invis')
+
+# --- Sektion 4: Kritik (Rot) ---
+with dot.subgraph(name='cluster_critique') as c:
+    c.attr(label='Kritikpunkte', style='dashed', color='#E74C3C')
+    c.node('Minority', 'Opferung von Minderheiten?\n(Rechte vs. Nutzen)', fillcolor='#FADBD8')
+    c.node('Info', 'Informationsüberlastung\n(Komplexe Kausalketten)', fillcolor='#FADBD8')
+    c.node('Overload', 'Psychische Überforderung\n(Entfremdung)', fillcolor='#FADBD8')
+    # Unsichtbare Kanten, um vertikale Anordnung zu erzwingen
+    c.edge('Minority', 'Info', style='invis')
+    c.edge('Info', 'Overload', style='invis')
+
+# --- Verbindungen ---
+dot.edge('U', 'P1'); dot.edge('U', 'P2'); dot.edge('U', 'P3'); dot.edge('U', 'P4')
+dot.edge('U', 'Bentham', label='Vertreter'); dot.edge('U', 'Mill', label='Vertreter')
+dot.edge('P3', 'Bentham', style='dotted', constraint="false"); dot.edge('P3', 'Mill', style='dotted', constraint="false")
+dot.edge('U', 'Regel'); dot.edge('U', 'Negativ')
+dot.edge('U', 'HO', label='Menschenbild'); dot.edge('U', 'Welfare', label='Anwendung')
+dot.edge('U', 'Minority', color='#E74C3C'); dot.edge('U', 'Info', color='#E74C3C'); dot.edge('U', 'Overload', color='#E74C3C')
+
+# Anzeige
+display(dot)
+```
+
+
+
 -   Probleme
 
     -   „Paradox der Quantität" (Durchschnittsnutzen kann sinken, Gesamtnutzen aber steigen)

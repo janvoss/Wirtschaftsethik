@@ -260,7 +260,7 @@ div.csl-indent {
 <li><p>Suche nach Charaktereigenschaften, die menschliche Triebe (in gewünschter Weise) steuern</p></li>
 <li><p>Ziel: Persönliche Vervollkommnung</p></li>
 </ul>
-<div id="015e969e" class="cell" data-message="false" data-execution_count="1">
+<div id="9a8e2f9c" class="cell" data-message="false" data-execution_count="1">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> graphviz</span>
@@ -339,7 +339,7 @@ div.csl-indent {
 <li><p>Willensfreiheit verlangt die Überwindung menschlicher Neigungen.</p></li>
 <li><p>Wer aus einer Pflicht heraus handelt, d.h., wer die Einsicht in das moralisch Gebotene über seine menschlichen Neigungen stellt, handelt moralisch.</p></li>
 </ul>
-<div id="34c5c01f" class="cell" data-message="false" data-execution_count="2">
+<div id="127639f4" class="cell" data-message="false" data-execution_count="2">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> graphviz</span>
@@ -432,6 +432,87 @@ div.csl-indent {
 <ul>
 <li><p>Teleologische Ethik: Die Folgen des Handelns sind entscheidend für die Beurteilung von Handlungen</p></li>
 <li><p>Spezialfall Utilitarismus: Die Summe der Nutzen in der Gesellschaft ist zu erhöhen (Problem: Konsequenzen für den/die Einzelne:n)</p></li>
+</ul>
+<div id="ac3032f0" class="cell" data-message="false" data-execution_count="3">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> graphviz</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> IPython.display <span class="im">import</span> display</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Erstellung des Digraph-Objekts</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>dot <span class="op">=</span> graphviz.Digraph(comment<span class="op">=</span><span class="st">'Systematik des Utilitarismus'</span>, <span class="bu">format</span><span class="op">=</span><span class="st">'png'</span>)</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Globale Layout-Attribute</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>dot.attr(rankdir<span class="op">=</span><span class="st">'TB'</span>, size<span class="op">=</span><span class="st">'12,12'</span>)</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>dot.attr(<span class="st">'node'</span>, shape<span class="op">=</span><span class="st">'rectangle'</span>, style<span class="op">=</span><span class="st">'filled,rounded'</span>, fontname<span class="op">=</span><span class="st">'Arial'</span>, fontsize<span class="op">=</span><span class="st">'11'</span>)</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>dot.attr(<span class="st">'edge'</span>, fontname<span class="op">=</span><span class="st">'Arial'</span>, fontsize<span class="op">=</span><span class="st">'10'</span>)</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Zentrale Instanz</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>dot.node(<span class="st">'U'</span>, <span class="st">'UTILITARISMUS</span><span class="ch">\n</span><span class="st">(Das größte Glück der größten Zahl)'</span>, fillcolor<span class="op">=</span><span class="st">'#2C3E50'</span>, fontcolor<span class="op">=</span><span class="st">'white'</span>, penwidth<span class="op">=</span><span class="st">'2'</span>)</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="co"># --- Sektion 1: Die 4 Grundprinzipien (Blau) ---</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> dot.subgraph(name<span class="op">=</span><span class="st">'cluster_principles'</span>) <span class="im">as</span> p:</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>    p.attr(label<span class="op">=</span><span class="st">'Die 4 Grundprinzipien'</span>, style<span class="op">=</span><span class="st">'dashed'</span>, color<span class="op">=</span><span class="st">'#3498DB'</span>)</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>    p.node(<span class="st">'P1'</span>, <span class="st">'Konsequenzprinzip</span><span class="ch">\n</span><span class="st">(Folgen statt Absicht)'</span>, fillcolor<span class="op">=</span><span class="st">'#AED6F1'</span>)</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>    p.node(<span class="st">'P2'</span>, <span class="st">'Utilitätsprinzip</span><span class="ch">\n</span><span class="st">(Nutzenmaximierung)'</span>, fillcolor<span class="op">=</span><span class="st">'#AED6F1'</span>)</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>    p.node(<span class="st">'P3'</span>, <span class="st">'Hedonismusprinzip</span><span class="ch">\n</span><span class="st">(Freude vs. Leid)'</span>, fillcolor<span class="op">=</span><span class="st">'#AED6F1'</span>)</span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>    p.node(<span class="st">'P4'</span>, <span class="st">'Allgemeinheitsprinzip</span><span class="ch">\n</span><span class="st">(Wohlergehen aller Betroffenen)'</span>, fillcolor<span class="op">=</span><span class="st">'#AED6F1'</span>)</span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Unsichtbare Kanten, um vertikale Anordnung zu erzwingen</span></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>    p.edge(<span class="st">'P1'</span>, <span class="st">'P2'</span>, style<span class="op">=</span><span class="st">'invis'</span>)</span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>    p.edge(<span class="st">'P2'</span>, <span class="st">'P3'</span>, style<span class="op">=</span><span class="st">'invis'</span>)</span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>    p.edge(<span class="st">'P3'</span>, <span class="st">'P4'</span>, style<span class="op">=</span><span class="st">'invis'</span>)</span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a><span class="co"># --- Sektion 2: Varianten &amp; Denker (Grün) ---</span></span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> dot.subgraph(name<span class="op">=</span><span class="st">'cluster_variants'</span>) <span class="im">as</span> v:</span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a>    v.attr(label<span class="op">=</span><span class="st">'Varianten &amp; Konzepte'</span>, style<span class="op">=</span><span class="st">'dashed'</span>, color<span class="op">=</span><span class="st">'#27AE60'</span>)</span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>    v.node(<span class="st">'Bentham'</span>, <span class="st">'Jeremy Bentham</span><span class="ch">\n</span><span class="st">(Quantitativ / Glückskalkül)'</span>, fillcolor<span class="op">=</span><span class="st">'#ABEBC6'</span>)</span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>    v.node(<span class="st">'Mill'</span>, <span class="st">'John Stuart Mill</span><span class="ch">\n</span><span class="st">(Qualitativ / Geistige Freude)'</span>, fillcolor<span class="op">=</span><span class="st">'#ABEBC6'</span>)</span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>    v.node(<span class="st">'Regel'</span>, <span class="st">'Regelutilitarismus</span><span class="ch">\n</span><span class="st">(Nutzen von Regeln)'</span>, fillcolor<span class="op">=</span><span class="st">'#D5F5E3'</span>)</span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>    v.node(<span class="st">'Negativ'</span>, <span class="st">'Negativer Utilitarismus</span><span class="ch">\n</span><span class="st">(Leidvermeidung Prio)'</span>, fillcolor<span class="op">=</span><span class="st">'#D5F5E3'</span>)</span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Unsichtbare Kanten, um vertikale Anordnung zu erzwingen</span></span>
+<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a>    v.edge(<span class="st">'Bentham'</span>, <span class="st">'Mill'</span>, style<span class="op">=</span><span class="st">'invis'</span>)</span>
+<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>    v.edge(<span class="st">'Mill'</span>, <span class="st">'Regel'</span>, style<span class="op">=</span><span class="st">'invis'</span>)</span>
+<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a>    v.edge(<span class="st">'Regel'</span>, <span class="st">'Negativ'</span>, style<span class="op">=</span><span class="st">'invis'</span>)</span>
+<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a><span class="co"># --- Sektion 3: Wirtschaft &amp; Menschbild (Gelb) ---</span></span>
+<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> dot.subgraph(name<span class="op">=</span><span class="st">'cluster_econ'</span>) <span class="im">as</span> e:</span>
+<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a>    e.attr(label<span class="op">=</span><span class="st">'Ökonomischer Kontext'</span>, style<span class="op">=</span><span class="st">'dashed'</span>, color<span class="op">=</span><span class="st">'#F1C40F'</span>)</span>
+<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a>    e.node(<span class="st">'HO'</span>, <span class="st">'Homo Oeconomicus</span><span class="ch">\n</span><span class="st">(Rationaler Maximierer)'</span>, fillcolor<span class="op">=</span><span class="st">'#FCF3CF'</span>)</span>
+<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a>    e.node(<span class="st">'Welfare'</span>, <span class="st">'Wohlfahrtstheorie</span><span class="ch">\n</span><span class="st">(Aggregierter Nutzen)'</span>, fillcolor<span class="op">=</span><span class="st">'#FCF3CF'</span>)</span>
+<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Unsichtbare Kanten, um vertikale Anordnung zu erzwingen</span></span>
+<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a>    e.edge(<span class="st">'HO'</span>, <span class="st">'Welfare'</span>, style<span class="op">=</span><span class="st">'invis'</span>)</span>
+<span id="cb3-46"><a href="#cb3-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-47"><a href="#cb3-47" aria-hidden="true" tabindex="-1"></a><span class="co"># --- Sektion 4: Kritik (Rot) ---</span></span>
+<span id="cb3-48"><a href="#cb3-48" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> dot.subgraph(name<span class="op">=</span><span class="st">'cluster_critique'</span>) <span class="im">as</span> c:</span>
+<span id="cb3-49"><a href="#cb3-49" aria-hidden="true" tabindex="-1"></a>    c.attr(label<span class="op">=</span><span class="st">'Kritikpunkte'</span>, style<span class="op">=</span><span class="st">'dashed'</span>, color<span class="op">=</span><span class="st">'#E74C3C'</span>)</span>
+<span id="cb3-50"><a href="#cb3-50" aria-hidden="true" tabindex="-1"></a>    c.node(<span class="st">'Minority'</span>, <span class="st">'Opferung von Minderheiten?</span><span class="ch">\n</span><span class="st">(Rechte vs. Nutzen)'</span>, fillcolor<span class="op">=</span><span class="st">'#FADBD8'</span>)</span>
+<span id="cb3-51"><a href="#cb3-51" aria-hidden="true" tabindex="-1"></a>    c.node(<span class="st">'Info'</span>, <span class="st">'Informationsüberlastung</span><span class="ch">\n</span><span class="st">(Komplexe Kausalketten)'</span>, fillcolor<span class="op">=</span><span class="st">'#FADBD8'</span>)</span>
+<span id="cb3-52"><a href="#cb3-52" aria-hidden="true" tabindex="-1"></a>    c.node(<span class="st">'Overload'</span>, <span class="st">'Psychische Überforderung</span><span class="ch">\n</span><span class="st">(Entfremdung)'</span>, fillcolor<span class="op">=</span><span class="st">'#FADBD8'</span>)</span>
+<span id="cb3-53"><a href="#cb3-53" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Unsichtbare Kanten, um vertikale Anordnung zu erzwingen</span></span>
+<span id="cb3-54"><a href="#cb3-54" aria-hidden="true" tabindex="-1"></a>    c.edge(<span class="st">'Minority'</span>, <span class="st">'Info'</span>, style<span class="op">=</span><span class="st">'invis'</span>)</span>
+<span id="cb3-55"><a href="#cb3-55" aria-hidden="true" tabindex="-1"></a>    c.edge(<span class="st">'Info'</span>, <span class="st">'Overload'</span>, style<span class="op">=</span><span class="st">'invis'</span>)</span>
+<span id="cb3-56"><a href="#cb3-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-57"><a href="#cb3-57" aria-hidden="true" tabindex="-1"></a><span class="co"># --- Verbindungen ---</span></span>
+<span id="cb3-58"><a href="#cb3-58" aria-hidden="true" tabindex="-1"></a>dot.edge(<span class="st">'U'</span>, <span class="st">'P1'</span>)<span class="op">;</span> dot.edge(<span class="st">'U'</span>, <span class="st">'P2'</span>)<span class="op">;</span> dot.edge(<span class="st">'U'</span>, <span class="st">'P3'</span>)<span class="op">;</span> dot.edge(<span class="st">'U'</span>, <span class="st">'P4'</span>)</span>
+<span id="cb3-59"><a href="#cb3-59" aria-hidden="true" tabindex="-1"></a>dot.edge(<span class="st">'U'</span>, <span class="st">'Bentham'</span>, label<span class="op">=</span><span class="st">'Vertreter'</span>)<span class="op">;</span> dot.edge(<span class="st">'U'</span>, <span class="st">'Mill'</span>, label<span class="op">=</span><span class="st">'Vertreter'</span>)</span>
+<span id="cb3-60"><a href="#cb3-60" aria-hidden="true" tabindex="-1"></a>dot.edge(<span class="st">'P3'</span>, <span class="st">'Bentham'</span>, style<span class="op">=</span><span class="st">'dotted'</span>, constraint<span class="op">=</span><span class="st">"false"</span>)<span class="op">;</span> dot.edge(<span class="st">'P3'</span>, <span class="st">'Mill'</span>, style<span class="op">=</span><span class="st">'dotted'</span>, constraint<span class="op">=</span><span class="st">"false"</span>)</span>
+<span id="cb3-61"><a href="#cb3-61" aria-hidden="true" tabindex="-1"></a>dot.edge(<span class="st">'U'</span>, <span class="st">'Regel'</span>)<span class="op">;</span> dot.edge(<span class="st">'U'</span>, <span class="st">'Negativ'</span>)</span>
+<span id="cb3-62"><a href="#cb3-62" aria-hidden="true" tabindex="-1"></a>dot.edge(<span class="st">'U'</span>, <span class="st">'HO'</span>, label<span class="op">=</span><span class="st">'Menschenbild'</span>)<span class="op">;</span> dot.edge(<span class="st">'U'</span>, <span class="st">'Welfare'</span>, label<span class="op">=</span><span class="st">'Anwendung'</span>)</span>
+<span id="cb3-63"><a href="#cb3-63" aria-hidden="true" tabindex="-1"></a>dot.edge(<span class="st">'U'</span>, <span class="st">'Minority'</span>, color<span class="op">=</span><span class="st">'#E74C3C'</span>)<span class="op">;</span> dot.edge(<span class="st">'U'</span>, <span class="st">'Info'</span>, color<span class="op">=</span><span class="st">'#E74C3C'</span>)<span class="op">;</span> dot.edge(<span class="st">'U'</span>, <span class="st">'Overload'</span>, color<span class="op">=</span><span class="st">'#E74C3C'</span>)</span>
+<span id="cb3-64"><a href="#cb3-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-65"><a href="#cb3-65" aria-hidden="true" tabindex="-1"></a><span class="co"># Anzeige</span></span>
+<span id="cb3-66"><a href="#cb3-66" aria-hidden="true" tabindex="-1"></a>display(dot)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Grundmodelle_files/figure-html/cell-4-output-1.svg" class="img-fluid figure-img"></p>
+<figcaption>Utilitarismus</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<ul>
 <li><p>Probleme</p>
 <ul>
 <li><p>„Paradox der Quantität” (Durchschnittsnutzen kann sinken, Gesamtnutzen aber steigen)</p></li>
