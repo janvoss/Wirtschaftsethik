@@ -6,11 +6,162 @@
 
 -   Ziel: Persönliche Vervollkommnung
 
+
+```{python}
+#| message: false
+#| warning: false
+#| fig-cap: "Tugendethik"
+
+import graphviz
+from IPython.display import display
+
+# Erstellung des Digraph-Objekts
+dot = graphviz.Digraph(comment='Struktur der Tugendethik', format='png')
+
+# Globale Layout-Attribute
+dot.attr(rankdir='TB', size='12,12')
+dot.attr('node', shape='rectangle', style='filled,rounded', fontname='Arial', fontsize='11')
+dot.attr('edge', fontname='Arial', fontsize='10')
+
+# --- Kernkonzept ---
+dot.node('TE', 'TUGENDETHIK\n(Fokus auf den Charakter)', fillcolor='#2C3E50', fontcolor='white', penwidth='2')
+
+# --- Sektion 1: Aristotelische Grundlagen ---
+with dot.subgraph(name='cluster_basis') as b:
+    b.attr(label='Grundlagen (Aristoteles)', style='dashed', color='navy')
+    b.node('Glück', 'Eudaimonia\n(Höchstes Gut / Glückseligkeit)', fillcolor='#AED6F1')
+    b.node('Vernunft', 'Vernunft (Logos)\n(Wesenszweck des Menschen)', fillcolor='#AED6F1')
+    b.node('Praxis', 'Praktische Philosophie\n(Übung & Gewohnheit)', fillcolor='#AED6F1')
+   # b.edge('Glück', 'Vernunft', style='invis') # Invisible edge for vertical alignment
+   # b.edge('Vernunft', 'Praxis', style='invis') # Invisible edge for vertical alignment
+
+# --- Sektion 2: Systematik der Tugenden ---
+with dot.subgraph(name='cluster_system') as s:
+    s.attr(label='Die Tugenden', style='dashed', color='green')
+    s.node('Dianoetisch', 'Dianoetische Tugenden\n(Verstandestugenden)', fillcolor='#D5F5E3')
+    s.node('Ethisch', 'Ethische Tugenden\n(Charaktertugenden)', fillcolor='#D5F5E3')
+  #  s.edge('Dianoetisch', 'Ethisch', style='invis') # Invisible edge for vertical alignment
+
+    # Die Lehre von der Mitte (Mesotes)
+    s.node('Mitte', 'Lehre von der Mitte\n(Mesotes)', fillcolor='#ABEBC6', style='filled,bold')
+    s.node('Mangel', 'Extrem: Mangel\n(z.B. Feigheit)', fillcolor='#FADBD8')
+    s.node('Uebermass', 'Extrem: Übermaß\n(z.B. Leichtsinn)', fillcolor='#FADBD8')
+   # s.edge('Mitte', 'Mangel', style='invis') # Invisible edge for vertical alignment
+   # s.edge('Mangel', 'Uebermass', style='invis') # Invisible edge for vertical alignment
+
+    s.edge('Ethisch', 'Mitte')
+    s.edge('Mitte', 'Mangel', dir='none')
+    s.edge('Mitte', 'Uebermass', dir='none')
+
+# --- Sektion 3: Moderne Anwendung & Kritik ---
+with dot.subgraph(name='cluster_modern') as m:
+    m.attr(label='Moderne & Wirtschaft', style='dashed', color='orange')
+    m.node('Kaufmann', 'Modell des\nehrbaren Kaufmanns', fillcolor='#FCF3CF')
+    m.node('Kritik', 'Kritik:\nSystemische Sachzwänge &\nAnonymität', fillcolor='#F5B7B1')
+    # m.edge('Kaufmann', 'Kritik', style='invis') # Invisible edge for vertical alignment
+
+# --- Verbindungen ---
+dot.edge('TE', 'Glück', label='Ziel')
+dot.edge('TE', 'Vernunft', label='Basis')
+dot.edge('Vernunft', 'Dianoetisch')
+dot.edge('Vernunft', 'Ethisch', label='steuert Triebe')
+dot.edge('Praxis', 'Ethisch', label='bildet durch Übung')
+dot.edge('TE', 'Kaufmann', label='Anwendung heute')
+dot.edge('Kaufmann', 'Kritik', label='Herausforderung')
+
+# Anzeige des Diagramms
+display(dot)
+```
+
+
 ## Pflichtenethik
 
 -   Willensfreiheit verlangt die Überwindung menschlicher Neigungen.
 
 -   Wer aus einer Pflicht heraus handelt, d.h., wer die Einsicht in das moralisch Gebotene über seine menschlichen Neigungen stellt, handelt moralisch.
+
+```{python}
+#| message: false
+#| warning: false
+#| fig-cap: "Pflichtenethik"
+
+import graphviz
+from IPython.display import display
+
+# Erstellung des Digraph-Objekts
+dot = graphviz.Digraph(comment='Deontologische Ethik nach Kant', format='png')
+
+# Globale Layout-Einstellungen
+dot.attr(rankdir='TB', size='12,12')
+dot.attr('node', shape='rectangle', style='filled,rounded', fontname='Arial', fontsize='11')
+dot.attr('edge', fontname='Arial', fontsize='10')
+
+# Hauptknoten
+dot.node('DEO', 'DEONTOLOGIE\n(Pflichtenethik)', fillcolor='#2C3E50', fontcolor='white', penwidth='2')
+
+# --- Sektion 1: Das Fundament (Blau) ---
+with dot.subgraph(name='cluster_foundation') as f:
+    f.attr(label='Das moralische Fundament', style='dashed', color='#3498DB')
+    f.node('Wille', 'Der Gute Wille\n(An sich gut)', fillcolor='#AED6F1')
+    f.node('Pflicht_Aus', 'Handeln AUS Pflicht\n(Moralischer Wert)', fillcolor='#3498DB', fontcolor='white')
+    f.node('Pflicht_Gem', 'Pflichtgemäßes Handeln\n(Aus Neigung/Vorteil - kein moral. Wert)', fillcolor='#D6EAF8')
+    # Unsichtbare Kanten zur vertikalen Anordnung
+    f.edge('Wille', 'Pflicht_Aus', style='invis')
+    f.edge('Pflicht_Aus', 'Pflicht_Gem', style='invis')
+
+# --- Sektion 2: Der Kategorische Imperativ (Gold) ---
+with dot.subgraph(name='cluster_ki') as ki:
+    ki.attr(label='Der Kategorische Imperativ (Prüfverfahren)', style='dashed', color='#F1C40F')
+    ki.node('Gesetz', 'Naturgesetzformel\n(Allgemeines Gesetz)', fillcolor='#FCF3CF')
+    ki.node('Mensch', 'Menschheitszweckformel\n(Menschen nie bloß als Mittel)', fillcolor='#FCF3CF')
+    ki.node('Hypo', 'Hypothetischer Imperativ\n(Mittel zum Zweck - "Wenn-Dann")', fillcolor='#FEF9E7', style='dotted')
+    # Unsichtbare Kanten zur vertikalen Anordnung
+    ki.edge('Gesetz', 'Mensch', style='invis')
+    ki.edge('Mensch', 'Hypo', style='invis')
+
+# --- Sektion 3: Die Pflichten (Grün) ---
+with dot.subgraph(name='cluster_duties') as d:
+    d.attr(label='Einteilung der Pflichten', style='dashed', color='#27AE60')
+    d.node('Perfekt', 'Perfekte Pflichten\n(Strikte Verbote: Lügen, Stehlen)', fillcolor='#ABEBC6')
+    d.node('Imperfekt', 'Imperfekte Pflichten\n(Ziele: Hilfeleistung, Selbstkultur)', fillcolor='#D5F5E3')
+    # Unsichtbare Kanten zur vertikalen Anordnung
+    d.edge('Perfekt', 'Imperfekt', style='invis')
+
+# --- Sektion 4: Kritik (Rot) ---
+with dot.subgraph(name='cluster_critique') as c:
+    c.attr(label='Herausforderungen & Kritik', style='dashed', color='#E74C3C')
+    c.node('Starr', 'Mangelnde Flexibilität\n(Der "Mörder an der Tür")', fillcolor='#FADBD8')
+    c.node('Kollision', 'Pflichtenkollision\n(Keine Hierarchie)', fillcolor='#FADBD8')
+    c.node('Gesinnung', 'Gesinnungsethik vs.\nVerantwortung für Folgen', fillcolor='#FADBD8')
+    # Unsichtbare Kanten zur vertikalen Anordnung
+    c.edge('Starr', 'Kollision', style='invis')
+    c.edge('Kollision', 'Gesinnung', style='invis')
+
+# --- Verbindungen ---
+dot.edge('DEO', 'Wille', label='basiert auf')
+dot.edge('Wille', 'Pflicht_Aus')
+dot.edge('Wille', 'Pflicht_Gem', style='dotted')
+dot.edge('DEO', 'Pflicht_Aus', style="invis") # um den Knoten DEO mittiger auszurichten
+dot.edge('DEO', 'Pflicht_Gem', style="invis") # um den Knoten DEO mittiger auszurichten
+
+dot.edge('DEO', 'Gesetz', label='fordert')
+dot.edge('DEO', 'Mensch', label='fordert')
+dot.edge('Gesetz', 'Perfekt', label='leitet ab')
+dot.edge('Gesetz', 'Imperfekt', label='leitet ab')
+
+dot.edge('DEO', 'Starr', color='#E74C3C')
+dot.edge('DEO', 'Kollision', color='#E74C3C', constraint="true")
+dot.edge('DEO', 'Gesinnung', color='#E74C3C', constraint="true")
+
+# Vergleichsknoten
+#dot.node('ExPost', 'Ex-post Verantwortung\n(Einhaltung von Regeln)', shape='note', fillcolor='#EAECEE')
+#dot.edge('DEO', 'ExPost', label='Verständnis')
+
+# Anzeige
+display(dot)
+```
+
+
 
 ## Utilitarismus/teleologische Ethik
 

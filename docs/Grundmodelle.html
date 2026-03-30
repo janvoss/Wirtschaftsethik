@@ -20,6 +20,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 /* CSS for citations */
 div.csl-bib-body { }
 div.csl-entry {
@@ -225,6 +260,78 @@ div.csl-indent {
 <li><p>Suche nach Charaktereigenschaften, die menschliche Triebe (in gewünschter Weise) steuern</p></li>
 <li><p>Ziel: Persönliche Vervollkommnung</p></li>
 </ul>
+<div id="015e969e" class="cell" data-message="false" data-execution_count="1">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> graphviz</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> IPython.display <span class="im">import</span> display</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Erstellung des Digraph-Objekts</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>dot <span class="op">=</span> graphviz.Digraph(comment<span class="op">=</span><span class="st">'Struktur der Tugendethik'</span>, <span class="bu">format</span><span class="op">=</span><span class="st">'png'</span>)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Globale Layout-Attribute</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>dot.attr(rankdir<span class="op">=</span><span class="st">'TB'</span>, size<span class="op">=</span><span class="st">'12,12'</span>)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>dot.attr(<span class="st">'node'</span>, shape<span class="op">=</span><span class="st">'rectangle'</span>, style<span class="op">=</span><span class="st">'filled,rounded'</span>, fontname<span class="op">=</span><span class="st">'Arial'</span>, fontsize<span class="op">=</span><span class="st">'11'</span>)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>dot.attr(<span class="st">'edge'</span>, fontname<span class="op">=</span><span class="st">'Arial'</span>, fontsize<span class="op">=</span><span class="st">'10'</span>)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co"># --- Kernkonzept ---</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>dot.node(<span class="st">'TE'</span>, <span class="st">'TUGENDETHIK</span><span class="ch">\n</span><span class="st">(Fokus auf den Charakter)'</span>, fillcolor<span class="op">=</span><span class="st">'#2C3E50'</span>, fontcolor<span class="op">=</span><span class="st">'white'</span>, penwidth<span class="op">=</span><span class="st">'2'</span>)</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="co"># --- Sektion 1: Aristotelische Grundlagen ---</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> dot.subgraph(name<span class="op">=</span><span class="st">'cluster_basis'</span>) <span class="im">as</span> b:</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    b.attr(label<span class="op">=</span><span class="st">'Grundlagen (Aristoteles)'</span>, style<span class="op">=</span><span class="st">'dashed'</span>, color<span class="op">=</span><span class="st">'navy'</span>)</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    b.node(<span class="st">'Glück'</span>, <span class="st">'Eudaimonia</span><span class="ch">\n</span><span class="st">(Höchstes Gut / Glückseligkeit)'</span>, fillcolor<span class="op">=</span><span class="st">'#AED6F1'</span>)</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>    b.node(<span class="st">'Vernunft'</span>, <span class="st">'Vernunft (Logos)</span><span class="ch">\n</span><span class="st">(Wesenszweck des Menschen)'</span>, fillcolor<span class="op">=</span><span class="st">'#AED6F1'</span>)</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>    b.node(<span class="st">'Praxis'</span>, <span class="st">'Praktische Philosophie</span><span class="ch">\n</span><span class="st">(Übung &amp; Gewohnheit)'</span>, fillcolor<span class="op">=</span><span class="st">'#AED6F1'</span>)</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>   <span class="co"># b.edge('Glück', 'Vernunft', style='invis') # Invisible edge for vertical alignment</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>   <span class="co"># b.edge('Vernunft', 'Praxis', style='invis') # Invisible edge for vertical alignment</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="co"># --- Sektion 2: Systematik der Tugenden ---</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> dot.subgraph(name<span class="op">=</span><span class="st">'cluster_system'</span>) <span class="im">as</span> s:</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>    s.attr(label<span class="op">=</span><span class="st">'Die Tugenden'</span>, style<span class="op">=</span><span class="st">'dashed'</span>, color<span class="op">=</span><span class="st">'green'</span>)</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>    s.node(<span class="st">'Dianoetisch'</span>, <span class="st">'Dianoetische Tugenden</span><span class="ch">\n</span><span class="st">(Verstandestugenden)'</span>, fillcolor<span class="op">=</span><span class="st">'#D5F5E3'</span>)</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>    s.node(<span class="st">'Ethisch'</span>, <span class="st">'Ethische Tugenden</span><span class="ch">\n</span><span class="st">(Charaktertugenden)'</span>, fillcolor<span class="op">=</span><span class="st">'#D5F5E3'</span>)</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>  <span class="co">#  s.edge('Dianoetisch', 'Ethisch', style='invis') # Invisible edge for vertical alignment</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Die Lehre von der Mitte (Mesotes)</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>    s.node(<span class="st">'Mitte'</span>, <span class="st">'Lehre von der Mitte</span><span class="ch">\n</span><span class="st">(Mesotes)'</span>, fillcolor<span class="op">=</span><span class="st">'#ABEBC6'</span>, style<span class="op">=</span><span class="st">'filled,bold'</span>)</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a>    s.node(<span class="st">'Mangel'</span>, <span class="st">'Extrem: Mangel</span><span class="ch">\n</span><span class="st">(z.B. Feigheit)'</span>, fillcolor<span class="op">=</span><span class="st">'#FADBD8'</span>)</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>    s.node(<span class="st">'Uebermass'</span>, <span class="st">'Extrem: Übermaß</span><span class="ch">\n</span><span class="st">(z.B. Leichtsinn)'</span>, fillcolor<span class="op">=</span><span class="st">'#FADBD8'</span>)</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>   <span class="co"># s.edge('Mitte', 'Mangel', style='invis') # Invisible edge for vertical alignment</span></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>   <span class="co"># s.edge('Mangel', 'Uebermass', style='invis') # Invisible edge for vertical alignment</span></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>    s.edge(<span class="st">'Ethisch'</span>, <span class="st">'Mitte'</span>)</span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>    s.edge(<span class="st">'Mitte'</span>, <span class="st">'Mangel'</span>, <span class="bu">dir</span><span class="op">=</span><span class="st">'none'</span>)</span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>    s.edge(<span class="st">'Mitte'</span>, <span class="st">'Uebermass'</span>, <span class="bu">dir</span><span class="op">=</span><span class="st">'none'</span>)</span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a><span class="co"># --- Sektion 3: Moderne Anwendung &amp; Kritik ---</span></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> dot.subgraph(name<span class="op">=</span><span class="st">'cluster_modern'</span>) <span class="im">as</span> m:</span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>    m.attr(label<span class="op">=</span><span class="st">'Moderne &amp; Wirtschaft'</span>, style<span class="op">=</span><span class="st">'dashed'</span>, color<span class="op">=</span><span class="st">'orange'</span>)</span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a>    m.node(<span class="st">'Kaufmann'</span>, <span class="st">'Modell des</span><span class="ch">\n</span><span class="st">ehrbaren Kaufmanns'</span>, fillcolor<span class="op">=</span><span class="st">'#FCF3CF'</span>)</span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>    m.node(<span class="st">'Kritik'</span>, <span class="st">'Kritik:</span><span class="ch">\n</span><span class="st">Systemische Sachzwänge &amp;</span><span class="ch">\n</span><span class="st">Anonymität'</span>, fillcolor<span class="op">=</span><span class="st">'#F5B7B1'</span>)</span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>    <span class="co"># m.edge('Kaufmann', 'Kritik', style='invis') # Invisible edge for vertical alignment</span></span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a><span class="co"># --- Verbindungen ---</span></span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>dot.edge(<span class="st">'TE'</span>, <span class="st">'Glück'</span>, label<span class="op">=</span><span class="st">'Ziel'</span>)</span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>dot.edge(<span class="st">'TE'</span>, <span class="st">'Vernunft'</span>, label<span class="op">=</span><span class="st">'Basis'</span>)</span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>dot.edge(<span class="st">'Vernunft'</span>, <span class="st">'Dianoetisch'</span>)</span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a>dot.edge(<span class="st">'Vernunft'</span>, <span class="st">'Ethisch'</span>, label<span class="op">=</span><span class="st">'steuert Triebe'</span>)</span>
+<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a>dot.edge(<span class="st">'Praxis'</span>, <span class="st">'Ethisch'</span>, label<span class="op">=</span><span class="st">'bildet durch Übung'</span>)</span>
+<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a>dot.edge(<span class="st">'TE'</span>, <span class="st">'Kaufmann'</span>, label<span class="op">=</span><span class="st">'Anwendung heute'</span>)</span>
+<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>dot.edge(<span class="st">'Kaufmann'</span>, <span class="st">'Kritik'</span>, label<span class="op">=</span><span class="st">'Herausforderung'</span>)</span>
+<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a><span class="co"># Anzeige des Diagramms</span></span>
+<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a>display(dot)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Grundmodelle_files/figure-html/cell-2-output-1.svg" class="img-fluid figure-img"></p>
+<figcaption>Tugendethik</figcaption>
+</figure>
+</div>
+</div>
+</div>
 </section>
 <section id="pflichtenethik" class="level2" data-number="3.2">
 <h2 data-number="3.2" class="anchored" data-anchor-id="pflichtenethik"><span class="header-section-number">3.2</span> Pflichtenethik</h2>
@@ -232,6 +339,93 @@ div.csl-indent {
 <li><p>Willensfreiheit verlangt die Überwindung menschlicher Neigungen.</p></li>
 <li><p>Wer aus einer Pflicht heraus handelt, d.h., wer die Einsicht in das moralisch Gebotene über seine menschlichen Neigungen stellt, handelt moralisch.</p></li>
 </ul>
+<div id="34c5c01f" class="cell" data-message="false" data-execution_count="2">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> graphviz</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> IPython.display <span class="im">import</span> display</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Erstellung des Digraph-Objekts</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>dot <span class="op">=</span> graphviz.Digraph(comment<span class="op">=</span><span class="st">'Deontologische Ethik nach Kant'</span>, <span class="bu">format</span><span class="op">=</span><span class="st">'png'</span>)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Globale Layout-Einstellungen</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>dot.attr(rankdir<span class="op">=</span><span class="st">'TB'</span>, size<span class="op">=</span><span class="st">'12,12'</span>)</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>dot.attr(<span class="st">'node'</span>, shape<span class="op">=</span><span class="st">'rectangle'</span>, style<span class="op">=</span><span class="st">'filled,rounded'</span>, fontname<span class="op">=</span><span class="st">'Arial'</span>, fontsize<span class="op">=</span><span class="st">'11'</span>)</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>dot.attr(<span class="st">'edge'</span>, fontname<span class="op">=</span><span class="st">'Arial'</span>, fontsize<span class="op">=</span><span class="st">'10'</span>)</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Hauptknoten</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>dot.node(<span class="st">'DEO'</span>, <span class="st">'DEONTOLOGIE</span><span class="ch">\n</span><span class="st">(Pflichtenethik)'</span>, fillcolor<span class="op">=</span><span class="st">'#2C3E50'</span>, fontcolor<span class="op">=</span><span class="st">'white'</span>, penwidth<span class="op">=</span><span class="st">'2'</span>)</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="co"># --- Sektion 1: Das Fundament (Blau) ---</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> dot.subgraph(name<span class="op">=</span><span class="st">'cluster_foundation'</span>) <span class="im">as</span> f:</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>    f.attr(label<span class="op">=</span><span class="st">'Das moralische Fundament'</span>, style<span class="op">=</span><span class="st">'dashed'</span>, color<span class="op">=</span><span class="st">'#3498DB'</span>)</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>    f.node(<span class="st">'Wille'</span>, <span class="st">'Der Gute Wille</span><span class="ch">\n</span><span class="st">(An sich gut)'</span>, fillcolor<span class="op">=</span><span class="st">'#AED6F1'</span>)</span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>    f.node(<span class="st">'Pflicht_Aus'</span>, <span class="st">'Handeln AUS Pflicht</span><span class="ch">\n</span><span class="st">(Moralischer Wert)'</span>, fillcolor<span class="op">=</span><span class="st">'#3498DB'</span>, fontcolor<span class="op">=</span><span class="st">'white'</span>)</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>    f.node(<span class="st">'Pflicht_Gem'</span>, <span class="st">'Pflichtgemäßes Handeln</span><span class="ch">\n</span><span class="st">(Aus Neigung/Vorteil - kein moral. Wert)'</span>, fillcolor<span class="op">=</span><span class="st">'#D6EAF8'</span>)</span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Unsichtbare Kanten zur vertikalen Anordnung</span></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>    f.edge(<span class="st">'Wille'</span>, <span class="st">'Pflicht_Aus'</span>, style<span class="op">=</span><span class="st">'invis'</span>)</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>    f.edge(<span class="st">'Pflicht_Aus'</span>, <span class="st">'Pflicht_Gem'</span>, style<span class="op">=</span><span class="st">'invis'</span>)</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a><span class="co"># --- Sektion 2: Der Kategorische Imperativ (Gold) ---</span></span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> dot.subgraph(name<span class="op">=</span><span class="st">'cluster_ki'</span>) <span class="im">as</span> ki:</span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>    ki.attr(label<span class="op">=</span><span class="st">'Der Kategorische Imperativ (Prüfverfahren)'</span>, style<span class="op">=</span><span class="st">'dashed'</span>, color<span class="op">=</span><span class="st">'#F1C40F'</span>)</span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>    ki.node(<span class="st">'Gesetz'</span>, <span class="st">'Naturgesetzformel</span><span class="ch">\n</span><span class="st">(Allgemeines Gesetz)'</span>, fillcolor<span class="op">=</span><span class="st">'#FCF3CF'</span>)</span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>    ki.node(<span class="st">'Mensch'</span>, <span class="st">'Menschheitszweckformel</span><span class="ch">\n</span><span class="st">(Menschen nie bloß als Mittel)'</span>, fillcolor<span class="op">=</span><span class="st">'#FCF3CF'</span>)</span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>    ki.node(<span class="st">'Hypo'</span>, <span class="st">'Hypothetischer Imperativ</span><span class="ch">\n</span><span class="st">(Mittel zum Zweck - "Wenn-Dann")'</span>, fillcolor<span class="op">=</span><span class="st">'#FEF9E7'</span>, style<span class="op">=</span><span class="st">'dotted'</span>)</span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Unsichtbare Kanten zur vertikalen Anordnung</span></span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>    ki.edge(<span class="st">'Gesetz'</span>, <span class="st">'Mensch'</span>, style<span class="op">=</span><span class="st">'invis'</span>)</span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>    ki.edge(<span class="st">'Mensch'</span>, <span class="st">'Hypo'</span>, style<span class="op">=</span><span class="st">'invis'</span>)</span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a><span class="co"># --- Sektion 3: Die Pflichten (Grün) ---</span></span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> dot.subgraph(name<span class="op">=</span><span class="st">'cluster_duties'</span>) <span class="im">as</span> d:</span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>    d.attr(label<span class="op">=</span><span class="st">'Einteilung der Pflichten'</span>, style<span class="op">=</span><span class="st">'dashed'</span>, color<span class="op">=</span><span class="st">'#27AE60'</span>)</span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>    d.node(<span class="st">'Perfekt'</span>, <span class="st">'Perfekte Pflichten</span><span class="ch">\n</span><span class="st">(Strikte Verbote: Lügen, Stehlen)'</span>, fillcolor<span class="op">=</span><span class="st">'#ABEBC6'</span>)</span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a>    d.node(<span class="st">'Imperfekt'</span>, <span class="st">'Imperfekte Pflichten</span><span class="ch">\n</span><span class="st">(Ziele: Hilfeleistung, Selbstkultur)'</span>, fillcolor<span class="op">=</span><span class="st">'#D5F5E3'</span>)</span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Unsichtbare Kanten zur vertikalen Anordnung</span></span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a>    d.edge(<span class="st">'Perfekt'</span>, <span class="st">'Imperfekt'</span>, style<span class="op">=</span><span class="st">'invis'</span>)</span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a><span class="co"># --- Sektion 4: Kritik (Rot) ---</span></span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> dot.subgraph(name<span class="op">=</span><span class="st">'cluster_critique'</span>) <span class="im">as</span> c:</span>
+<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a>    c.attr(label<span class="op">=</span><span class="st">'Herausforderungen &amp; Kritik'</span>, style<span class="op">=</span><span class="st">'dashed'</span>, color<span class="op">=</span><span class="st">'#E74C3C'</span>)</span>
+<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a>    c.node(<span class="st">'Starr'</span>, <span class="st">'Mangelnde Flexibilität</span><span class="ch">\n</span><span class="st">(Der "Mörder an der Tür")'</span>, fillcolor<span class="op">=</span><span class="st">'#FADBD8'</span>)</span>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>    c.node(<span class="st">'Kollision'</span>, <span class="st">'Pflichtenkollision</span><span class="ch">\n</span><span class="st">(Keine Hierarchie)'</span>, fillcolor<span class="op">=</span><span class="st">'#FADBD8'</span>)</span>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a>    c.node(<span class="st">'Gesinnung'</span>, <span class="st">'Gesinnungsethik vs.</span><span class="ch">\n</span><span class="st">Verantwortung für Folgen'</span>, fillcolor<span class="op">=</span><span class="st">'#FADBD8'</span>)</span>
+<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Unsichtbare Kanten zur vertikalen Anordnung</span></span>
+<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a>    c.edge(<span class="st">'Starr'</span>, <span class="st">'Kollision'</span>, style<span class="op">=</span><span class="st">'invis'</span>)</span>
+<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a>    c.edge(<span class="st">'Kollision'</span>, <span class="st">'Gesinnung'</span>, style<span class="op">=</span><span class="st">'invis'</span>)</span>
+<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a><span class="co"># --- Verbindungen ---</span></span>
+<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a>dot.edge(<span class="st">'DEO'</span>, <span class="st">'Wille'</span>, label<span class="op">=</span><span class="st">'basiert auf'</span>)</span>
+<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a>dot.edge(<span class="st">'Wille'</span>, <span class="st">'Pflicht_Aus'</span>)</span>
+<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a>dot.edge(<span class="st">'Wille'</span>, <span class="st">'Pflicht_Gem'</span>, style<span class="op">=</span><span class="st">'dotted'</span>)</span>
+<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a>dot.edge(<span class="st">'DEO'</span>, <span class="st">'Pflicht_Aus'</span>, style<span class="op">=</span><span class="st">"invis"</span>) <span class="co"># um den Knoten DEO mittiger auszurichten</span></span>
+<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a>dot.edge(<span class="st">'DEO'</span>, <span class="st">'Pflicht_Gem'</span>, style<span class="op">=</span><span class="st">"invis"</span>) <span class="co"># um den Knoten DEO mittiger auszurichten</span></span>
+<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a>dot.edge(<span class="st">'DEO'</span>, <span class="st">'Gesetz'</span>, label<span class="op">=</span><span class="st">'fordert'</span>)</span>
+<span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a>dot.edge(<span class="st">'DEO'</span>, <span class="st">'Mensch'</span>, label<span class="op">=</span><span class="st">'fordert'</span>)</span>
+<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a>dot.edge(<span class="st">'Gesetz'</span>, <span class="st">'Perfekt'</span>, label<span class="op">=</span><span class="st">'leitet ab'</span>)</span>
+<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a>dot.edge(<span class="st">'Gesetz'</span>, <span class="st">'Imperfekt'</span>, label<span class="op">=</span><span class="st">'leitet ab'</span>)</span>
+<span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a>dot.edge(<span class="st">'DEO'</span>, <span class="st">'Starr'</span>, color<span class="op">=</span><span class="st">'#E74C3C'</span>)</span>
+<span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a>dot.edge(<span class="st">'DEO'</span>, <span class="st">'Kollision'</span>, color<span class="op">=</span><span class="st">'#E74C3C'</span>, constraint<span class="op">=</span><span class="st">"true"</span>)</span>
+<span id="cb2-67"><a href="#cb2-67" aria-hidden="true" tabindex="-1"></a>dot.edge(<span class="st">'DEO'</span>, <span class="st">'Gesinnung'</span>, color<span class="op">=</span><span class="st">'#E74C3C'</span>, constraint<span class="op">=</span><span class="st">"true"</span>)</span>
+<span id="cb2-68"><a href="#cb2-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-69"><a href="#cb2-69" aria-hidden="true" tabindex="-1"></a><span class="co"># Vergleichsknoten</span></span>
+<span id="cb2-70"><a href="#cb2-70" aria-hidden="true" tabindex="-1"></a><span class="co">#dot.node('ExPost', 'Ex-post Verantwortung\n(Einhaltung von Regeln)', shape='note', fillcolor='#EAECEE')</span></span>
+<span id="cb2-71"><a href="#cb2-71" aria-hidden="true" tabindex="-1"></a><span class="co">#dot.edge('DEO', 'ExPost', label='Verständnis')</span></span>
+<span id="cb2-72"><a href="#cb2-72" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-73"><a href="#cb2-73" aria-hidden="true" tabindex="-1"></a><span class="co"># Anzeige</span></span>
+<span id="cb2-74"><a href="#cb2-74" aria-hidden="true" tabindex="-1"></a>display(dot)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Grundmodelle_files/figure-html/cell-3-output-1.svg" class="img-fluid figure-img"></p>
+<figcaption>Pflichtenethik</figcaption>
+</figure>
+</div>
+</div>
+</div>
 </section>
 <section id="utilitarismusteleologische-ethik" class="level2" data-number="3.3">
 <h2 data-number="3.3" class="anchored" data-anchor-id="utilitarismusteleologische-ethik"><span class="header-section-number">3.3</span> Utilitarismus/teleologische Ethik</h2>
