@@ -260,7 +260,7 @@ div.csl-indent {
 <li><p>Suche nach Charaktereigenschaften, die menschliche Triebe (in gewünschter Weise) steuern</p></li>
 <li><p>Ziel: Persönliche Vervollkommnung</p></li>
 </ul>
-<div id="9a8e2f9c" class="cell" data-message="false" data-execution_count="1">
+<div id="73e3d926" class="cell" data-message="false" data-execution_count="1">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> graphviz</span>
@@ -339,7 +339,7 @@ div.csl-indent {
 <li><p>Willensfreiheit verlangt die Überwindung menschlicher Neigungen.</p></li>
 <li><p>Wer aus einer Pflicht heraus handelt, d.h., wer die Einsicht in das moralisch Gebotene über seine menschlichen Neigungen stellt, handelt moralisch.</p></li>
 </ul>
-<div id="127639f4" class="cell" data-message="false" data-execution_count="2">
+<div id="f456734e" class="cell" data-message="false" data-execution_count="2">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> graphviz</span>
@@ -433,7 +433,7 @@ div.csl-indent {
 <li><p>Teleologische Ethik: Die Folgen des Handelns sind entscheidend für die Beurteilung von Handlungen</p></li>
 <li><p>Spezialfall Utilitarismus: Die Summe der Nutzen in der Gesellschaft ist zu erhöhen (Problem: Konsequenzen für den/die Einzelne:n)</p></li>
 </ul>
-<div id="ac3032f0" class="cell" data-message="false" data-execution_count="3">
+<div id="9cb00cd3" class="cell" data-message="false" data-execution_count="3">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> graphviz</span>
@@ -525,8 +525,81 @@ div.csl-indent {
 <ul>
 <li><p>Freie und gleiche/gleichberechtigte Individuen einigen sich auf Rechte und Pflichten</p></li>
 <li><p>Moral entsteht durch Übereinkunft</p></li>
-<li><p>Anwendungsfall: Einstimmige Einigung hinter dem Schleier des Nichtwissens</p></li>
+<li><p>Bereits bekannter (?) Anwendungsfall: Einstimmige Einigung hinter dem Schleier des Nichtwissens</p></li>
 </ul>
+<div id="64842db4" class="cell" data-message="false" data-execution_count="4">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> graphviz</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> IPython.display <span class="im">import</span> display</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Erstellung des Digraph-Objekts</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>dot <span class="op">=</span> graphviz.Digraph(comment<span class="op">=</span><span class="st">'Vertragstheorien der Moral'</span>, <span class="bu">format</span><span class="op">=</span><span class="st">'png'</span>)</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Globale Layout-Einstellungen</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>dot.attr(rankdir<span class="op">=</span><span class="st">'TD'</span>, size<span class="op">=</span><span class="st">'12,12'</span>, nodesep<span class="op">=</span><span class="st">'0.4'</span>, ranksep<span class="op">=</span><span class="st">'1.0'</span>)</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>dot.attr(<span class="st">'node'</span>, shape<span class="op">=</span><span class="st">'rectangle'</span>, style<span class="op">=</span><span class="st">'filled,rounded'</span>, fontname<span class="op">=</span><span class="st">'Verdana'</span>, fontsize<span class="op">=</span><span class="st">'10'</span>)</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>dot.attr(<span class="st">'edge'</span>, fontname<span class="op">=</span><span class="st">'Verdana'</span>, fontsize<span class="op">=</span><span class="st">'9'</span>, color<span class="op">=</span><span class="st">'gray50'</span>)</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Zentrale Definition</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>dot.node(<span class="st">'VT'</span>, <span class="st">'VERTRAGSTHEORIEN</span><span class="ch">\n</span><span class="st">(Kontraktualismus)'</span>, fillcolor<span class="op">=</span><span class="st">'#2C3E50'</span>, fontcolor<span class="op">=</span><span class="st">'white'</span>, penwidth<span class="op">=</span><span class="st">'2'</span>)</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a><span class="co"># --- Sektion 1: Thomas Hobbes (Der Realist) ---</span></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> dot.subgraph(name<span class="op">=</span><span class="st">'cluster_hobbes'</span>) <span class="im">as</span> h:</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>    h.attr(label<span class="op">=</span><span class="st">'Thomas Hobbes'</span>, style<span class="op">=</span><span class="st">'filled'</span>, color<span class="op">=</span><span class="st">'#FADBD8'</span>)</span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>    h.node(<span class="st">'Natur'</span>, <span class="st">'Naturzustand</span><span class="ch">\n</span><span class="st">(Krieg aller gegen alle)'</span>, fillcolor<span class="op">=</span><span class="st">'#E6B0AA'</span>)</span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>    h.node(<span class="st">'Leviathan'</span>, <span class="st">'Leviathan</span><span class="ch">\n</span><span class="st">(Absoluter Souverän)'</span>, fillcolor<span class="op">=</span><span class="st">'#E6B0AA'</span>, style<span class="op">=</span><span class="st">'filled,bold'</span>)</span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>    h.node(<span class="st">'Sanktion'</span>, <span class="st">'Sicherung durch</span><span class="ch">\n</span><span class="st">Zwang &amp; Kontrolle'</span>, fillcolor<span class="op">=</span><span class="st">'#F2D7D5'</span>)</span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>    h.edge(<span class="st">'Natur'</span>, <span class="st">'Leviathan'</span>, style<span class="op">=</span><span class="st">'invis'</span>) <span class="co"># Invisible edge for vertical alignment</span></span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>    h.edge(<span class="st">'Leviathan'</span>, <span class="st">'Sanktion'</span>, style<span class="op">=</span><span class="st">'invis'</span>) <span class="co"># Invisible edge for vertical alignment</span></span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>    h.edge(<span class="st">'Natur'</span>, <span class="st">'Leviathan'</span>, label<span class="op">=</span><span class="st">'Rationale Flucht'</span>)</span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>    h.edge(<span class="st">'Leviathan'</span>, <span class="st">'Sanktion'</span>)</span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a><span class="co"># --- Sektion 2: John Rawls (Die Gerechtigkeit) ---</span></span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> dot.subgraph(name<span class="op">=</span><span class="st">'cluster_rawls'</span>) <span class="im">as</span> r:</span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a>    r.attr(label<span class="op">=</span><span class="st">'John Rawls'</span>, style<span class="op">=</span><span class="st">'filled'</span>, color<span class="op">=</span><span class="st">'#D4E6F1'</span>)</span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>    r.node(<span class="st">'Schleier'</span>, <span class="st">'Schleier des Nichtwissens</span><span class="ch">\n</span><span class="st">(Faire Wahl)'</span>, fillcolor<span class="op">=</span><span class="st">'#AED6F1'</span>, style<span class="op">=</span><span class="st">'filled,bold'</span>)</span>
+<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a>    r.node(<span class="st">'Maximin'</span>, <span class="st">'Maximin-Regel</span><span class="ch">\n</span><span class="st">(Schutz der Schwächsten)'</span>, fillcolor<span class="op">=</span><span class="st">'#AED6F1'</span>)</span>
+<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a>    r.node(<span class="st">'Prinzipien'</span>, <span class="st">'Freiheits- &amp;</span><span class="ch">\n</span><span class="st">Differenzprinzip'</span>, fillcolor<span class="op">=</span><span class="st">'#D6EAF8'</span>)</span>
+<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a>    r.edge(<span class="st">'Schleier'</span>, <span class="st">'Maximin'</span>, style<span class="op">=</span><span class="st">'invis'</span>) <span class="co"># Invisible edge for vertical alignment</span></span>
+<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a>    r.edge(<span class="st">'Maximin'</span>, <span class="st">'Prinzipien'</span>, style<span class="op">=</span><span class="st">'invis'</span>) <span class="co"># Invisible edge for vertical alignment</span></span>
+<span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a>    r.edge(<span class="st">'Schleier'</span>, <span class="st">'Maximin'</span>)</span>
+<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a>    r.edge(<span class="st">'Maximin'</span>, <span class="st">'Prinzipien'</span>)</span>
+<span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-37"><a href="#cb4-37" aria-hidden="true" tabindex="-1"></a><span class="co"># --- Sektion 3: David Gauthier (Der Stratege) ---</span></span>
+<span id="cb4-38"><a href="#cb4-38" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> dot.subgraph(name<span class="op">=</span><span class="st">'cluster_gauthier'</span>) <span class="im">as</span> g:</span>
+<span id="cb4-39"><a href="#cb4-39" aria-hidden="true" tabindex="-1"></a>    g.attr(label<span class="op">=</span><span class="st">'David Gauthier'</span>, style<span class="op">=</span><span class="st">'filled'</span>, color<span class="op">=</span><span class="st">'#D5F5E3'</span>)</span>
+<span id="cb4-40"><a href="#cb4-40" aria-hidden="true" tabindex="-1"></a>    g.node(<span class="st">'Eigen'</span>, <span class="st">'Rationales Eigeninteresse'</span>, fillcolor<span class="op">=</span><span class="st">'#ABEBC6'</span>)</span>
+<span id="cb4-41"><a href="#cb4-41" aria-hidden="true" tabindex="-1"></a>    g.node(<span class="st">'Koop'</span>, <span class="st">'Moral als</span><span class="ch">\n</span><span class="st">Kooperationsvorteil'</span>, fillcolor<span class="op">=</span><span class="st">'#ABEBC6'</span>, style<span class="op">=</span><span class="st">'filled,bold'</span>)</span>
+<span id="cb4-42"><a href="#cb4-42" aria-hidden="true" tabindex="-1"></a>    g.edge(<span class="st">'Eigen'</span>, <span class="st">'Koop'</span>, style<span class="op">=</span><span class="st">'invis'</span>) <span class="co"># Invisible edge for vertical alignment</span></span>
+<span id="cb4-43"><a href="#cb4-43" aria-hidden="true" tabindex="-1"></a>    g.edge(<span class="st">'Eigen'</span>, <span class="st">'Koop'</span>, label<span class="op">=</span><span class="st">'Langfristiger Nutzen'</span>)</span>
+<span id="cb4-44"><a href="#cb4-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-45"><a href="#cb4-45" aria-hidden="true" tabindex="-1"></a><span class="co"># --- Sektion 4: T.M. Scanlon (Der Moralist) ---</span></span>
+<span id="cb4-46"><a href="#cb4-46" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> dot.subgraph(name<span class="op">=</span><span class="st">'cluster_scanlon'</span>) <span class="im">as</span> s:</span>
+<span id="cb4-47"><a href="#cb4-47" aria-hidden="true" tabindex="-1"></a>    s.attr(label<span class="op">=</span><span class="st">'T. M. Scanlon'</span>, style<span class="op">=</span><span class="st">'filled'</span>, color<span class="op">=</span><span class="st">'#FCF3CF'</span>)</span>
+<span id="cb4-48"><a href="#cb4-48" aria-hidden="true" tabindex="-1"></a>    s.node(<span class="st">'Ablehnung'</span>, <span class="st">'Nicht-Ablehnbarkeit</span><span class="ch">\n</span><span class="st">(Vernünftige Gründe)'</span>, fillcolor<span class="op">=</span><span class="st">'#F9E79F'</span>, style<span class="op">=</span><span class="st">'filled,bold'</span>)</span>
+<span id="cb4-49"><a href="#cb4-49" aria-hidden="true" tabindex="-1"></a>    s.node(<span class="st">'Respekt'</span>, <span class="st">'Gegenseitige Anerkennung</span><span class="ch">\n</span><span class="st">&amp; Rechtfertigung'</span>, fillcolor<span class="op">=</span><span class="st">'#F9E79F'</span>)</span>
+<span id="cb4-50"><a href="#cb4-50" aria-hidden="true" tabindex="-1"></a>    s.edge(<span class="st">'Ablehnung'</span>, <span class="st">'Respekt'</span>, style<span class="op">=</span><span class="st">'invis'</span>) <span class="co"># Invisible edge for vertical alignment</span></span>
+<span id="cb4-51"><a href="#cb4-51" aria-hidden="true" tabindex="-1"></a>    s.edge(<span class="st">'Ablehnung'</span>, <span class="st">'Respekt'</span>)</span>
+<span id="cb4-52"><a href="#cb4-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-53"><a href="#cb4-53" aria-hidden="true" tabindex="-1"></a><span class="co"># Hauptverbindungen vom Zentrum</span></span>
+<span id="cb4-54"><a href="#cb4-54" aria-hidden="true" tabindex="-1"></a>dot.edge(<span class="st">'VT'</span>, <span class="st">'Natur'</span>, label<span class="op">=</span><span class="st">'Motiv: Sicherheit'</span>)</span>
+<span id="cb4-55"><a href="#cb4-55" aria-hidden="true" tabindex="-1"></a>dot.edge(<span class="st">'VT'</span>, <span class="st">'Schleier'</span>, label<span class="op">=</span><span class="st">'Motiv: Fairness'</span>)</span>
+<span id="cb4-56"><a href="#cb4-56" aria-hidden="true" tabindex="-1"></a>dot.edge(<span class="st">'VT'</span>, <span class="st">'Eigen'</span>, label<span class="op">=</span><span class="st">'Motiv: Strategie'</span>)</span>
+<span id="cb4-57"><a href="#cb4-57" aria-hidden="true" tabindex="-1"></a>dot.edge(<span class="st">'VT'</span>, <span class="st">'Ablehnung'</span>, label<span class="op">=</span><span class="st">'Motiv: Rechtfertigung'</span>)</span>
+<span id="cb4-58"><a href="#cb4-58" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-59"><a href="#cb4-59" aria-hidden="true" tabindex="-1"></a><span class="co"># Anzeige des Diagramms</span></span>
+<span id="cb4-60"><a href="#cb4-60" aria-hidden="true" tabindex="-1"></a>display(dot)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Grundmodelle_files/figure-html/cell-5-output-1.svg" class="img-fluid figure-img"></p>
+<figcaption>Vertragstheorien</figcaption>
+</figure>
+</div>
+</div>
+</div>
 </section>
 <section id="diskursethik" class="level2" data-number="3.5">
 <h2 data-number="3.5" class="anchored" data-anchor-id="diskursethik"><span class="header-section-number">3.5</span> Diskursethik</h2>
@@ -545,6 +618,89 @@ div.csl-indent {
 <li><p><strong>Mündigkeit</strong> – Alle argumentieren vernünftig, widerspruchsfrei und meinen, was sie sagen.</p></li>
 <li><p><strong>Rationale Motivation</strong> – Unvoreingenommenes Abwägen aller Argumente, Konsensfindung angestrebt.</p></li>
 </ol>
+<div id="4605c655" class="cell" data-message="false" data-execution_count="5">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> graphviz</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> IPython.display <span class="im">import</span> display</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Erstellung des Digraph-Objekts</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>dot <span class="op">=</span> graphviz.Digraph(comment<span class="op">=</span><span class="st">'Diskursethik nach Habermas und Apel'</span>, <span class="bu">format</span><span class="op">=</span><span class="st">'png'</span>)</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Globale Layout-Attribute für Übersichtlichkeit</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>dot.attr(rankdir<span class="op">=</span><span class="st">'TB'</span>, size<span class="op">=</span><span class="st">'12,12'</span>)</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>dot.attr(<span class="st">'node'</span>, shape<span class="op">=</span><span class="st">'rectangle'</span>, style<span class="op">=</span><span class="st">'filled,rounded'</span>, fontname<span class="op">=</span><span class="st">'Arial'</span>, fontsize<span class="op">=</span><span class="st">'11'</span>)</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>dot.attr(<span class="st">'edge'</span>, fontname<span class="op">=</span><span class="st">'Arial'</span>, fontsize<span class="op">=</span><span class="st">'10'</span>, color<span class="op">=</span><span class="st">'gray40'</span>)</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="co"># --- ZENTRALES KONZEPT ---</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>dot.node(<span class="st">'DE'</span>, <span class="st">'DISKURSETHIK</span><span class="ch">\n</span><span class="st">(Moral durch fairen Dialog)'</span>, fillcolor<span class="op">=</span><span class="st">'#2C3E50'</span>, fontcolor<span class="op">=</span><span class="st">'white'</span>, penwidth<span class="op">=</span><span class="st">'2'</span>)</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a><span class="co"># --- Sektion 1: Die Grundprinzipien (Habermas) ---</span></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> dot.subgraph(name<span class="op">=</span><span class="st">'cluster_principles'</span>) <span class="im">as</span> p:</span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>    p.attr(label<span class="op">=</span><span class="st">'Die zwei Grundpfeiler'</span>, style<span class="op">=</span><span class="st">'dashed'</span>, color<span class="op">=</span><span class="st">'#3498DB'</span>)</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>    p.node(<span class="st">'D'</span>, <span class="st">'Diskursprinzip</span><span class="ch">\n</span><span class="st"> (rationale Motivation)'</span>, fillcolor<span class="op">=</span><span class="st">'#AED6F1'</span>)</span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>    p.node(<span class="st">'U'</span>, <span class="st">'Universalisierungsprinzip'</span>, fillcolor<span class="op">=</span><span class="st">'#AED6F1'</span>)</span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>    p.edge(<span class="st">'D'</span>, <span class="st">'U'</span>, style<span class="op">=</span><span class="st">'invis'</span>) <span class="co"># Invisible edge for vertical alignment</span></span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a><span class="co"># --- Sektion 2: Die Ideale Sprechsituation ---</span></span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> dot.subgraph(name<span class="op">=</span><span class="st">'cluster_dialog'</span>) <span class="im">as</span> d:</span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>    d.attr(label<span class="op">=</span><span class="st">'Die Ideale Sprechsituation (Regeln)'</span>, style<span class="op">=</span><span class="st">'dashed'</span>, color<span class="op">=</span><span class="st">'#27AE60'</span>)</span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>    d.node(<span class="st">'Rules'</span>, <span class="st">'Zwangloser Zwang des</span><span class="ch">\n</span><span class="st">besseren Arguments'</span>, fillcolor<span class="op">=</span><span class="st">'#ABEBC6'</span>, style<span class="op">=</span><span class="st">'filled,bold'</span>)</span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>    d.node(<span class="st">'R1'</span>, <span class="st">'Chancengleichheit der Rede'</span>, fillcolor<span class="op">=</span><span class="st">'#D5F5E3'</span>)</span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>    d.node(<span class="st">'R2'</span>, <span class="st">'Inklusion aller Betroffenen'</span>, fillcolor<span class="op">=</span><span class="st">'#D5F5E3'</span>)</span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>    d.node(<span class="st">'R3'</span>, <span class="st">'Freier Informationsfluss &amp;</span><span class="ch">\n</span><span class="st">Zwanglosigkeit'</span>, fillcolor<span class="op">=</span><span class="st">'#D5F5E3'</span>)</span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>    d.edge(<span class="st">'Rules'</span>, <span class="st">'R1'</span>, style<span class="op">=</span><span class="st">'invis'</span>) <span class="co"># Invisible edge for vertical alignment</span></span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>    d.edge(<span class="st">'R1'</span>, <span class="st">'R2'</span>, style<span class="op">=</span><span class="st">'invis'</span>) <span class="co"># Invisible edge for vertical alignment</span></span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a>    d.edge(<span class="st">'R2'</span>, <span class="st">'R3'</span>, style<span class="op">=</span><span class="st">'invis'</span>) <span class="co"># Invisible edge for vertical alignment</span></span>
+<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a><span class="co"># --- Sektion 3: Philosophische Begründung (Apel) ---</span></span>
+<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a>dot.node(<span class="st">'Apel'</span>, <span class="st">'Karl-Otto Apel:</span><span class="ch">\n</span><span class="st">Performativer Selbstwiderspruch</span><span class="ch">\n</span><span class="st">(Unhintergehbarkeit)'</span>, fillcolor<span class="op">=</span><span class="st">'#D2B4DE'</span>)</span>
+<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a><span class="co"># --- Sektion 4: Wirtschaftsethik (Peter Ulrich) ---</span></span>
+<span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> dot.subgraph(name<span class="op">=</span><span class="st">'cluster_econ'</span>) <span class="im">as</span> e:</span>
+<span id="cb5-38"><a href="#cb5-38" aria-hidden="true" tabindex="-1"></a>    e.attr(label<span class="op">=</span><span class="st">'Anwendung: Integrative Wirtschaftsethik'</span>, style<span class="op">=</span><span class="st">'dashed'</span>, color<span class="op">=</span><span class="st">'#F1C40F'</span>)</span>
+<span id="cb5-39"><a href="#cb5-39" aria-hidden="true" tabindex="-1"></a>    e.node(<span class="st">'Ulrich'</span>, <span class="st">'Peter Ulrich:</span><span class="ch">\n</span><span class="st">Unternehmen als Ort des Dialogs'</span>, fillcolor<span class="op">=</span><span class="st">'#FCF3CF'</span>)</span>
+<span id="cb5-40"><a href="#cb5-40" aria-hidden="true" tabindex="-1"></a>    e.node(<span class="st">'Stakeholder'</span>, <span class="st">'Interessenabwägung aller</span><span class="ch">\n</span><span class="st">Anspruchsgruppen (Stakeholder)'</span>, fillcolor<span class="op">=</span><span class="st">'#FCF3CF'</span>)</span>
+<span id="cb5-41"><a href="#cb5-41" aria-hidden="true" tabindex="-1"></a>    e.edge(<span class="st">'Ulrich'</span>, <span class="st">'Stakeholder'</span>, style<span class="op">=</span><span class="st">'invis'</span>) <span class="co"># Invisible edge for vertical alignment</span></span>
+<span id="cb5-42"><a href="#cb5-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-43"><a href="#cb5-43" aria-hidden="true" tabindex="-1"></a><span class="co"># --- Sektion 5: Kritik &amp; Grenzen ---</span></span>
+<span id="cb5-44"><a href="#cb5-44" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> dot.subgraph(name<span class="op">=</span><span class="st">'cluster_critique'</span>) <span class="im">as</span> c:</span>
+<span id="cb5-45"><a href="#cb5-45" aria-hidden="true" tabindex="-1"></a>    c.attr(label<span class="op">=</span><span class="st">'Kritik &amp; Realität'</span>, style<span class="op">=</span><span class="st">'dashed'</span>, color<span class="op">=</span><span class="st">'#E74C3C'</span>)</span>
+<span id="cb5-46"><a href="#cb5-46" aria-hidden="true" tabindex="-1"></a>    c.node(<span class="st">'Real'</span>, <span class="st">'Strategische Interessen &amp;</span><span class="ch">\n</span><span class="st">Zeitdruck'</span>, fillcolor<span class="op">=</span><span class="st">'#FADBD8'</span>)</span>
+<span id="cb5-47"><a href="#cb5-47" aria-hidden="true" tabindex="-1"></a>    c.node(<span class="st">'Incap'</span>, <span class="st">'Diskursunfähige Subjekte</span><span class="ch">\n</span><span class="st">(Tiere, Kinder, Zukunft)'</span>, fillcolor<span class="op">=</span><span class="st">'#FADBD8'</span>)</span>
+<span id="cb5-48"><a href="#cb5-48" aria-hidden="true" tabindex="-1"></a>    c.node(<span class="st">'Media'</span>, <span class="st">'Manipulative Medienselektion'</span>, fillcolor<span class="op">=</span><span class="st">'#FADBD8'</span>)</span>
+<span id="cb5-49"><a href="#cb5-49" aria-hidden="true" tabindex="-1"></a>    c.edge(<span class="st">'Real'</span>, <span class="st">'Incap'</span>, style<span class="op">=</span><span class="st">'invis'</span>) <span class="co"># Invisible edge for vertical alignment</span></span>
+<span id="cb5-50"><a href="#cb5-50" aria-hidden="true" tabindex="-1"></a>    c.edge(<span class="st">'Incap'</span>, <span class="st">'Media'</span>, style<span class="op">=</span><span class="st">'invis'</span>) <span class="co"># Invisible edge for vertical alignment</span></span>
+<span id="cb5-51"><a href="#cb5-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-52"><a href="#cb5-52" aria-hidden="true" tabindex="-1"></a><span class="co"># --- Verbindungen ---</span></span>
+<span id="cb5-53"><a href="#cb5-53" aria-hidden="true" tabindex="-1"></a>dot.edge(<span class="st">'DE'</span>, <span class="st">'D'</span>)</span>
+<span id="cb5-54"><a href="#cb5-54" aria-hidden="true" tabindex="-1"></a>dot.edge(<span class="st">'DE'</span>, <span class="st">'U'</span>)</span>
+<span id="cb5-55"><a href="#cb5-55" aria-hidden="true" tabindex="-1"></a>dot.edge(<span class="st">'D'</span>, <span class="st">'Rules'</span>, label<span class="op">=</span><span class="st">'erfordert'</span>, constraint<span class="op">=</span><span class="st">"false"</span>)</span>
+<span id="cb5-56"><a href="#cb5-56" aria-hidden="true" tabindex="-1"></a>dot.edge(<span class="st">'Rules'</span>, <span class="st">'R1'</span>)</span>
+<span id="cb5-57"><a href="#cb5-57" aria-hidden="true" tabindex="-1"></a>dot.edge(<span class="st">'Rules'</span>, <span class="st">'R2'</span>)</span>
+<span id="cb5-58"><a href="#cb5-58" aria-hidden="true" tabindex="-1"></a>dot.edge(<span class="st">'Rules'</span>, <span class="st">'R3'</span>)</span>
+<span id="cb5-59"><a href="#cb5-59" aria-hidden="true" tabindex="-1"></a>dot.edge(<span class="st">'DE'</span>, <span class="st">'Rules'</span>)</span>
+<span id="cb5-60"><a href="#cb5-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-61"><a href="#cb5-61" aria-hidden="true" tabindex="-1"></a>dot.edge(<span class="st">'Apel'</span>, <span class="st">'DE'</span>, label<span class="op">=</span><span class="st">'begründet'</span>)</span>
+<span id="cb5-62"><a href="#cb5-62" aria-hidden="true" tabindex="-1"></a>dot.edge(<span class="st">'DE'</span>, <span class="st">'Ulrich'</span>, label<span class="op">=</span><span class="st">'transferiert auf'</span>)</span>
+<span id="cb5-63"><a href="#cb5-63" aria-hidden="true" tabindex="-1"></a>dot.edge(<span class="st">'Ulrich'</span>, <span class="st">'Stakeholder'</span>)</span>
+<span id="cb5-64"><a href="#cb5-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-65"><a href="#cb5-65" aria-hidden="true" tabindex="-1"></a>dot.edge(<span class="st">'DE'</span>, <span class="st">'Real'</span>, color<span class="op">=</span><span class="st">'#E74C3C'</span>)</span>
+<span id="cb5-66"><a href="#cb5-66" aria-hidden="true" tabindex="-1"></a>dot.edge(<span class="st">'DE'</span>, <span class="st">'Incap'</span>, color<span class="op">=</span><span class="st">'#E74C3C'</span>)</span>
+<span id="cb5-67"><a href="#cb5-67" aria-hidden="true" tabindex="-1"></a>dot.edge(<span class="st">'DE'</span>, <span class="st">'Media'</span>, color<span class="op">=</span><span class="st">'#E74C3C'</span>)</span>
+<span id="cb5-68"><a href="#cb5-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-69"><a href="#cb5-69" aria-hidden="true" tabindex="-1"></a><span class="co"># Anzeige des Diagramms</span></span>
+<span id="cb5-70"><a href="#cb5-70" aria-hidden="true" tabindex="-1"></a>display(dot)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="Grundmodelle_files/figure-html/cell-6-output-1.svg" class="img-fluid figure-img"></p>
+<figcaption>Diskursethik</figcaption>
+</figure>
+</div>
+</div>
+</div>
 </section>
 <section id="gerechtigkeit-und-gleichheit" class="level2" data-number="3.6">
 <h2 data-number="3.6" class="anchored" data-anchor-id="gerechtigkeit-und-gleichheit"><span class="header-section-number">3.6</span> Gerechtigkeit und Gleichheit</h2>
