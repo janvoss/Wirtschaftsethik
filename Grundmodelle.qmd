@@ -6,7 +6,6 @@
 
 -   Ziel: Persönliche Vervollkommnung
 
-
 ```{python}
 #| message: false
 #| warning: false
@@ -73,6 +72,24 @@ dot.edge('Kaufmann', 'Kritik', label='Herausforderung')
 display(dot)
 ```
 
+::: {.callout-important
+      icon=false 
+      collapse=true }
+
+# Der Text zum Bild {.unnumbered}
+
+Vgl. @holzmann_wirtschaftsethik_2019.
+
+Die Tugendethik hat ihren Ursprung in der griechischen Antike und wurde maßgeblich von Denkern wie Sokrates, Platon und insbesondere Aristoteles geprägt. Im Zentrum dieser ethischen Grundposition steht nicht die Befolgung von Regeln oder die Abwägung von Handlungsfolgen, sondern der tugendhafte Charakter einer Person. Aristoteles gilt dabei als Begründer der Ethik als praktischer Philosophie, die sich auf das tatsächliche Handeln richtet. Nach seiner Auffassung verfolgen alle Menschen in ihren Handlungen bestimmte Ziele, wobei das höchste Gut dasjenige Ziel ist, welches nur noch um seiner selbst willen angestrebt wird. Dieses Ziel wird als Glückseligkeit bezeichnet.
+
+Der eigentliche Wesenszweck des Menschen liegt laut Aristoteles in seiner denkenden und vernünftigen Natur begründet. Ein Mensch handelt demnach dann moralisch gut, wenn er gemäß dieser Vernunft lebt und seine Triebe entsprechend steuert. In der Tugend, die als feste charakterliche Eigenschaft verstanden wird, manifestiert sich diese ideale Ausgestaltung des menschlichen Wesens. Aristoteles unterscheidet dabei zwischen ethischen Tugenden, die sich auf die Steuerung der Triebe in der realen Lebenswelt beziehen, und dianoetischen Tugenden, die den Umgang mit dem eigenen Geist betreffen.
+
+Ein zentrales Merkmal der ethischen Tugenden ist die Lehre von der rechten Mitte. Demnach ist eine Tugend wie die Tapferkeit als das richtige Maß zwischen den Extremen der Feigheit und des Leichtsinns zu verorten. Die Fähigkeit, in jeder Situation diese richtige Mitte zu finden, ist dem Menschen nicht von Geburt an gegeben, sondern muss durch Erziehung, Vorbilder, eigene Reflexion und ständiges Üben entwickelt werden. Glück ist in diesem Sinne kein einmaliges Ereignis, sondern das Ergebnis eines fortlaufenden Prozesses zur Verbesserung der ethischen Entscheidungsfähigkeit.
+
+In der modernen Wirtschaftswelt findet das tugendethische Ideal im Modell des ehrbaren Kaufmanns Ausdruck. Dieser zeichnet sich durch Charakterzüge wie Redlichkeit, Fairness und Sparsamkeit aus und handelt im Bewusstsein seiner Verantwortung gegenüber seinem sozialen und ökologischen Umfeld. Ein wesentlicher Vorteil der Tugendethik liegt darin, dass sie die Person als Ganzes in den Mittelpunkt rückt und moralfreie Räume ablehnt. Tugenden gelten unabhängig vom jeweiligen Funktionsbereich, etwa der Familie oder dem Arbeitsplatz. Zudem bietet der Ansatz eine situative Offenheit, da er keine dogmatischen Vorschriften macht, sondern Orientierungshilfen für die individuelle Entscheidung bietet.
+
+Dennoch sieht sich die Tugendethik auch Kritik gegenübergestellt. Da sie in den überschaubaren athenischen Stadtstaaten entwickelt wurde, erscheint ihre Anwendung in der heutigen globalisierten und anonymen Wirtschaftswelt schwierig. Kritiker bemängeln zudem, dass die Tugendethik kaum objektivierbare Regeln für Konfliktfälle bereitstellt und stattdessen indirekt auf einen gesellschaftlichen Konsens verweist, der oft nicht mehr existiert. Im wirtschaftlichen Kontext wird zudem angeführt, dass systemische Sachzwänge und starke Anreizstrukturen den Einzelnen überfordern können, sodass tugendhaftes Verhalten zu einem unerfüllbaren Ideal wird. Schließlich wird eingewandt, dass der starke Fokus auf das Individuum systemische Faktoren ausblendet, da gesellschaftlicher Wohlstand unter Umständen gerade durch das eigennützige Streben der Akteure entstehen kann.
+:::
 
 ## Pflichtenethik
 
@@ -161,6 +178,23 @@ dot.edge('DEO', 'Gesinnung', color='#E74C3C', constraint="true")
 display(dot)
 ```
 
+:::{.callout-important 
+    icon=false 
+    collapse=true }
+
+# Der Text zum Bild{-}
+
+Die Pflichtenethik, die in der Fachsprache als deontologische Ethik bezeichnet wird, leitet ihren Namen vom griechischen Begriff deon ab, was übersetzt die Pflicht oder das Erforderliche bedeutet. Im Zentrum dieses ethischen Ansatzes steht die Beurteilung von Handlungen nach ihrem moralischen Eigenwert oder der Übereinstimmung mit feststehenden Geboten und Verboten, unabhängig von den daraus resultierenden Folgen. Diese konsequente Abkehr von der Ergebnisorientierung unterscheidet die Deontologie grundlegend von teleologischen Theorien, welche die Richtigkeit einer Tat ausschließlich an ihrem Nutzen oder Schaden für Dritte messen. Während eine teleologische Sichtweise die moralische Vertretbarkeit von Mitteln gegen den Wert der erreichten Zwecke abwägen kann, erklärt eine streng deontologische Position bestimmte Handlungstypen, wie etwa die Lüge, für sich genommen und unter allen Umständen für unerlaubt.
+
+Der bedeutendste Vertreter dieser Denktradition in der Neuzeit ist Immanuel Kant, der das Ziel verfolgte, moralische Regeln allein auf die menschliche Vernunft zu gründen. Für Kant stellt der gute Wille das einzige Gut dar, das ohne Einschränkung als gut angesehen werden kann, da er im Gegensatz zu Talenten, Charakterzügen oder Handlungsfolgen vollständig in der Macht des Individuums liegt. Moralischen Wert besitzt eine Handlung nach dieser Auffassung nur dann, wenn sie aus Pflicht geschieht und nicht lediglich pflichtgemäß aus einer Neigung, einem persönlichen Bedürfnis oder zur Erreichung eines Vorteils vollzogen wird. Ein Beispiel hierfür ist der ehrliche Kaufmann, der seine Kunden nicht übervorteilt: Handelt er so, um seinen guten Ruf zu wahren und den Gewinn zu sichern, ist sein Verhalten zwar pflichtgemäß, aber im kantischen Sinne nicht moralisch; erst wenn er aus der reinen Einsicht in die moralische Notwendigkeit der Ehrlichkeit handelt, erlangt sein Tun moralische Qualität.
+
+Als oberstes Prüfverfahren für die moralische Richtigkeit von Handlungsmaximen entwickelte Kant den kategorischen Imperativ, der in seiner Grundform fordert, nur nach jenen Grundsätzen zu handeln, von denen man zugleich wollen kann, dass sie ein allgemeines Gesetz werden. Dieser Imperativ gilt kategorisch, also unbedingt und unabhängig von persönlichen Wünschen oder Zwecken, im Gegensatz zu hypothetischen Imperativen, die lediglich als Mittel zur Erreichung eines bestimmten Ziels dienen. Eine weitere zentrale Ausprägung des kategorischen Imperativs ist die Menschheitszweckformel, die vorschreibt, Menschen niemals bloß als Mittel zum Zweck zu gebrauchen, sondern sie jederzeit zugleich als Zweck an sich selbst und somit in ihrer unveräußerlichen Würde zu achten. Innerhalb dieses Systems lassen sich perfekte Pflichten, die strikte Unterlassungsgebote wie das Verbot zu stehlen oder zu betrügen darstellen, von imperfekten Pflichten unterscheiden, die positive Handlungsziele wie die Hilfeleistung für Notleidende vorschreiben, dabei jedoch Spielräume in der Umsetzung lassen.
+
+Die deontologische Ethik bildet zudem das Fundament für ein spezifisches Verständnis von Verantwortung, insbesondere in ihrer retrospektiven Ausrichtung als Ex-post-Verantwortung. Hierbei wird ein Akteur dafür zur Rechenschaft gezogen, ob er sich an die vorgegebenen Prinzipien und Regeln gehalten hat, wobei die Zurechenbarkeit primär an die Übereinstimmung der Handlung mit den normativen Kriterien geknüpft ist. Im Gegensatz zur proaktiven Verantwortung, die auf die Erreichung zukünftiger Zustände zielt, konzentriert sich die deontologische Perspektive auf die Rechtfertigung bereits vollzogener Taten vor einer Instanz.
+
+Trotz ihrer großen Bedeutung sieht sich die Pflichtenethik erheblicher Kritik ausgesetzt, die oft an ihrer mangelnden Flexibilität in realen Konfliktsituationen ansetzt. Da Pflichten nach Kant ausnahmslos gelten müssen, führt dies zu problematischen Konsequenzen, wie etwa der Forderung nach absoluter Wahrhaftigkeit selbst gegenüber einem Mörder, der nach dem Aufenthaltsort seines Opfers fragt. Kritiker wie Max Weber bemängelten zudem, dass die reine Gesinnungsethik dazu führen kann, dass Akteure die Verantwortung für absehbare üble Folgen ihres pflichtgemäßen Handelns auf die Welt oder andere abschieben, anstatt sie selbst zu tragen. Ein weiteres Problem stellt die Kollision zweier gleichrangiger Pflichten dar, für die das kantische Modell keine klare Lösungshierarchie bereitstellt, wie etwa im tragischen Dilemma eines Arztes, der zwischen dem Leben einer Mutter und dem ihres ungeborenen Kindes entscheiden muss. Schließlich wird eingewandt, dass die Deontologie durch ihren Fokus auf das rationale Vernunftvermögen die moralische Relevanz von Gefühlen ignoriert und Tieren sowie der Natur keine eigenständige schützenswerte Würde zuspricht.
+ 
+:::
 
 
 ## Utilitarismus/teleologische Ethik
@@ -242,12 +276,9 @@ dot.edge('U', 'Minority', color='#E74C3C'); dot.edge('U', 'Info', color='#E74C3C
 display(dot)
 ```
 
-
-
 -   Probleme
 
     -   „Paradox der Quantität" (Durchschnittsnutzen kann sinken, Gesamtnutzen aber steigen)
-
 
     -   Berücksichtigung des *tatsächlichen* Nutzens oder des Nutzens einer *hypothetischen gut informierten* Person?
 
@@ -257,7 +288,7 @@ display(dot)
 
 -   Moral entsteht durch Übereinkunft
 
-- Bereits bekannter (?) Anwendungsfall: Einstimmige Einigung hinter dem Schleier des Nichtwissens
+-   Bereits bekannter (?) Anwendungsfall: Einstimmige Einigung hinter dem Schleier des Nichtwissens
 
 ```{python}
 #| message: false
@@ -328,7 +359,6 @@ display(dot)
 
 ```
 
-
 ## Diskursethik
 
 -   Ausgangspunkt: Es gibt keine objektiv begründbaren universellen Wertevorstellungen
@@ -337,21 +367,21 @@ display(dot)
 
 -   Der Konsens kann nur aus einem Diskurs mit den folgenden Eigenschaften hervorgehen [@holzmann_wirtschaftsethik_2019]:
 
-1. **Beteiligung aller** – Jeder darf am Diskurs teilnehmen und eigene Argumente einbringen.
+1.  **Beteiligung aller** – Jeder darf am Diskurs teilnehmen und eigene Argumente einbringen.
 
-2. **Chancengleichheit** – Alle Argumente zählen gleich, unabhängig von Person oder Position.
+2.  **Chancengleichheit** – Alle Argumente zählen gleich, unabhängig von Person oder Position.
 
-3. **Zwanglosigkeit** – Nur das bessere Argument zählt, kein anderer Zwang ist erlaubt.
+3.  **Zwanglosigkeit** – Nur das bessere Argument zählt, kein anderer Zwang ist erlaubt.
 
-4. **Handlungsentlastung** – Kein Zeit- oder Handlungsdruck beeinflusst das Argument.
+4.  **Handlungsentlastung** – Kein Zeit- oder Handlungsdruck beeinflusst das Argument.
 
-5. **Unbeschränkte Information** – Alle verfügen über die gleiche Informationsbasis.
+5.  **Unbeschränkte Information** – Alle verfügen über die gleiche Informationsbasis.
 
-6. **Universalisierbarkeit** – Argumente müssen allgemeingültig sein, nicht nur individuell.
+6.  **Universalisierbarkeit** – Argumente müssen allgemeingültig sein, nicht nur individuell.
 
-7. **Mündigkeit** – Alle argumentieren vernünftig, widerspruchsfrei und meinen, was sie sagen.
+7.  **Mündigkeit** – Alle argumentieren vernünftig, widerspruchsfrei und meinen, was sie sagen.
 
-8. **Rationale Motivation** – Unvoreingenommenes Abwägen aller Argumente, Konsensfindung angestrebt.
+8.  **Rationale Motivation** – Unvoreingenommenes Abwägen aller Argumente, Konsensfindung angestrebt.
 
 ```{python}
 #| message: false
@@ -430,132 +460,135 @@ dot.edge('DE', 'Media', color='#E74C3C')
 display(dot)
 ```
 
-
-
-
 ## Gerechtigkeit und Gleichheit
 
 Das Folgende basiert auf @koller_gerechtigkeit_2021
 
+-   **1. Historische Entwicklung des Gerechtigkeitsbegriffs:**
 
-- **1. Historische Entwicklung des Gerechtigkeitsbegriffs:**
+    -   Der heutige Gerechtigkeitsbegriff hat sich in mehreren Phasen herauskristallisiert:
 
-  - Der heutige Gerechtigkeitsbegriff hat sich in mehreren Phasen herauskristallisiert:
-  
-    - **Antike (Platon, Aristoteles):** Gerechtigkeit primär als Richtlinie interpersonalen Handelns und personale Tugend.
-    
-    - **Mittelalter (Scholastische Philosophie):** Ausweitung des Gegenstands auf soziale Institutionen (Herrschafts- und Wirtschaftsordnungen).
-    
-    - **Neuzeit (Aufklärung):** Aufwertung zum übergreifenden Grundprinzip politischer Moral.
-    - **Heute:** Gerechtigkeit als umfassender Richtwert sozialen Handelns, der Werte wie Freiheit, Gleichheit und Solidarität integriert und auf gesellschaftliche, staatliche und wirtschaftliche Ordnungen angewendet wird.
+        -   **Antike (Platon, Aristoteles):** Gerechtigkeit primär als Richtlinie interpersonalen Handelns und personale Tugend.
 
-- **2. Das Vokabular von Gerechtigkeit und Gleichheit:**
+        -   **Mittelalter (Scholastische Philosophie):** Ausweitung des Gegenstands auf soziale Institutionen (Herrschafts- und Wirtschaftsordnungen).
 
-  - **Gegenstände der Gerechtigkeit:**
-    - Personen  
-    - Handlungen  
-    - Regeln/Institutionen  
-    - soziale Verhältnisse  
-    - gesellschaftliche Ordnungen 
-    - internationales System
-    
-  - **Formale Gerechtigkeit:**
-    - Handlungen müssen allgemeinen Regeln folgen, die unter gleichartigen Umständen gleiche Behandlung verlangen ("Gleiches gleich behandeln")
-    
-  - **Materiale Gerechtigkeit:**  
-     Bezieht sich auf die Kriterien für die Gerechtigkeit der Regeln selbst.
-     
-  - **Vier grundlegende Arten von (materialer) Gerechtigkeit:**
-  
-    - **Distributive (Verteilungs-) Gerechtigkeit:** Aufteilung gemeinsamer Güter/Lasten, konditionale Gleichbehandlung.
-    
-    - **Kontraktuale (Tausch-) Gerechtigkeit:** Vertragsverhältnisse und Markttransaktionen, erfordert ausgewogene Bedingungen, Freiwilligkeit, Ausschluss von Betrug, ausreichende Information.
-    
-    - **Politische Gerechtigkeit:** Herrschaftsverhältnisse, Unparteilichkeit, allgemeine Vertretbarkeit von Herrschaft.
-    
-    - **Korrektive Gerechtigkeit:** Reaktion auf Unrecht durch Wiedergutmachung oder Strafe, Angemessenheit der Sanktionen.
-    
-  - Die Gerechtigkeit ganzer sozialer Formationen bemisst sich an der Gesamtheit dieser vier Arten.
-  
-  - **Verklammerung von Gerechtigkeit und Gleichheit:**
-    - Formale Gerechtigkeit enthält eine Gleichheitsforderung.
-    
-    - Distributive Gerechtigkeit baut auf der **Idee des gleichen Werts jedes Menschen auf**.
+        -   **Neuzeit (Aufklärung):** Aufwertung zum übergreifenden Grundprinzip politischer Moral.
 
-- **3. Die Ideen sozialer Gerechtigkeit und Gleichheit in der Moderne:**
-  - **Normative Grundidee:** Grundsätzliche moralische Gleichheit aller Menschen; gleicher Wert und gleiche Achtung.
-  
-  - **Geltung für gesellschaftliche Ordnungen:** Gerechtigkeitsforderungen gelten für gesellschaftliche Ordnungen als Ganzes.
-  
-  - **Gesellschaftsauffassung:** Wandel von atomistisch/individualistisch zu kollektiv/kommunitär.
-  
-  - **Soziale Gerechtigkeit:** Gesamtheit der Gerechtigkeitserfordernisse für die Grundordnung einer staatlich verfassten Gesellschaft.
-  
-  - **Kontroverse über distributive soziale Gerechtigkeit:**
-  
-    - Liberale: Markt als Verteilungsmechanismus.
-    
-    - Linke: Forderung nach gleichmäßigerer Verteilung sozialer Chancen und ökonomischer Mittel.
-    
-  - **Kritik von Hayek:** Distributive Gerechtigkeit gilt nicht für große Gesellschaften (spontane Ordnungen).
-  
-  - **Entgegnung** (folgt hier eher JV als Peter Koller): Soziale Gerechtigkeit ist zunächst eine Leerformel. Es lassen sich aber Maßstäbe für Verteilungsergebnisse formulieren, die eine poltische Gemeinschaft nicht gewillt ist zu akzeptieren
-  
-  - **Gesellschaft als soziales Gemeinwesen:**
-    - **Besitzgemeinschaft:** Gemeinbesitz an Ressourcen/Kultur; Anspruch auf Teilhabe.
-    
-    - **Kooperationsgemeinschaft:** Mitglieder akzeptieren Verhaltensbeschränkungen und leisten Beiträge.
-    
-    - **Solidaritätsgemeinschaft:** Unterstützung für Hilfsbedürftige, Pflicht zum Beitrag zur sozialen Sicherung.
-    
-  - **Gegenstand der sozialen Verteilungsgerechtigkeit:** Fundamentale gesellschaftliche Güter (Rechte, Freiheiten, Teilhabe, soziale Positionen, Ressourcen).
-  
-  - **Basaler Grundsatz:** *Gleichverteilung, sofern Ungleichverteilung nicht durch triftige Gründe gerechtfertigt ist*.
-  
-  - **Rechtfertigungsgründe für Ungleichheiten:**
-    - **Leistungsargument:** Ungleichheiten zulässig bei ungleichen Leistungen/Beiträgen, wenn alle profitieren.
-    
-    - **Freiheitsargument:** Ungleichheiten zulässig, wenn sie aus selbständigem Handeln im Rahmen gerechtfertigter Rechte resultieren.
-    
-    - **Bedürfnisargument:** Ungleiche Unterstützung für Bedürftige gerechtfertigt, wenn jedes Mitglied profitieren könnte.
-    
-  - **Anwendung der Rechtfertigungsgründe:**
-  
-    - *Keine Gründe* für Ungleichverteilung bei Rechten, Freiheiten, Teilhaberechten.
-    
-    - *Plausible Gründe* für Ungleichheiten bei sozialen Positionen und Ressourcen.
+        -   **Heute:** Gerechtigkeit als umfassender Richtwert sozialen Handelns, der Werte wie Freiheit, Gleichheit und Solidarität integriert und auf gesellschaftliche, staatliche und wirtschaftliche Ordnungen angewendet wird.
 
-- **4. Soziale Verteilungsgerechtigkeit und Sozialstaat:**
+-   **2. Das Vokabular von Gerechtigkeit und Gleichheit:**
 
-  - **Fünf Grundpostulate der sozialen Verteilungsgerechtigkeit:**
-  
-    - **Rechtliche Gleichheit:** Gleiche Rechte und Pflichten auf Basis allgemeiner Gesetze.
-    
-    - **Bürgerliche Freiheit:** Gleiche Freiheit zur Lebensgestaltung.
-    
-    - **Demokratische Teilhabe:** Gleichberechtigte Mitwirkung an öffentlicher Willensbildung.
-    
-    - **Soziale Chancengleichheit:** Soziale Positionen müssen allen offenstehen; materielle Chancengleichheit umstritten.
-    
-    - **Ökonomische Ausgewogenheit:** Wirtschaftliche Ungleichheiten zulässig, wenn sie für Effizienz erforderlich und begrenzt sind, sodass alle profitieren.
-    
-  - **Implikation für die politische Ordnung:** Demokratische Gesellschaftsordnung mit regulierter Marktwirtschaft und Sozialstaat.
-  
+    -   **Gegenstände der Gerechtigkeit:**
 
-  - **Notwendige sozialstaatliche Institutionen:**
-    - Öffentliches Bildungswesen.
-    - Materielle Grundsicherung.
-    - Aktive Beschäftigungspolitik (JV: warum?)
-    - Soziales Gesundheitswesen.
-    
+        -   Personen\
+        -   Handlungen\
+        -   Regeln/Institutionen\
+        -   soziale Verhältnisse\
+        -   gesellschaftliche Ordnungen
+        -   internationales System
 
-- **5. Fazit und Ausblick:**
-  - Konzepte von Gerechtigkeit und Gleichheit haben einen festen Bedeutungskern, sind aber in Ausprägung kontrovers.
-  
-  - Vorherrschende Vorstellung sozialer Gerechtigkeit basiert auf rechtlicher Gleichheit, bürgerlicher Freiheit, demokratischer Beteiligung, sozialer Chancengleichheit und wirtschaftlicher Ausgewogenheit.
-  
-  - Diese Vorstellung legt eine demokratische Ordnung mit regulierter Marktwirtschaft und Sozialstaat nahe.
-  
-  - Verwirklichung und Sicherung dieser Forderungen wird zunehmend transnational gesucht werden müssen; nationale Politik reicht nicht mehr aus.
-  
-  - Herausforderung bereits bei Menschenrechten, noch schwieriger bei sozioökonomischen Erfordernissen.
+    -   **Formale Gerechtigkeit:**
+
+        -   Handlungen müssen allgemeinen Regeln folgen, die unter gleichartigen Umständen gleiche Behandlung verlangen ("Gleiches gleich behandeln")
+
+    -   **Materiale Gerechtigkeit:**\
+        Bezieht sich auf die Kriterien für die Gerechtigkeit der Regeln selbst.
+
+    -   **Vier grundlegende Arten von (materialer) Gerechtigkeit:**
+
+        -   **Distributive (Verteilungs-) Gerechtigkeit:** Aufteilung gemeinsamer Güter/Lasten, konditionale Gleichbehandlung.
+
+        -   **Kontraktuale (Tausch-) Gerechtigkeit:** Vertragsverhältnisse und Markttransaktionen, erfordert ausgewogene Bedingungen, Freiwilligkeit, Ausschluss von Betrug, ausreichende Information.
+
+        -   **Politische Gerechtigkeit:** Herrschaftsverhältnisse, Unparteilichkeit, allgemeine Vertretbarkeit von Herrschaft.
+
+        -   **Korrektive Gerechtigkeit:** Reaktion auf Unrecht durch Wiedergutmachung oder Strafe, Angemessenheit der Sanktionen.
+
+    -   Die Gerechtigkeit ganzer sozialer Formationen bemisst sich an der Gesamtheit dieser vier Arten.
+
+    -   **Verklammerung von Gerechtigkeit und Gleichheit:**
+
+        -   Formale Gerechtigkeit enthält eine Gleichheitsforderung.
+
+        -   Distributive Gerechtigkeit baut auf der **Idee des gleichen Werts jedes Menschen auf**.
+
+-   **3. Die Ideen sozialer Gerechtigkeit und Gleichheit in der Moderne:**
+
+    -   **Normative Grundidee:** Grundsätzliche moralische Gleichheit aller Menschen; gleicher Wert und gleiche Achtung.
+
+    -   **Geltung für gesellschaftliche Ordnungen:** Gerechtigkeitsforderungen gelten für gesellschaftliche Ordnungen als Ganzes.
+
+    -   **Gesellschaftsauffassung:** Wandel von atomistisch/individualistisch zu kollektiv/kommunitär.
+
+    -   **Soziale Gerechtigkeit:** Gesamtheit der Gerechtigkeitserfordernisse für die Grundordnung einer staatlich verfassten Gesellschaft.
+
+    -   **Kontroverse über distributive soziale Gerechtigkeit:**
+
+        -   Liberale: Markt als Verteilungsmechanismus.
+
+        -   Linke: Forderung nach gleichmäßigerer Verteilung sozialer Chancen und ökonomischer Mittel.
+
+    -   **Kritik von Hayek:** Distributive Gerechtigkeit gilt nicht für große Gesellschaften (spontane Ordnungen).
+
+    -   **Entgegnung** (folgt hier eher JV als Peter Koller): Soziale Gerechtigkeit ist zunächst eine Leerformel. Es lassen sich aber Maßstäbe für Verteilungsergebnisse formulieren, die eine poltische Gemeinschaft nicht gewillt ist zu akzeptieren
+
+    -   **Gesellschaft als soziales Gemeinwesen:**
+
+        -   **Besitzgemeinschaft:** Gemeinbesitz an Ressourcen/Kultur; Anspruch auf Teilhabe.
+
+        -   **Kooperationsgemeinschaft:** Mitglieder akzeptieren Verhaltensbeschränkungen und leisten Beiträge.
+
+        -   **Solidaritätsgemeinschaft:** Unterstützung für Hilfsbedürftige, Pflicht zum Beitrag zur sozialen Sicherung.
+
+    -   **Gegenstand der sozialen Verteilungsgerechtigkeit:** Fundamentale gesellschaftliche Güter (Rechte, Freiheiten, Teilhabe, soziale Positionen, Ressourcen).
+
+    -   **Basaler Grundsatz:** *Gleichverteilung, sofern Ungleichverteilung nicht durch triftige Gründe gerechtfertigt ist*.
+
+    -   **Rechtfertigungsgründe für Ungleichheiten:**
+
+        -   **Leistungsargument:** Ungleichheiten zulässig bei ungleichen Leistungen/Beiträgen, wenn alle profitieren.
+
+        -   **Freiheitsargument:** Ungleichheiten zulässig, wenn sie aus selbständigem Handeln im Rahmen gerechtfertigter Rechte resultieren.
+
+        -   **Bedürfnisargument:** Ungleiche Unterstützung für Bedürftige gerechtfertigt, wenn jedes Mitglied profitieren könnte.
+
+    -   **Anwendung der Rechtfertigungsgründe:**
+
+        -   *Keine Gründe* für Ungleichverteilung bei Rechten, Freiheiten, Teilhaberechten.
+
+        -   *Plausible Gründe* für Ungleichheiten bei sozialen Positionen und Ressourcen.
+
+-   **4. Soziale Verteilungsgerechtigkeit und Sozialstaat:**
+
+    -   **Fünf Grundpostulate der sozialen Verteilungsgerechtigkeit:**
+
+        -   **Rechtliche Gleichheit:** Gleiche Rechte und Pflichten auf Basis allgemeiner Gesetze.
+
+        -   **Bürgerliche Freiheit:** Gleiche Freiheit zur Lebensgestaltung.
+
+        -   **Demokratische Teilhabe:** Gleichberechtigte Mitwirkung an öffentlicher Willensbildung.
+
+        -   **Soziale Chancengleichheit:** Soziale Positionen müssen allen offenstehen; materielle Chancengleichheit umstritten.
+
+        -   **Ökonomische Ausgewogenheit:** Wirtschaftliche Ungleichheiten zulässig, wenn sie für Effizienz erforderlich und begrenzt sind, sodass alle profitieren.
+
+    -   **Implikation für die politische Ordnung:** Demokratische Gesellschaftsordnung mit regulierter Marktwirtschaft und Sozialstaat.
+
+    -   **Notwendige sozialstaatliche Institutionen:**
+
+        -   Öffentliches Bildungswesen.
+        -   Materielle Grundsicherung.
+        -   Aktive Beschäftigungspolitik (JV: warum?)
+        -   Soziales Gesundheitswesen.
+
+-   **5. Fazit und Ausblick:**
+
+    -   Konzepte von Gerechtigkeit und Gleichheit haben einen festen Bedeutungskern, sind aber in Ausprägung kontrovers.
+
+    -   Vorherrschende Vorstellung sozialer Gerechtigkeit basiert auf rechtlicher Gleichheit, bürgerlicher Freiheit, demokratischer Beteiligung, sozialer Chancengleichheit und wirtschaftlicher Ausgewogenheit.
+
+    -   Diese Vorstellung legt eine demokratische Ordnung mit regulierter Marktwirtschaft und Sozialstaat nahe.
+
+    -   Verwirklichung und Sicherung dieser Forderungen wird zunehmend transnational gesucht werden müssen; nationale Politik reicht nicht mehr aus.
+
+    -   Herausforderung bereits bei Menschenrechten, noch schwieriger bei sozioökonomischen Erfordernissen.
