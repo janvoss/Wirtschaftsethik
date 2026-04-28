@@ -72,10 +72,7 @@ dot.edge('Kaufmann', 'Kritik', label='Herausforderung')
 display(dot)
 ```
 
-::: {.callout-important
-      icon=false 
-      collapse=true }
-
+::: {.callout-important icon="false" collapse="true"}
 # Der Text zum Bild {.unnumbered}
 
 Vgl. @holzmann_wirtschaftsethik_2019.
@@ -178,11 +175,8 @@ dot.edge('DEO', 'Gesinnung', color='#E74C3C', constraint="true")
 display(dot)
 ```
 
-:::{.callout-important 
-    icon=false 
-    collapse=true }
-
-# Der Text zum Bild{-}
+::: {.callout-important icon="false" collapse="true"}
+# Der Text zum Bild {.unnumbered}
 
 Die Pflichtenethik, die in der Fachsprache als deontologische Ethik bezeichnet wird, leitet ihren Namen vom griechischen Begriff deon ab, was übersetzt die Pflicht oder das Erforderliche bedeutet. Im Zentrum dieses ethischen Ansatzes steht die Beurteilung von Handlungen nach ihrem moralischen Eigenwert oder der Übereinstimmung mit feststehenden Geboten und Verboten, unabhängig von den daraus resultierenden Folgen. Diese konsequente Abkehr von der Ergebnisorientierung unterscheidet die Deontologie grundlegend von teleologischen Theorien, welche die Richtigkeit einer Tat ausschließlich an ihrem Nutzen oder Schaden für Dritte messen. Während eine teleologische Sichtweise die moralische Vertretbarkeit von Mitteln gegen den Wert der erreichten Zwecke abwägen kann, erklärt eine streng deontologische Position bestimmte Handlungstypen, wie etwa die Lüge, für sich genommen und unter allen Umständen für unerlaubt.
 
@@ -193,9 +187,7 @@ Als oberstes Prüfverfahren für die moralische Richtigkeit von Handlungsmaximen
 Die deontologische Ethik bildet zudem das Fundament für ein spezifisches Verständnis von Verantwortung, insbesondere in ihrer retrospektiven Ausrichtung als Ex-post-Verantwortung. Hierbei wird ein Akteur dafür zur Rechenschaft gezogen, ob er sich an die vorgegebenen Prinzipien und Regeln gehalten hat, wobei die Zurechenbarkeit primär an die Übereinstimmung der Handlung mit den normativen Kriterien geknüpft ist. Im Gegensatz zur proaktiven Verantwortung, die auf die Erreichung zukünftiger Zustände zielt, konzentriert sich die deontologische Perspektive auf die Rechtfertigung bereits vollzogener Taten vor einer Instanz.
 
 Trotz ihrer großen Bedeutung sieht sich die Pflichtenethik erheblicher Kritik ausgesetzt, die oft an ihrer mangelnden Flexibilität in realen Konfliktsituationen ansetzt. Da Pflichten nach Kant ausnahmslos gelten müssen, führt dies zu problematischen Konsequenzen, wie etwa der Forderung nach absoluter Wahrhaftigkeit selbst gegenüber einem Mörder, der nach dem Aufenthaltsort seines Opfers fragt. Kritiker wie Max Weber bemängelten zudem, dass die reine Gesinnungsethik dazu führen kann, dass Akteure die Verantwortung für absehbare üble Folgen ihres pflichtgemäßen Handelns auf die Welt oder andere abschieben, anstatt sie selbst zu tragen. Ein weiteres Problem stellt die Kollision zweier gleichrangiger Pflichten dar, für die das kantische Modell keine klare Lösungshierarchie bereitstellt, wie etwa im tragischen Dilemma eines Arztes, der zwischen dem Leben einer Mutter und dem ihres ungeborenen Kindes entscheiden muss. Schließlich wird eingewandt, dass die Deontologie durch ihren Fokus auf das rationale Vernunftvermögen die moralische Relevanz von Gefühlen ignoriert und Tieren sowie der Natur keine eigenständige schützenswerte Würde zuspricht.
- 
 :::
-
 
 ## Utilitarismus/teleologische Ethik
 
@@ -462,7 +454,90 @@ display(dot)
 
 ## Gerechtigkeit und Gleichheit
 
-Das Folgende basiert auf @koller_gerechtigkeit_2021
+### Grundsätzliches
+
+Das Folgende basiert wesentlich auf @koller_gerechtigkeit_2021
+
+```{python}
+#| message: false
+#| warning: false
+#| fig-cap: "Gerechtigkeit und Gleichheit"
+
+import graphviz
+from IPython.display import display
+
+# Erstellung des Digraph-Objekts
+dot = graphviz.Digraph(comment='Systematik der Gerechtigkeit', format='png')
+
+# Globale Layout-Attribute
+dot.attr(rankdir='TB', size='12,14', nodesep='0.6', ranksep='0.8')
+dot.attr('node', fontname='Helvetica', fontsize='11', style='filled,rounded', shape='box')
+dot.attr('edge', fontname='Helvetica', fontsize='10', color='#444444')
+
+# --- EBENE 1: Der doppelte Gerechtigkeitsbegriff ---
+with dot.subgraph(name='cluster_types') as c:
+    c.attr(label='Dimensionen der Gerechtigkeit', style='bold', color='#2C3E50')
+
+    c.node('Formal', 'FORMALE GERECHTIGKEIT\n(Gleichbehandlung von Gleichem nach Regeln)',
+           fillcolor='#D6EAF8', width='3')
+
+    c.node('Material', 'MATERIALE GERECHTIGKEIT\n(Inhaltliche Maßstäbe sozialer Interaktion)',
+           fillcolor='#D5F5E3', width='3', penwidth='2')
+
+# --- EBENE 2: Distributive Gerechtigkeit ---
+dot.node('Dist', 'Distributive Gerechtigkeit\n(Angelpunkt der Güterallokation)',
+         fillcolor='#ABEBC6', shape='octagon')
+
+# --- EBENE 3: Das Prinzip der konditionalen Gleichbehandlung ---
+with dot.subgraph(name='cluster_condition') as cond:
+    cond.attr(label='Konditionale Gleichbehandlung', style='dashed', color='#27AE60')
+
+    cond.node('Default', 'Prämisse:\nGLEICHVERTEILUNG', fillcolor='#F9E79F', # shape='circle'
+              )
+
+    cond.node('Reasons', 'Rechtfertigungsgründe für\nUNGLEICHVERTEILUNG', fillcolor='#FAD7A0')
+
+    cond.node('Leistung', 'Individuelle Leistung', fillcolor='#FEF9E7')
+    cond.node('Bedarf', 'Besondere Bedürfnisse', fillcolor='#FEF9E7')
+    cond.node('Voluntary', 'Folgen freiwilligen Handelns', fillcolor='#FEF9E7')
+
+    cond.edge('Reasons', 'Leistung')
+    cond.edge('Reasons', 'Bedarf')
+    cond.edge('Reasons', 'Voluntary')
+
+# --- EBENE 4: Die 5 Postulate als Resultat ---
+with dot.subgraph(name='cluster_postulates') as p:
+    p.attr(label='Materialisierung in 5 Postulaten', style='dotted', color='#2980B9')
+    p.node('P1', 'Rechtliche Gleichheit', fillcolor='#EBF5FB')
+    p.node('P2', 'Bürgerliche Freiheit', fillcolor='#EBF5FB')
+    p.node('P3', 'Demokratische Teilhabe', fillcolor='#EBF5FB')
+    p.node('P4', 'Chancengerechtigkeit', fillcolor='#AED6F1', style='filled,bold')
+    p.node('P5', 'Ökonomische Ausgewogenheit', fillcolor='#AED6F1')
+    # Unsichtbare Kanten zur vertikalen Anordnung
+    p.edge('P1', 'P2', style='invis')
+    p.edge('P2', 'P3', style='invis')
+    p.edge('P3', 'P4', style='invis')
+    p.edge('P4', 'P5', style='invis')
+
+# --- VERBINDUNGEN ---
+dot.edge('Formal', 'Material', label='ergänzt durch', style='dotted', dir='both')
+dot.edge('Material', 'Dist', label='fokussiert auf')
+dot.edge('Dist', 'Default', label='Startpunkt')
+dot.edge('Default', 'Reasons', label='Abweichung erfordert Triftigkeit')
+
+# Verbindung zu den Postulaten
+dot.edge('P1', 'Formal', label='basiert auf', constraint='false', style='dashed')
+dot.edge('Reasons', 'P4', label='konkretisiert')
+dot.edge('Reasons', 'P5', label='konkretisiert')
+
+# Abschluss: Soziale Marktwirtschaft
+dot.node('SME', 'SOZIALE MARKTWIRTSCHAFT\n(Institutionelle Verklammerung)',
+         fillcolor='#F1C40F', shape='doubleoctagon')
+dot.edge('P4', 'SME')
+dot.edge('P5', 'SME')
+
+display(dot)
+```
 
 -   **1. Historische Entwicklung des Gerechtigkeitsbegriffs:**
 
@@ -592,3 +667,7 @@ Das Folgende basiert auf @koller_gerechtigkeit_2021
     -   Verwirklichung und Sicherung dieser Forderungen wird zunehmend transnational gesucht werden müssen; nationale Politik reicht nicht mehr aus.
 
     -   Herausforderung bereits bei Menschenrechten, noch schwieriger bei sozioökonomischen Erfordernissen.
+
+### Die Empirie sozialer Gerechtigkeit
+
+Wir lesen @enste_soziale_2025.
