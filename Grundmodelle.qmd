@@ -671,3 +671,23 @@ display(dot)
 ### Die Empirie sozialer Gerechtigkeit
 
 Wir lesen @enste_soziale_2025.
+
+```{python}
+
+import qrcode
+import qrcode.image.svg
+
+# Die URL definieren
+url = 'https://www.wirtschaftsdienst.eu/inhalt/jahr/2025/heft/8/beitrag/soziale-gerechtigkeit-in-deutschland-wunsch-versus-wirklichkeit.html'
+
+# QR-Code Instanz erstellen (optional für mehr Kontrolle)
+# Hier nutzen wir die SvgImage Factory, um ein SVG zu generieren
+factory = qrcode.image.svg.SvgImage
+img = qrcode.make(url, image_factory=factory)
+
+# Als SVG-Datei speichern
+img.save("qr-Ensteetal.svg")
+
+```
+
+![QR-Code zum Text](qr-Ensteetal.svg){width="30%"}   
