@@ -309,7 +309,7 @@ dot.render('ki_begriff', format='svg', cleanup=True)
 #|warning: false
 #|message: false
 #|output: false
-#|echo: false
+#|echo: true
 
 import graphviz
 # from IPython.display import display
@@ -408,7 +408,7 @@ dot.render('ki_arbeitsmarkt', format='svg', cleanup=True)
 #| warning: false
 #| message: false
 #| output: false
-#| echo: false
+#| echo: true
 
 import graphviz
 # from IPython.display import display
