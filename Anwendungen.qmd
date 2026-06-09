@@ -486,7 +486,7 @@ dot.render('ki_verantwortung', format='svg', cleanup=True)
 ```
 
 
-[![Veranwortungszuweisung und KI](ki_verantwortung.svg)]::
+![Veranwortungszuweisung und KI](ki_verantwortung.svg)
 
 
 ### Ethische Probleme im Zusammenhang mit KI
