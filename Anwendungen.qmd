@@ -492,6 +492,93 @@ dot.render('ki_verantwortung', format='svg', cleanup=True)
 ### Ethische Probleme im Zusammenhang mit KI
 
 
+```{python}
+#| message: false
+#| warning: false
+#| output: false
+
+
+import graphviz
+
+# from IPython.display import display
+
+# Definition des Digraphs mit modernem, klarem Design
+dot = graphviz.Digraph(comment='Ethische Herausforderungen der KI', format='svg')
+dot.attr(rankdir='TB')
+dot.attr('node', fontname='Helvetica,Arial,sans-serif', fontsize='11', shape='box', style='rounded,filled', width='2.2')
+dot.attr('edge', fontname='Helvetica,Arial,sans-serif', fontsize='9', color='#444444', arrowhead='vee')
+
+# --- SUBGRAPHEN / CLUSTER ---
+
+# Cluster 1: Technologische Kerndynamik (Der Treiber)
+with dot.subgraph(name='cluster_tech') as c:
+    c.attr(label='Technologischer Treiber', color='#1e88e5', fontcolor='#1e88e5', style='dashed')
+    c.node('Selbstverbesserung', 'Rekursive Selbstverbesserung\n(KI entwickelt KI)', fillcolor='#1e88e5', fontcolor='white', style='filled,bold')
+    c.node('Fehlerpotenzierung', 'Fehlerpotenzierung\n(Fehlausrichtungen wachsen exponentiell)', fillcolor='#bbdefb')
+    c.node('Kontrollverlust', 'Drohender Kontrollverlust\n(Mensch als Bottleneck)', fillcolor='#ffcdd2', fontcolor='#b71c1c', style='filled,bold')
+
+# Cluster 2: Psychologische & Kognitive Ebene (Mensch-Maschine-Interaktion)
+with dot.subgraph(name='cluster_human') as c:
+    c.attr(label='Psychologische & Kognitive Ebene', color='#f57c00', fontcolor='#f57c00', style='dashed')
+    c.node('Erosion', 'Erosion des Sachverstands\n(Verlust von Praxiswissen)', fillcolor='#ffe0b2')
+    c.node('Rollenwandel', 'Rollenwandel\n(Aktiv zu reiner Überprüfung)', fillcolor='#ffe0b2')
+    c.node('Automation_Bias', 'Automation Bias\n(Blindes Vertrauen in Output)', fillcolor='#ffe0b2')
+    c.node('Entfremdung', 'Entfremdung von Arbeit\n& Kompetenzverlust', fillcolor='#ffe0b2')
+
+# Cluster 3: Wirtschaftsethik & Gesellschaft
+with dot.subgraph(name='cluster_socio') as c:
+    c.attr(label='Wirtschaftsethik & Gesellschaft', color='#7b1fa2', fontcolor='#7b1fa2', style='dashed')
+    c.node('Produktivitaet', '8-fache Steigerung\ndes Outputs pro Kopf', fillcolor='#e1bee7')
+    c.node('Machtkonzentration', 'Macht- & Wohlstandskonzentration\nbei Tech-Plattformen', fillcolor='#f3e5f5')
+    c.node('Post_Commodity', 'Post-commoditisierte Wirtschaft\n(Arbeit nicht mehr wettbewerbsfähig)', fillcolor='#f3e5f5')
+    c.node('Manipulation', 'Überwachung & Manipulation\n(Desinformation / Staatskontrolle)', fillcolor='#f3e5f5')
+
+# Cluster 4: Geopolitik & Regulierung (Das finale Dilemma)
+with dot.subgraph(name='cluster_global') as c:
+    c.attr(label='Geopolitik & Regulierung', color='#d32f2f', fontcolor='#d32f2f', style='dashed')
+    c.node('Wettruesten', 'Internationaler Wettbewerb\n(Sicherheit vs. Dominanz)', fillcolor='#ffccbc')
+    c.node('Regulierungs_Lag', 'Asynchronität\n(Schnelle KI vs. Langsame Politik)', fillcolor='#ffccbc')
+    c.node('Existentiell', 'Kollision:\nExistenzielle Krise der\nmenschlichen Urheberschaft', fillcolor='#b71c1c', fontcolor='white', style='filled,bold')
+
+# --- KAUSALE BEZIEHUNGEN (KANTEN) ---
+
+# Technischer Pfad
+dot.edge('Selbstverbesserung', 'Fehlerpotenzierung', label=' Autonome Nachfolger-Modelle')
+dot.edge('Fehlerpotenzierung', 'Kontrollverlust', label=' Überforderung der Aufsicht')
+
+# Psychologischer Pfad (Erosion)
+dot.edge('Selbstverbesserung', 'Rollenwandel', label=' Delegation kognitiver Prozesse')
+dot.edge('Rollenwandel', 'Erosion')
+dot.edge('Rollenwandel', 'Entfremdung')
+dot.edge('Automation_Bias', 'Erosion', label=' Verhindert Verifikation')
+dot.edge('Erosion', 'Kontrollverlust', label=' System kann bei Fehlern\n nicht repariert werden')
+
+# Wirtschaftsethischer Pfad
+dot.edge('Selbstverbesserung', 'Produktivitaet')
+dot.edge('Produktivitaet', 'Machtkonzentration', label=' Ungerechte Verteilung')
+dot.edge('Produktivitaet', 'Post_Commodity', label=' Disruption des Arbeitsmarktes')
+dot.edge('Machtkonzentration', 'Manipulation', label=' Technologische Überlegenheit')
+
+# Geopolitischer & Regulativer Pfad
+dot.edge('Selbstverbesserung', 'Wettruesten', label=' Mangelnde globale Koordination')
+dot.edge('Selbstverbesserung', 'Regulierungs_Lag', label=' Exponentielle Innovation')
+
+# Zusammenlaufen in der existenziellen Krise
+dot.edge('Kontrollverlust', 'Existentiell', color='#b71c1c', style='dashed')
+dot.edge('Post_Commodity', 'Existentiell', color='#b71c1c', style='dashed')
+dot.edge('Manipulation', 'Existentiell', color='#b71c1c', style='dashed')
+dot.edge('Wettruesten', 'Existentiell', color='#b71c1c', style='bold')
+dot.edge('Regulierungs_Lag', 'Existentiell', color='#b71c1c', style='bold')
+
+# Graph im Jupyter Notebook anzeigen
+# display(dot
+
+dot.render('ethik', format='svg', cleanup=True)
+```
+
+
+![Ethische Fragen im Zusammenhang mit KI](ethik.svg)
+
 ## Post Scriptum zur künstlichen Intelligenz
 
 ### Vision der 1980er Jahre: War Games
