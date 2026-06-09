@@ -398,7 +398,7 @@ dot.render('ki_arbeitsmarkt', format='svg', cleanup=True)
 ```
 
 
-[![Auswirkungen von KI auf den Arbeitsmarkt und die Einkommensverteilung](ki_arbeitsmarkt.svg)]::
+![Auswirkungen von KI auf den Arbeitsmarkt und die Einkommensverteilung](ki_arbeitsmarkt.svg)
 
 
 
