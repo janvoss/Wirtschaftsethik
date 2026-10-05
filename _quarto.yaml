@@ -6,7 +6,7 @@ book:
   title: "Wirtschaftsethik"
   author: "Prof. Dr. Jan S. Voßwinkel"
   # date: "2024"
-  subtitle: "Sommersemester 2026"
+  subtitle: "Wintersemester 2026/27"
   #lang: de-De
   language:  _language.yml
   repo-url: https://github.com/janvoss/Wirtschaftsethik.git
@@ -24,7 +24,7 @@ book:
 bibliography: Wirtschaftsethik.bib
 csl: dresden.csl #Ohne funktioniert es gut, mit nicht. 
 # Aber warum? Und was ist mit Herausgeberwerken (Hrsg vs. Ed?)
-
+lang: de
 
 format:
   html:
